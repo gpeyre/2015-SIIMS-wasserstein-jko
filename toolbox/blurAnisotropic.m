@@ -13,41 +13,31 @@ function [Blur, Delta,Grad] = blurAnisotropic(M, options)
 %   matrices involved. In this case, options.CholFactor is equal to 
 %   the time t involved.
 %
+%   You can set options.laplacian_type to 'fd' (finite differences)
+%   or 'superbases'.
+%
 %   Copyright (c) 2014 Gabriel Peyre
 
 options.null = 0;
 diff_type = getoptions(options, 'diff_type', 'fwd');
 CholFactor = getoptions(options, 'CholFactor', 0);
-
+laplacian_type = getoptions(options, 'laplacian_type', 'fd');
 
 N = size(M,1);
-id = speye(N);
 
-e = ones(N,1);
-switch diff_type
-    case 'sym'
-        % symmetric
-        D = spdiags([e -e]/2, [-1 1], N, N);
-        D([1 end],:) = 0; % Neumann BC
-    case 'fwd'
-        % forward
-        D = spdiags([e -e], [0 1], N, N);
-        D(end,:) = 0; % Neumann BC
+switch laplacian_type
+    case 'fd'
+        [Delta,Grad] = compute_anisotropic_laplacian(M, diff_type);
+    case 'superbases'
+        Grad = [];
+        M1 = cat(3, M(:,:,1,1), M(:,:,1,2), M(:,:,2,2));
+        Delta = DiffusionSparseMatrix(M1);
     otherwise
-        error('Unknown finite differenciation mode.');
+        error('Uknown Laplacian type');
 end
 
-Dx = kron(D,id);
-Dy = kron(id,D);
-Grad = [Dx;Dy];
-
-% metric along the diagonal
-diagH = @(h)spdiags(h(:), 0, N^2,N^2);
-dH = [diagH(M(:,:,2,2)), diagH(M(:,:,1,2)); ...
-      diagH(M(:,:,2,1)), diagH(M(:,:,1,1))];
-% Laplacian
-Delta = Grad'*dH*Grad;
-
+    
+    
 % load blurring kernel
 if CholFactor==0
     Blur = @(u,t,filtIter)heat_iter(Delta, t, filtIter, u);

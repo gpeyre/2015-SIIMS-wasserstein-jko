@@ -1,24 +1,22 @@
 %%
 % Simulation of crowd motion through JKO flow.
 % The function to be minimized is
-%       f(p) = <w,p> + epsilon*E(p) + h(p)
-% w act as an attraction potential, and epsilon is the diffusion strength.
+%       f(p) = <w,p> + h(p)
+% w act as an attraction potential.
 
 addpath('toolbox/');
 addpath('imgaussian/');
+addpath('anisotropic/');
 set(0,'DefaultFigureWindowStyle','docked');
 
 if not(exist('name'))
     name = 'bump';
-    name = 'holes';
-    name = 'lena';
+    name = 'tworooms-noncvx';
+    name = 'aniso3';
     name = 'tworooms';
-    name = 'disksquare';
-    name = 'hibiscus';
-    name = 'roof1';
-    name = 'aniso1';
+    name = 'holes';
+    name = 'disk1';
 end
-
 
 porous_mode = 'constant';
 porous_mode = 'varying-e';
@@ -31,7 +29,7 @@ porous_mode = 'varying-m';
 
 % grid size
 N = 200;
-N = 100;
+N = 99;
 
 %%
 % helpers
@@ -50,7 +48,7 @@ gaussian = @(m,s)exp( -( (X-m(1)).^2+(Y-m(2)).^2 )/(2*s^2) );
 %%
 % Parameters, here for N=100
 
-[epsilon,tau,gamma,model] = load_default_parameters(name,N);
+[tau,gamma,model] = load_default_parameters(name,N);
 
 rep = ['results/' model '/'];
 if not(exist(rep))
@@ -58,25 +56,23 @@ if not(exist(rep))
 end
 
 %%
-% Display levelset of w.
+% Display w and metric.
 
-w1 = w.*mask; w1 = w1/max(w1(:));
-f = cos(150*w1);
 figure(1); setfigname('Potential');
-clf; 
-imageplot(f);
-imwrite(rescale(f), [rep name '-potential.png'],'png');
-
-%%
-% Display metric if needed.
-
-if not(isempty(M))
-    f = cos(80*w1);
+w1 = w.*mask; w1 = w1/max(w1(:));
+if not(isempty(M)) && norm(M(:,:,1,2), 'fro')>1e-5
+    f = cos(60*w1);
     opt.sub = 8;
     opt.color = 'r';
     clf;
     plot_tensor_field(M, f, opt);
     drawnow;
+    saveas(gcf, [rep name '-potential.eps'], 'epsc');
+else
+    f = cos(150*w1);
+    clf;
+    imageplot(f);
+    imwrite(rescale(f), [rep name '-potential.png'],'png');
 end
 
 %%
@@ -86,14 +82,6 @@ if not(exist('kappa_mult'))
     kappa_mult = 1;
 end
 kappa = max(p0(:))*kappa_mult; % box constraint on the density
-
-if strcmp(name(1:4), 'roof')==1
-    % varying kappa
-    i = str2num(name(5));
-    kappa = max(p0(:)) * rescale(Y, 1-i/4, 1);
-    kappa = ones(N); kappa(:,1:round(2*N/3)) = .1;
-    kappa = Inf; % kappa * max(p0(:));
-end
 
 %%
 % Porous-media model parameter.
@@ -108,7 +96,6 @@ if strcmp(model, 'porous') %  not(exist('m_porous'))
             m_field = rescale(gaussian([.5 .5],.2),1.01,2);
             e_field = ones(N);
             %
-            epsilon = .05;
             tau = 10/2;
             gamma = .3;
         case 'varying-e'
@@ -116,14 +103,12 @@ if strcmp(model, 'porous') %  not(exist('m_porous'))
             m_field = m_porous*ones(N);
             e_field = rescale( gaussian([.5 .5],.2), .1, 2);
             %
-            epsilon = .05;
             tau = 10/2;
             gamma = .3;
         case 'varying-em'
             m_field = rescale(gaussian([.5 .5],.2),1.01,2);
             e_field = rescale( gaussian([.5 .5],.2), .1, 2);
             %
-            epsilon = .05;
             tau = 10/2;
             gamma = .3;
     end
@@ -135,22 +120,30 @@ end
 switch  model 
     case 'crowd'
         % crowd motion clamping
-        proxh = @(p,sigma)min(p,kappa);  
-        options.algorithm = 'projection';
-        options.algorithm = 'dykstra';
+        proxf = @(p,sigma)min(p .* exp(-sigma*w),kappa);  
+        if strcmp(name, 'tworooms-noncvx')
+            % non convex clamping
+            a = .0001*max(p0(:));
+            b = 1*max(p0(:));
+            E = @(x)x.*(log(max(x,1e-10))-1);
+            Emean = @(a,b)exp( (E(a)-E(b))/(a-b) );
+            pthresh = Emean(a,b);
+            proxf1 = @(p,sigma) (p<=pthresh) * a + (p>pthresh) * b  ;
+            proxf = @(p,sigma)proxf1(p .* exp(-sigma*w),sigma);
+            p0 = proxf1(p0,1);
+            options.prox_postprocess = 1;  
+        end
         paramstr = sprintf('kappa%d',10*kappa_mult);
     case 'porous'
         if isscalar(m_field)
             % constant medium
             ProxPorous = load_porous_prox();
-            proxh = @(p,sigma)ProxPorous(p,m_porous,sigma);
+            proxf = @(p,sigma)ProxPorous(p,m_porous,sigma);
         else
             % spacially varying medium
             opts.niter = 20; % newton steps
-            proxh = @(p,sigma)porous_prox_newton(sigma*e_field,m_field,p, opts);
+            proxf = @(p,sigma)porous_prox_newton(sigma*e_field,m_field,p, opts);
         end
-        options.algorithm = 'dykstra';
-        % proxh = @(p,sigma)p;
         paramstr = porous_mode; % sprintf('m%d',10*m_porous);
 end
 
@@ -169,6 +162,10 @@ else
     else
         opt.CholFactor = gamma;        
     end
+    opt.laplacian_type = 'fd'; % finite differences
+    if isempty(find(mask==0))
+        opt.laplacian_type = 'superbases'; % J.M. Mirebeau's method
+    end
     [blur, Delta, Grad] = blurAnisotropic(M,opt);
     filtIter = 5;
     K = @(x)blur(x,gamma,filtIter);
@@ -177,13 +174,12 @@ end
 %%
 % Test single step.
 
-options.niter = 50; 
+options.niter = 10; 
 options.tol = 1e-15;
 options.nsteps = 1;
-options.niter_deconvol = 0;
 figure(3); setfigname('Iterations');
 clf;
-[p,Constr] = perform_jko_stepping(K,w,p0, gamma,tau,epsilon,proxh, options);
+[p,Constr] = perform_jko_stepping(K,w,p0, gamma,tau,proxf, options);
 % display
 figure(2); setfigname('Constraints');
 clf;
@@ -194,30 +190,15 @@ plot(1:length(Constr{2}), log10(Constr{2}));
 drawnow;
 
 %%
-% Perform a deconvolution of the result.
-
-Kdeconv = @(x)blur(x,gamma);
-Kdeconv = K;
-options.Kdeconv = Kdeconv;
-opt.niter = 30;
-[q,err] = deconv_richlucy(Kdeconv,p,opt);
-
-figure(4); 
-clf; setfigname('Deconvolution');
-imageplot({p0 K(p0) p q}, {'p_0' 'K(p_0)' 'p' 'Deconv(p)'}, 2, 2);
-
-%%
 % Perform several iterates.
 
 figure(3); setfigname('Iterations');
-options.DispFunc = @(p)imageplot(p);
 options.DispFunc = @(p)imageplot( format_image(p,mask) ); % 
 options.WriteFunc = []; % @(p,i)imwrite(rescale(p), [rep1 num2str(i) '.png'], 'png');
 options.niter = 100; 
 options.nsteps = 50;
 options.tol = 1e-6;
-options.niter_deconvol = 0; % 50; % 200;
-[p,Constr,plist] = perform_jko_stepping(K,w,p0, gamma,tau,epsilon, proxh, options);
+[p,Constr,plist] = perform_jko_stepping(K,w,p0, gamma,tau, proxf, options);
 
 % convert to displayable space/time volume
 A0 = reshape(cell2mat(plist), [N N options.nsteps]);
