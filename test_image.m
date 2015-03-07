@@ -51,9 +51,7 @@ gaussian = @(m,s)exp( -( (X-m(1)).^2+(Y-m(2)).^2 )/(2*s^2) );
 [tau,gamma,model] = load_default_parameters(name,N);
 
 rep = ['results/' model '/'];
-if not(exist(rep))
-    mkdir(rep);
-end
+cmkdir(rep);
 
 %%
 % Display w and metric.
@@ -150,26 +148,7 @@ end
 %%
 % Gibbs kernel
 
-if isempty(M)
-    % isoptropic metric
-    blur = @(x,mu)imgaussian(x,mu,mu*50);
-    K = @(x)blur(x,gamma);
-else
-    % anisotropic metric
-    using_factorization = 1;
-    if not(using_factorization)
-        opt.CholFactor = 0;
-    else
-        opt.CholFactor = gamma;        
-    end
-    opt.laplacian_type = 'fd'; % finite differences
-    if isempty(find(mask==0))
-        opt.laplacian_type = 'superbases'; % J.M. Mirebeau's method
-    end
-    [blur, Delta, Grad] = blurAnisotropic(M,opt);
-    filtIter = 5;
-    K = @(x)blur(x,gamma,filtIter);
-end
+[blur,K] = load_kernel(M,mask,gamma)
 
 %%
 % Test single step.

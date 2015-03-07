@@ -2,12 +2,8 @@
 % Test for the prox of a power function.
 
 rep = 'results/prox/';
-if not(exist(rep))
-    mkdir(rep);
-end
+cmkdir(rep);
 setfigname = @(name)set(gcf, 'Name', name, 'NumberTitle','off');
-
-
 
 %%
 % Define the prox operator of the associated entropy

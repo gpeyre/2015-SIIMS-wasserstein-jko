@@ -5,9 +5,7 @@ addpath('toolbox/');
 addpath('toolbox_mesh/');
 
 rep = 'results/';
-if not(exist(rep))
-    mkdir(rep);
-end
+cmkdir(rep);
 
 name = 'moomoo';
 
