@@ -1,0 +1,47 @@
+<html>
+<body>
+
+<!-- Adress: bit.ly/1AJxkzN -->
+
+<p>
+	<i>Top row:</i> congestion functional on the sum.
+</p>
+<p>
+	<i>Bottom row:</i> entropy functional on the sum (so that p1+p2 evolves according to a linear heat diffusion).
+</p>
+
+<table border=0 width=256><tr>
+
+<script type="text/javascript">
+		function DispVideo(filename, comment)
+		{
+			document.write("<td  align=center>");
+			// width=\"256\"
+			document.write("<embed height=\"256\" src=\"", filename, "\" loop=\"true\"/><br/>");
+			document.write(comment);
+			document.write("</td>");
+		}
+		function NewLine()
+		{
+			document.write("</tr><tr>");
+		}
+
+DispVideo("congestion.gif", "p1 and p2");
+DispVideo("congestion-sum.gif", "p1+p2");
+DispVideo("congestion-1.gif", "p1");
+DispVideo("congestion-2.gif", "p2");
+NewLine();
+DispVideo("tworectangles.gif", "p1 and p2");
+DispVideo("tworectangles-sum.gif", "p1+p2");
+DispVideo("tworectangles-1.gif", "p1");
+DispVideo("tworectangles-2.gif", "p2");
+
+
+
+</script>
+
+
+</tr></table>
+
+</body>
+</html>

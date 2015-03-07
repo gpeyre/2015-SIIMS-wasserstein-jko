@@ -1,0 +1,72 @@
+<html>
+<body>
+
+<!-- Adress: bit.ly/1AJxkzN -->
+<p>
+	Crowd motion with congestion.
+	<br/>
+	"kappa" indicates the level of congestion (the smaller, the more congestion).
+	<br/>
+	"potential" shows the level set of the driving potential (mass evoleves along the gradient of the potential).
+</p>
+
+<table border=0 width=256><tr>
+
+<script type="text/javascript">
+		function DispVideo(filename, comment)
+		{
+			document.write("<td  align=center>");
+			document.write("<embed height=\"256\" src=\"", filename, "\" loop=\"true\"/><br/>");
+			document.write("</td>");
+		}
+		function DispComment(comment)
+		{
+					document.write("<td  align=center>");
+					document.write(comment);
+					document.write("</td>");
+		}
+		function NewLine()
+		{
+			document.write("</tr><tr>");
+		}
+
+
+		DispComment("kappa=1");
+		DispComment("kappa=2");
+		DispComment("kappa=4");
+		DispComment("w");
+		NewLine();
+		DispVideo("bump-kappa10.gif", "kappa=1");
+		DispVideo("bump-kappa20.gif", "kappa=2");
+		DispVideo("bump-kappa40.gif", "kappa=4");
+		DispVideo("bump-potential.png", "potential");
+		NewLine();
+		DispVideo("tworooms-kappa10.gif", "kappa=1");
+		DispVideo("tworooms-kappa20.gif", "kappa=2");
+		DispVideo("tworooms-kappa40.gif", "kappa=4");
+		DispVideo("tworooms-potential.png", "potential");
+		NewLine();
+		DispVideo("holes-kappa10.gif", "kappa=1");
+		DispVideo("holes-kappa20.gif", "kappa=2");
+		DispVideo("holes-kappa40.gif", "kappa=4");
+		DispVideo("holes-potential.png", "w");
+		NewLine();
+		DispVideo("disk-kappa10.gif", "kappa=1");
+		DispVideo("disk-kappa20.gif", "kappa=2");
+		DispVideo("disk-kappa40.gif", "kappa=4");
+		DispVideo("disk-potential.png", "w");
+		NewLine();
+		DispVideo("disk1-kappa10.gif", "kappa=1");
+		DispVideo("disk1-kappa20.gif", "kappa=2");
+		DispVideo("disk1-kappa40.gif", "kappa=4");
+		DispVideo("disk1-potential.png", "w");
+
+
+
+</script>
+
+
+</tr></table>
+
+</body>
+</html>

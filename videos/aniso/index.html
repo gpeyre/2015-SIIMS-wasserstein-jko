@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<!-- Adress: bit.ly/1AJxkzN -->
+
+<table border=0 width=256><tr>
+
+<script type="text/javascript">
+		function DispVideo(filename, comment)
+		{
+			document.write("<td  align=center>");
+			// width=\"256\"
+			document.write("<embed height=\"256\" src=\"", filename, "\" loop=\"true\"/><br/>");
+			document.write(comment);
+			document.write("</td>");
+		}
+		function NewLine()
+		{
+			document.write("</tr><tr>");
+		}
+
+
+
+		DispVideo("aniso0-kappa10.gif", "anisotropy=1");
+		DispVideo("aniso1-kappa10.gif", "anisotropy=.5");
+		DispVideo("aniso2-kappa10.gif", "anisotropy=.2");
+		DispVideo("aniso3-kappa10.gif", "anisotropy=.1");
+		DispVideo("aniso4-kappa10.gif", "anisotropy=.03");
+
+
+</script>
+
+
+</tr></table>
+
+</body>
+</html>

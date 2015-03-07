@@ -1,0 +1,40 @@
+<html>
+<body>
+
+<!-- Adress: bit.ly/1AJxkzN -->
+
+<table border=0 width=256><tr>
+
+<script type="text/javascript">
+		function DispVideo(filename, comment)
+		{
+			document.write("<td  align=center>");
+			// width=\"256\"
+			document.write("<embed height=\"256\" src=\"", filename, "\" loop=\"true\"/><br/>");
+			document.write(comment);
+			document.write("</td>");
+		}
+		function NewLine()
+		{
+			document.write("</tr><tr>");
+		}
+
+
+		DispVideo("tworooms-tgt.png", "Target");
+		DispVideo("tworooms.gif", "Evolution");
+		NewLine();
+		DispVideo("holes-tgt.png", "Target");
+		DispVideo("holes.gif", "Evolution");
+		NewLine();
+		DispVideo("disk-tgt.png", "Target");
+		DispVideo("disk.gif", "Evolution");
+
+
+
+</script>
+
+
+</tr></table>
+
+</body>
+</html>

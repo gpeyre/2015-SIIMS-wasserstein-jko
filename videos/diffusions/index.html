@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<!-- Adress: bit.ly/1AJxkzN -->
+
+		<p>
+			<i>Left:</i> non-linear entropy (m=1.4) with a spatially varying diffusivity
+				(strong diffusion in the center).
+		</p>
+		<p>
+			<i>Right:</i> non-linear entropy with a spatially varying non-linear exponent
+				(strong non-linearity in the center).
+		</p>
+
+
+<table border=0 width=256><tr>
+
+<script type="text/javascript">
+		function DispVideo(filename, comment)
+		{
+			document.write("<td  align=center>");
+			// width=\"256\"
+			document.write("<embed height=\"256\" src=\"", filename, "\" loop=\"true\"/><br/>");
+			document.write(comment);
+			document.write("</td>");
+		}
+		function NewLine()
+		{
+			document.write("</tr><tr>");
+		}
+
+
+
+		DispVideo("rand-varying-e.gif", "varying b");
+		DispVideo("rand-varying-m.gif", "varying m");
+
+
+
+</script>
+
+
+</tr></table>
+
+</body>
+</html>
