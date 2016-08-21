@@ -1,0 +1,5 @@
+![anisotropy=1](aniso0-kappa10.gif)
+![anisotropy=.5](aniso1-kappa10.gif)
+![anisotropy=.2"](aniso2-kappa10.gif)
+![anisotropy=.1](aniso3-kappa10.gif)
+![anisotropy=.03](aniso4-kappa10.gif)
