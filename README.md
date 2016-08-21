@@ -5,6 +5,10 @@ Gabriel Peyré. [Entropic Approximation of Wasserstein Gradient Flows](http://ar
 ![JKO flow with congestion on a planar domain](imgs/jko-images.png)
 ![JKO flow with congestion on a 3D mesh](imgs/jko-mesh.png)
 
+![](videos/crowd/tworooms-kappa10.gif)
+![](videos/meshes/moomoo-kappa10.gif)
+![](videos/pairwise-attraction/holes.gif)
+
 Content
 -------
 
