@@ -2,12 +2,10 @@ This toolbox reproduces the numerical illustrations of the paper:
 
 Gabriel Peyré. [Entropic Approximation of Wasserstein Gradient Flows](http://arxiv.org/abs/1502.06216). SIAM Journal on Imaging Sciences, 8(4), pp. 2323–2351, 2015
 
-![JKO flow with congestion on a planar domain](imgs/jko-images.png)
-![JKO flow with congestion on a 3D mesh](imgs/jko-mesh.png)
-
-![](videos/crowd/tworooms-kappa10.gif)
-![](videos/meshes/moomoo-kappa10.gif)
-![](videos/pairwise-attraction/holes.gif)
+![JKO flow with congestion on a planar domain](videos/crowd/tworooms-kappa10.gif)
+![JKO flow with Wasserstein attraction](videos/pairwise-attraction/holes.gif)
+![JKO flow of the entropy of the sum of two density](tworectangles)
+![JKO flow with congestion on a 3D mesh](videos/meshes/moomoo-kappa10.gif)
 
 Content
 -------
