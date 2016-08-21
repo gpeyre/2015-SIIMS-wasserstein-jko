@@ -1,8 +1,9 @@
 This toolbox reproduces the numerical illustrations of the paper:
 
-Discrete Entropic Wasserstein Flows
-Gabriel Peyré
-Preprint HAL, 2015
+Gabriel Peyré. [Entropic Approximation of Wasserstein Gradient Flows](http://arxiv.org/abs/1502.06216). SIAM Journal on Imaging Sciences, 8(4), pp. 2323–2351, 2015
+
+![JKO flow with congestion on a planar domain](imgs/jko-images.png)
+![JKO flow with congestion on a 3D mesh](imgs/jko-mesh.png)
 
 Content
 -------
