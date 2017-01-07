@@ -1,0 +1,61 @@
+% \documentclass[10pt]{article}
+\documentclass[final]{siamltex}
+
+\usepackage{hyperref} %BUG if put after
+
+% Be sure to use PDF Latex
+\pdfoutput=1
+
+\usepackage[latin1]{inputenc}
+\usepackage{mystyle}
+\usepackage{url}
+
+
+% format A4
+%\usepackage{vmargin}
+%\setpapersize{A4} 
+
+\graphicspath{{./images/}}
+
+
+\hypersetup{  
+   bookmarks=true,
+   backref=true,
+   pagebackref=false,
+   colorlinks=true,
+   linkcolor=blue,
+   citecolor=red,
+   urlcolor=blue,
+   pdftitle={Entropic Approximation of Wasserstein Gradient Flows},
+   pdfauthor={Gabriel Peyr\'e},
+   pdfsubject={Entropic Approximation of Wasserstein Gradient Flows}
+}
+
+
+\title{Entropic Approximation of \\ Wasserstein Gradient Flows}
+
+\author{Gabriel Peyr\'e\thanks{CNRS and CEREMADE, Universit\'e Paris-Dauphine, Place du Mar\'echal De Lattre De Tassigny, 75775 PARIS CEDEX 16, FRANCE.} }
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\input{sections/sec-abstract}
+\input{sections/sec-intro}
+\input{sections/sec-entropic-jko}
+\input{sections/sec-dykstra}
+\input{sections/sec-numerics}
+\input{sections/sec-wass-attraction}
+\input{sections/sec-conclusion}
+\appendix
+\input{sections/sec-prox-calculus}
+
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
+

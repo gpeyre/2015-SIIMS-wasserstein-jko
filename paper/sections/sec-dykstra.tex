@@ -1,0 +1,282 @@
+% !TEX root = ../EntropicJKO.tex
+\section{A Bregman Proximal Splitting Approach}
+\label{sec-bregman-prox}
+
+In this section, we show how to re-formulate a single entropic regularized JKO step in order to introduce a KL divergence penalty. This is useful to allow for the application of generalized first order proximal methods. 
+
+%%%%
+\subsection{Reformulation as a KL Minimization}
+
+We consider a single time step $t$, and denoting $q \eqdef p_t$ the previous iterate of the flow, one can re-write the JKO stepping operator~\eqref{eq-def-jko-operator} as
+\eq{
+	\Prox_{\tau f}^{W_{\ga}}(q) = \pi \ones 
+} 
+where $\pi \in \RR^{N \times N}$ solves the following strictly convex optimization problem
+\eql{\label{eq-prox-step}
+	\umin{\pi} 
+		\dotp{c}{\pi} + \ga E(\pi) + \tau f(\pi \ones) + \iota_{\Cc_q}(\pi)
+}
+where we introduced the constraint set
+\eq{
+	\Cc_q \eqdef \enscond{\pi \in \RR^{N \times N}}{\pi^T \ones=q}.
+}
+
+The initial formulation~\eqref{eq-prox-step} can be re-cast as
+\eql{\label{eq-defn-KL-prbm}
+	\umin{\pi} \KL(\pi|\xi) + \phi_1(\pi) + \phi_2(\pi)
+	\qwhereq
+	\choice{
+		\phi_1(\pi) \eqdef \iota_{\Cc_q}(\pi), \\
+		\phi_2(\pi) \eqdef \frac{\tau}{\ga} f(\pi \ones),
+	}
+}
+where we defined the Gibbs kernel $\xi$ as
+\eq{ 
+	\xi \eqdef e^{-c/\ga} \in \RR_{+,*}^{N \times N}.
+}
+It should be noted that functions $(\phi_1,\phi_2)$ only depends on the marginals $\pi\ones$ and $\pi^T\ones$, which is a crucial point, and is extensively used to compute proximal operators (see in particular formula~\eqref{eq-prox-calculus-lifting}). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dykstra Algorithm with Bregman Divergences}
+\label{subsec-dykstra-bregman}
+
+%%
+\paragraph{Bregman divergence and proximal map}
+
+In order to give a more general treatment of optimization problems of the form~\eqref{eq-defn-KL-prbm}, that can be useful beyond the particular context of this article, we consider a generic Bregman divergence $\BregDiv_\Ga$, defined on some convex set $\Dd$. 
+
+
+We follow~\cite{bauschke-lewis} and define a Bregman divergence (see for instance) as
+\eq{
+	\foralls (\pi,\xi) \in \Dd \times \text{int}(\Dd), \quad
+	\BregDiv_\Ga(\pi|\xi) = \Ga(\pi)-\Ga(\xi)-\dotp{\nabla \Ga(\xi)}{\pi-\xi}.
+}
+where $\Ga$ is a strictly convex function, smooth on $\interop(\Dd)$ where $\Dd=\dom(\Ga)$ such that its Legendre transform 
+\eq{
+	\Ga^*(\rho) = \umax{\pi \in \Dd} \dotp{\pi}{\rho} - \Ga(\pi), 
+} 
+is also smooth and strictly convex. In particular, one has that $\nabla \Ga$ and $\nabla \Ga^*$ are bijective maps between $\interop(\Dd)$ and $\interop(\dom(\Ga^*))$ such that $\nabla \Ga^* = \nabla \Ga^{-1}$. 
+
+For $\Ga = \norm{\cdot}^2$, one recovers the squared Euclidean norm $\BregDiv_\Ga = \norm{\cdot}^2$. 
+One has $\KL = \BregDiv_\Ga$ for $\Ga(\pi)=E(\pi)$, which is cased we used to tackle~\eqref{eq-defn-KL-prbm}. Note that in general, $\BregDiv_\Ga$ is not symmetric and does not satisfy the triangular inequality, so that it is not a distance. We refer to~\cite{bauschke-lewis} for a table detailing many examples of Bregman's divergences. 
+
+Let us write the general form of problem~\eqref{eq-defn-KL-prbm} as
+\eql{\label{eq-generic-optim}
+	\umin{\pi \in \Dd} \BregDiv_\Ga(\pi|\xi) + \phi_1(\pi) + \phi_2(\pi)
+}
+where $\phi_1,\phi_2$ are two proper, lower-semicontinuous convex functions defined on $\Dd$. We also assume that the following qualification constraint holds
+\eql{\label{eq-qualif}
+	\ri( \dom(\phi_1) ) \cap \ri(\dom(\phi_2)) \cap \ri(\dom(\Gamma) )  \neq \emptyset.
+}
+where $\ri$ is the relative interior and $\dom(\phi)=\enscond{\pi}{\phi(\pi) \neq +\infty}$.
+
+We define the proximal map of a convex function $\phi$ according to this divergence as
+\eql{\label{eq-defn-proxKL}
+	\Prox^{\BregDiv_\Ga}_{\phi}(\pi) \eqdef \uargmin{\tilde \pi \in \Dd} \BregDiv_\Ga(\tilde \pi|\pi) + \phi(\tilde \pi).
+}
+We assume that $\phi$ is coercive, so that $\Prox^{\BregDiv_\Ga}_{\phi}(\pi)$ is always uniquely defined by strict convexity. Furthermore, one has $\Prox^{\BregDiv_\Ga}_{\phi}(\pi) \in \interop(\Dd)$, see~\cite{bauschke-lewis}.
+
+%%
+\paragraph{Dykstra's iterations}
+
+
+Dykstra's algorithm starts by initializing  
+\eq{
+	\itz{\pi} \eqdef \xi
+	\qandq
+	\itz{v}=v^{(-1)} \eqdef 0.
+}
+One then iteratively defines, for $\ell>0$
+\begin{align}\label{eq-it-bregman-1}
+	\iter{\pi} &\eqdef  \Prox^{\BregDiv_\Ga}_{\phi_{[\ell]_2}}(  \nabla \Ga^*( \nabla \Ga(\itA{\pi}) + \itAA{v} ) ), \\
+	\label{eq-it-bregman-2}
+	\iter{v} &\eqdef \itAA{v} + \nabla\Ga( \itA{\pi} ) - \nabla \Ga(\iter{\pi}),
+\end{align}
+where $[\ell]_2$ is defined in~\eqref{eq-modulo-2}. Note that the iterates satisfies $\iter{\pi} \in \interop(\Dd)$, so that the algorithm is well defined. 
+
+The iterates $\iter{\pi}$ of this algorithm are known to converge to the solution of~\eqref{eq-generic-optim} in the case where $\phi_1$ and $\phi_2$ are indicators of convex sets, see~\cite{bauschke-lewis}. This corresponds to the case where $\Prox^{\BregDiv_\Ga}_{\phi_{i}}$ for $i=1,2$ are projectors according to the Bregman divergence. 
+
+
+%%
+\paragraph{Convergence proof}
+
+This convergence result in fact caries over to the more general setting where $(\phi_1,\phi_2)$ are arbitrary proper and lower-semicontinuous convex functions.  The proof follows from the fact that Dykstra's iterations correspond to an alternate block minimization algorithm on the dual problem. This idea was suggested to us by Antonin Chambolle and Jalal Fadili. 
+
+\begin{prop}\label{prop-conv-dykstra}
+	If condition~\eqref{eq-qualif} holds, then $\iter{\pi}$ converges to the solution of~\eqref{eq-generic-optim}.
+\end{prop}
+\begin{proof}
+The dual problem to~\eqref{eq-generic-optim} reads
+\eql{\label{eq-generic-optim-dual}
+	\umax{u_1,u_2} -\phi_1^*(u_1)-\phi_2^*(u_2)-\Ga^*( \al-u_1-u_2 ) - C(\xi)
+}
+where the constant is $C(\xi) \eqdef \dotp{\al}{\xi}-\Ga(\xi)$
+and where we defined $\al \eqdef \nabla\Ga(\xi)$.
+
+Duality means that under the domain qualification hypothesis~\eqref{eq-qualif}, the minimum value of~\eqref{eq-generic-optim} and the maximum value of~\eqref{eq-generic-optim-dual} are the same, and that the primal solution $\pi$ can be recovered from the dual one $(u_1,u_2)$ as
+\eql{\label{eq-primal-dual-bregman}
+	\pi = \nabla\Ga^*(-u_1-u_2). 
+}
+
+Starting from $(\itz{u_1},\itz{u_2})=(0,0)$, the alternate block optimization  on~\eqref{eq-generic-optim-dual} defines a sequence $(\iter{u_1},\iter{u_2})$, where, denoting $i=[\ell]_2$ (as defined in~\eqref{eq-modulo-2}) and $j=3-i \in \{1,2\}$, the update at iteration $\ell$ reads
+\eql{\label{eq-block-min-dykstra}
+	\iter{u_j} \eqdef \itA{u_j}
+	\qandq
+	\iter{u_i} \eqdef \uargmax{u_i} -\phi_i^*(u_i) - \Ga^*( q-u_i )
+}
+where we defined $q \eqdef \al-\itA{u_j}$.
+
+Since in~\eqref{eq-generic-optim-dual} the coupling term $\Ga^*( \al-u_1-u_2 )$ between $(u_1,u_2)$ is smooth, a classical result ensures that $(\iter{u_1},\iter{u_2})$ converges to the solution $(u_1^\star,u_2^\star)$ of~\eqref{eq-generic-optim-dual}, see for instance~\cite{Ciarlet-Book}.
+ 
+The primal problem associated to the dual maximization~\eqref{eq-block-min-dykstra} is
+\eql{\label{eq-block-min-dykstra-primal}
+	\umin{\pi_i} \Ga(\pi_i) - \dotp{q}{\pi_i} + \phi_i(\pi_i) = \BregDiv_\Ga( \pi_i|\nabla\Ga^*(q) ) + \phi_i(\pi_i) + C
+}
+where $C \in \RR$ is a constant.
+The primal-dual relationship between the solutions of~\eqref{eq-block-min-dykstra} and~\eqref{eq-block-min-dykstra-primal} reads 
+\eql{\label{eq-rel-primal-dual-proofdyk}
+	\pi_i = \nabla\Ga^*(q-u_i).
+}
+Equations~\eqref{eq-block-min-dykstra} and~\eqref{eq-rel-primal-dual-proofdyk} show that one has
+\eql{\label{eq-dyk-dual-iter}
+	\iter{u_i} = \al-\itA{u_j} - \nabla \Ga \circ \Prox_{\phi_i}^{\BregDiv_\Ga}\pa{
+		\nabla\Ga^*( \al - \itA{u_j} )
+	}.
+}
+
+We now perform the following change of variables $(\iter{u_1},\iter{u_2}) \rightarrow (\iter{\pi},\iter{v})$
+\eq{
+	\iter{\pi} = \choice{
+		\nabla\Ga^*( \al - \iter{u_1}-\itA{u_2} ) \qifq [\ell]_2=1, \\
+		\nabla\Ga^*( \al - \itA{u_1}-\iter{u_2} ) \qifq [\ell]_2=2, 
+	}
+	\qandq
+	\iter{v} = -\iter{u_{[\ell]_2}}.
+}
+One then verifies that these variables satisfy the relationship~\eqref{eq-it-bregman-2} and that~\eqref{eq-dyk-dual-iter} is equivalent to~\eqref{eq-it-bregman-1}. This shows by recursion that $(\iter{\pi},\iter{v})$ corresponds to Dykstra's variables. The convergence of $(\iter{u_1},\iter{u_2})$ toward $(u_1^\star,u_2^\star)$ implies that $\iter{\pi}$ converges to $\pi^\star \eqdef \nabla\Ga^*( \al - u_1^\star-u_2^\star )$ which is the solution of~\eqref{eq-generic-optim} thanks to the primal-dual relationship~\eqref{eq-primal-dual-bregman}.
+\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dykstra's Algorithm for $\KL$ divergence}
+
+We now consider the case where $\Ga=E$, $\BregDiv_\Ga=\KL$. To ease the notations, we make the change of variables $\iter{z} \eqdef \nabla \Ga^*(\iter{v})$. One has that $\nabla \Ga = \log$ and $\nabla \Ga^* = \exp$ and thus one has the iterates 
+\begin{align}
+	\itz{\pi} &\eqdef \xi \qandq	\itz{z}=z^{(-1)} \eqdef \ones \\
+	\label{eq-iter-dystra-1}
+	 \foralls \ell>0, \quad \iter{\pi} &\eqdef  \Prox^{\KL}_{\phi_{[\ell]_2}}( \itA{\pi} \odot \itAA{z} ), \\
+	\label{eq-iter-dystra-2}
+	\iter{z} &\eqdef \itAA{z} \odot \frac{ \itA{\pi} }{ \iter{\pi} }.
+\end{align}
+Recall here that $\odot$ and $\frac{\cdot}{\cdot}$ denotes entry-wise operations.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{KL Proximal Operator for JKO Stepping}
+\label{sec-kl-jko-algo}
+
+In order to be able to apply iterations~\eqref{eq-iter-dystra-1} and~\eqref{eq-iter-dystra-2}, one needs to be able to compute the proximal operator for the $\KL$ divergence of $\phi_1$ and $\phi_2$ for the functionals defined in~\eqref{eq-defn-KL-prbm}. 
+
+The following proposition shows that these proximal operators for the $\KL$ divergence can be indeed computed in closed form as long as one can compute in closed form the proximal operator of $f$ for the $\oKL$ divergence.
+
+\begin{proposition}\label{prop-projection}
+	For any $\pi \in \RR_+^{N \times N}$, for $(\phi_1,\phi_2)$ defined in~\eqref{eq-defn-KL-prbm}, one has 	
+	\eql{\label{eq-formula-prox-explicit}
+		\Prox_{\phi_1}^{\KL}(\pi) = \pi \diag\pa{ \frac{q}{\pi^T \ones} }
+		\qandq
+		\Prox_{\phi_2}^{\KL}(\pi) = \diag\pa{
+					\frac{ \Prox_{\frac{\tau}{\ga} f}^{\oKL}(\pi \ones) }{\pi\ones}
+				} \pi
+	}
+\end{proposition}
+\begin{proof}
+	The computation of $\Prox_{\phi_1}^{\KL}$ is obtained by combining~\eqref{eq-prox-calculus-lifting-transp} and~\eqref{eq-prox-calculus-indic} in the special case $M=1$.
+	%
+	The computation of $\Prox_{\phi_2}^{\KL}$ is obtained by applying~\eqref{eq-prox-calculus-lifting} in the special case of $M=1$ coupling.
+\end{proof}
+
+
+%%%%
+\subsection{Dykstra Algorithm for JKO Stepping}
+\label{subsec-dykstra-jko}
+
+Writing down the first order optimality conditions with respect to $\pi$ for problem~\eqref{eq-prox-step} shows that there exists $(a,b) \in (\RR_+^N)^2$ such that the optimal $\pi$ satisfies $\pi = \diag(a)\xi\diag(b)$. It means that, just as for the classical entropic regularization of optimal transport~\cite{CuturiSinkhorn}, the optimal coupling $\pi$ is a diagonal scaling of the initial Gibbs kernel $\xi$. This remark actually not only holds for the optimal $\pi$, but it also holds for each iterate $\iter{\pi}$ constructed by iterations~\eqref{eq-iter-dystra-1} and~\eqref{eq-iter-dystra-2} that defines $(\iter{\pi}, \iter{z}) \in (\RR_+^N)^2$.
+
+The following proposition makes use of this remark and shows how to actually implement numerically iterations~\eqref{eq-iter-dystra-1} and \eqref{eq-iter-dystra-2} of the method in a fast and parallel way using only matrix-vector multiplications against the kernel $\xi$.
+
+
+\newcommand{\myprox}{\ProxKL}
+\renewcommand{\myprox}{\text{Prox}}
+
+\begin{proposition}\label{prop-implementation-scaling}
+The iterates of Dykstra's algorithm can be written as 
+\eql{\label{eq-factor-format}
+	\iter{\pi} = \diag(\iter{a}) \xi \diag(\iter{b})
+	\qandq
+	\iter{z} = \iter{u} v^{(\ell),T}
+}
+(i.e. $\iter{z}$ is a rank-1 matrix) where	$(\iter{a},\iter{b},\iter{u},\iter{v}) \in (\RR_{+,*}^N)^4$,  
+with the initialization 
+\eql{\label{eq-init-factor}
+	\itz{a}=\itz{b}=\itz{u}=\itz{v}=\ones.
+}
+For odd $\ell$, the update of $(\iter{a},\iter{b})$ reads
+\eql{\label{eq-update-formula-1}
+	\iter{a} = \itA{a} \odot \itAA{u}
+	\qandq
+	\iter{b} = \frac{q}{\xi^T(\iter{a})}, 	
+}
+while for even $\ell$ it reads
+\eql{\label{eq-update-formula-2}
+	\iter{b} = \itA{b} \odot \itAA{v}
+	\qandq 
+	\iter{a} = \frac{
+			\iter{p}
+		}{\xi(\iter{b})}, 
+}
+where we defined 
+\eql{\label{eq-defn-pell}
+	\iter{p} \eqdef \Prox_{\frac{\tau}{\ga} f}^{\KL}( \itA{a} \odot \itAA{u} \odot \xi(\iter{b})).
+}
+The update of $(\iter{u},\iter{v})$ is always
+\eql{\label{eq-update-formula-3}
+	\iter{u}  = 	\itAA{u} \odot \frac{ \itA{a} }{ \iter{a} }
+	\qandq
+	\iter{v} = \itAA{v} \odot \frac{ \itA{b} }{ \iter{b} }.
+}
+\end{proposition}
+\begin{proof}
+	One verifies that the format~\eqref{eq-factor-format} holds for the initialization~\eqref{eq-init-factor}
+	and that it is maintained by the update formulas~\eqref{eq-formula-prox-explicit}. Formulas~\eqref{eq-update-formula-1}, \eqref{eq-update-formula-2} and \eqref{eq-update-formula-3} are obtained by identifying the different terms when plugging the format~\eqref{eq-factor-format} into the update formulas~\eqref{eq-formula-prox-explicit}.
+\end{proof}
+
+The Pseudo-code~\ref{table-pseudo-code} recaps all the successive steps needed to compute the full JKO flow~\eqref{eq-smooth-jko} with entropic smoothing. 
+%
+This resolution thus only requires to iteratively apply, until a suitable convergence criterion is met, the update rules~\eqref{eq-update-formula-1}, \eqref{eq-update-formula-2} and~\eqref{eq-update-formula-3}. In practice, we found that monitoring the violation of the constraint $\Cc_q$ to be both a simple and efficient way to enforce a stopping criterion This criterion allows furthermore to precisely enforce mass conservation and positivity, i.e. $p_t \in \Si_N$ stays normalized to unit mass, which is important in many practical cases. 
+
+The crux of the method, that is extensively used in the numerical section (see in particular Section~\ref{subsec-kernel-comp}) is that one only needs to know how to apply the kernel $\xi$ and its adjoint $\xi^T$ (which are in most practical situations equals), which can be achieved either exactly or approximately in fast and highly parallelizable manner. 
+
+
+\begin{listing}[h!]
+	\begin{enumerate}
+		\item Initialize $t=0$ and $p_{t=0}$. 
+		\item Initialize $\ell=1$ and set
+		\eq{
+			\itz{a}=\itz{b}=\itz{u}=\itz{v}=\ones.
+		} 
+		\item Setting $q \eqdef p_t$, update $(a^{(\ell)},b^{(\ell)})$ using~\eqref{eq-update-formula-1} is $\ell$
+			is odd, and using~\eqref{eq-update-formula-2} if $\ell$ is even.		
+		\item Update $(u^{(\ell)},v^{(\ell)})$ using~\eqref{eq-update-formula-3}.
+		\item If $\norm{\iter{b} \odot \xi^T(\iter{a}) - q} > \epsilon$ or if $\ell$ is odd, 
+			set $\ell \leftarrow \ell+1$
+			and go back to step 3.
+		\item Set $p_{t+1} = \iter{p}$ as defined by~\eqref{eq-defn-pell}, $t \leftarrow t+1$ and go back to step 2.
+	\end{enumerate}
+	\caption{% 
+		Iterations computing the full JKO flow. 
+		The inputs are the initial density $p_{t=0}$, the parameters $(\ga,\tau)$ and the tolerance $\epsilon$.
+		The outputs are the iterates $(p_t)_{t > 0}$.
+	}
+   \label{table-pseudo-code}
+\end{listing}

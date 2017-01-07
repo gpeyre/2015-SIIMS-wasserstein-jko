@@ -1,0 +1,3863 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  7 JAN 2017 20:38
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**EntropicJKO.tex
+(./EntropicJKO.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(./siamltex.cls
+Document Class: siamltex 1996/10/11 v1.2 LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/leqno.clo
+File: leqno.clo 2015/03/31 v1.1i Standard LaTeX option (left equation numbers)
+) (./siam10.clo
+File: siam10.clo 1994/10/01 v1.0 SIAM LaTeX file (size option)
+)
+\c@section=\count79
+\c@subsection=\count80
+\c@subsubsection=\count81
+\c@paragraph=\count82
+\c@subparagraph=\count83
+\c@rmnum=\count84
+\c@muni=\count85
+\c@theorem=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen103
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count91
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `final' set `true' on input line 4322.
+Package hyperref Info: Hyper figures OFF on input line 4446.
+Package hyperref Info: Link nesting OFF on input line 4451.
+Package hyperref Info: Hyper index ON on input line 4454.
+Package hyperref Info: Plain pages OFF on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4691.
+\c@Hy@tempcnt=\count92
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5044.
+\XeTeXLinkMargin=\dimen104
+\Fld@menulength=\count93
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
+Package hyperref Info: Hyper figures OFF on input line 6298.
+Package hyperref Info: Link nesting OFF on input line 6303.
+Package hyperref Info: Hyper index ON on input line 6306.
+Package hyperref Info: backreferencing OFF on input line 6313.
+Package hyperref Info: Link coloring OFF on input line 6318.
+Package hyperref Info: Link coloring with OCG OFF on input line 6323.
+Package hyperref Info: PDF/A mode OFF on input line 6328.
+LaTeX Info: Redefining \ref on input line 6368.
+LaTeX Info: Redefining \pageref on input line 6372.
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+)) (./mystyle.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen107
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count99
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count100
+\leftroot@=\count101
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count102
+\DOTSCASE@=\count103
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
+\dotsspace@=\muskip11
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks18
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks19
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks20
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count111
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip47
+\subfigcapskip=\skip48
+\subfigcaptopadj=\dimen118
+\subfigbottomskip=\skip49
+\subfigcapmargin=\dimen119
+\subfiglabelskip=\skip50
+\c@subfigure=\count112
+\c@lofdepth=\count113
+\c@subtable=\count114
+\c@lotdepth=\count115
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip51
+\subfig@bottom=\skip52
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen120
+\extrarowheight=\dimen121
+\NC@list=\toks22
+\extratabsurround=\skip53
+\backup@length=\skip54
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen122
+\TX@old@table=\dimen123
+\TX@old@col=\dimen124
+\TX@target=\dimen125
+\TX@delta=\dimen126
+\TX@cols=\count116
+\TX@ftn=\toks23
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+\c@thm=\count117
+\c@prop=\count118
+\c@defn=\count119
+\c@cor=\count120
+\c@lem=\count121
+\c@rem=\count122
+\c@exmp=\count123
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count124
+\float@exts=\toks24
+\float@box=\box28
+\@float@everytoks=\toks25
+\@floatcapt=\box29
+)
+\@float@every@table=\toks26
+\@float@every@listing=\toks27
+\c@listing=\count125
+\restsubwidth=\skip55
+\restsubheight=\skip56
+\restsubmoreheight=\skip57
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen127
+))
+
+Package hyperref Warning: Option `bookmarks' has already been used,
+(hyperref)                setting the option has no effect on input line 32.
+
+
+Package hyperref Warning: Option `backref' has already been used,
+(hyperref)                setting the option has no effect on input line 32.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 32.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
+(./EntropicJKO.aux)
+\openout1 = `EntropicJKO.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring ON on input line 41.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count126
+)
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
+
+(./EntropicJKO.out) (./EntropicJKO.out)
+\@outlinefile=\write3
+\openout3 = `EntropicJKO.out'.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen128
+\scratchbox=\box31
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen129
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks29
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(./sections/sec-abstract.tex) (./sections/sec-intro.tex [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \vbox (badness 3199) has occurred while \output is active []
+
+ [3]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 102.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [4])
+(./sections/sec-entropic-jko.tex [5] [6]) (./sections/sec-dykstra.tex [7]
+[8] [9] [10]
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 280.
+) (./sections/sec-numerics.tex [11] [12]
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 8365 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-19 17:59:39
+(epstopdf)                    size: 2603 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-1-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-1.eps>
+(epstopdf)             \includegraphics on input line 85.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa10/bump-kappa10-1-eps-converted-to.pdf, id=406, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa10/bump-kappa10-1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa10/bump-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-1-eps-converted-to.
+pdf used on input line 85.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-2-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:50
+(epstopdf)                    size: 6869 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-2-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-2.eps>
+(epstopdf)             \includegraphics on input line 86.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa10/bump-kappa10-2-eps-converted-to.pdf, id=407, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa10/bump-kappa10-2-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa10/bump-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-2-eps-converted-to.
+pdf used on input line 86.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-5-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:51
+(epstopdf)                    size: 4071 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-5-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-5.eps>
+(epstopdf)             \includegraphics on input line 87.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa10/bump-kappa10-5-eps-converted-to.pdf, id=408, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa10/bump-kappa10-5-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa10/bump-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-5-eps-converted-to.
+pdf used on input line 87.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-10.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-10-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:52
+(epstopdf)                    size: 4193 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-10-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-10.eps>
+(epstopdf)             \includegraphics on input line 88.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa10/bump-kappa10-10-eps-converted-to.pdf, id=409, 99.37125pt
+ x 99.37125pt>
+File: ./images/bump-kappa10/bump-kappa10-10-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa10/bump-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-10-eps-converted-to
+.pdf used on input line 88.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-20.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-20-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:52
+(epstopdf)                    size: 3617 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-20-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-20.eps>
+(epstopdf)             \includegraphics on input line 89.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa10/bump-kappa10-20-eps-converted-to.pdf, id=410, 99.37125pt
+ x 99.37125pt>
+File: ./images/bump-kappa10/bump-kappa10-20-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa10/bump-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-20-eps-converted-to
+.pdf used on input line 89.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa20/bump-kappa20-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 8365 bytes
+(epstopdf)             Output file: <./images/bump-kappa20/bump-kappa20-1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:53
+(epstopdf)                    size: 2603 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa20/bump
+-kappa20-1-eps-converted-to.pdf ./images/bump-kappa20/bump-kappa20-1.eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa20/bump-kappa20-1-eps-converted-to.pdf, id=411, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa20/bump-kappa20-1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa20/bump-kappa20-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa20/bump-kappa20-1-eps-converted-to.
+pdf used on input line 90.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa20/bump-kappa20-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa20/bump-kappa20-2-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:54
+(epstopdf)                    size: 6060 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa20/bump
+-kappa20-2-eps-converted-to.pdf ./images/bump-kappa20/bump-kappa20-2.eps>
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa20/bump-kappa20-2-eps-converted-to.pdf, id=412, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa20/bump-kappa20-2-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa20/bump-kappa20-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa20/bump-kappa20-2-eps-converted-to.
+pdf used on input line 91.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa20/bump-kappa20-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa20/bump-kappa20-5-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:55
+(epstopdf)                    size: 4878 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa20/bump
+-kappa20-5-eps-converted-to.pdf ./images/bump-kappa20/bump-kappa20-5.eps>
+(epstopdf)             \includegraphics on input line 92.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa20/bump-kappa20-5-eps-converted-to.pdf, id=413, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa20/bump-kappa20-5-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa20/bump-kappa20-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa20/bump-kappa20-5-eps-converted-to.
+pdf used on input line 92.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa20/bump-kappa20-10.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa20/bump-kappa20-10-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:55
+(epstopdf)                    size: 4210 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa20/bump
+-kappa20-10-eps-converted-to.pdf ./images/bump-kappa20/bump-kappa20-10.eps>
+(epstopdf)             \includegraphics on input line 93.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa20/bump-kappa20-10-eps-converted-to.pdf, id=414, 99.37125pt
+ x 99.37125pt>
+File: ./images/bump-kappa20/bump-kappa20-10-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa20/bump-kappa20-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa20/bump-kappa20-10-eps-converted-to
+.pdf used on input line 93.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa20/bump-kappa20-20.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa20/bump-kappa20-20-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:56
+(epstopdf)                    size: 3508 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa20/bump
+-kappa20-20-eps-converted-to.pdf ./images/bump-kappa20/bump-kappa20-20.eps>
+(epstopdf)             \includegraphics on input line 94.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa20/bump-kappa20-20-eps-converted-to.pdf, id=415, 99.37125pt
+ x 99.37125pt>
+File: ./images/bump-kappa20/bump-kappa20-20-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa20/bump-kappa20-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa20/bump-kappa20-20-eps-converted-to
+.pdf used on input line 94.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa40/bump-kappa40-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 8365 bytes
+(epstopdf)             Output file: <./images/bump-kappa40/bump-kappa40-1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:57
+(epstopdf)                    size: 2603 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa40/bump
+-kappa40-1-eps-converted-to.pdf ./images/bump-kappa40/bump-kappa40-1.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa40/bump-kappa40-1-eps-converted-to.pdf, id=416, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa40/bump-kappa40-1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa40/bump-kappa40-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa40/bump-kappa40-1-eps-converted-to.
+pdf used on input line 95.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa40/bump-kappa40-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa40/bump-kappa40-2-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:58
+(epstopdf)                    size: 6018 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa40/bump
+-kappa40-2-eps-converted-to.pdf ./images/bump-kappa40/bump-kappa40-2.eps>
+(epstopdf)             \includegraphics on input line 96.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa40/bump-kappa40-2-eps-converted-to.pdf, id=417, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa40/bump-kappa40-2-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa40/bump-kappa40-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa40/bump-kappa40-2-eps-converted-to.
+pdf used on input line 96.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa40/bump-kappa40-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa40/bump-kappa40-5-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:59
+(epstopdf)                    size: 4770 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa40/bump
+-kappa40-5-eps-converted-to.pdf ./images/bump-kappa40/bump-kappa40-5.eps>
+(epstopdf)             \includegraphics on input line 97.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa40/bump-kappa40-5-eps-converted-to.pdf, id=418, 99.37125pt 
+x 99.37125pt>
+File: ./images/bump-kappa40/bump-kappa40-5-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa40/bump-kappa40-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa40/bump-kappa40-5-eps-converted-to.
+pdf used on input line 97.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa40/bump-kappa40-10.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa40/bump-kappa40-10-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:59
+(epstopdf)                    size: 4224 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa40/bump
+-kappa40-10-eps-converted-to.pdf ./images/bump-kappa40/bump-kappa40-10.eps>
+(epstopdf)             \includegraphics on input line 98.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa40/bump-kappa40-10-eps-converted-to.pdf, id=419, 99.37125pt
+ x 99.37125pt>
+File: ./images/bump-kappa40/bump-kappa40-10-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa40/bump-kappa40-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa40/bump-kappa40-10-eps-converted-to
+.pdf used on input line 98.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/bump-kappa40/bump-kappa40-20.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa40/bump-kappa40-20-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:00
+(epstopdf)                    size: 3450 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa40/bump
+-kappa40-20-eps-converted-to.pdf ./images/bump-kappa40/bump-kappa40-20.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/bump-kappa40/bump-kappa40-20-eps-converted-to.pdf, id=420, 99.37125pt
+ x 99.37125pt>
+File: ./images/bump-kappa40/bump-kappa40-20-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa40/bump-kappa40-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa40/bump-kappa40-20-eps-converted-to
+.pdf used on input line 99.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13]
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 8365 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-19 17:59:39
+(epstopdf)                    size: 2603 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-1-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-1.eps>
+(epstopdf)             \includegraphics on input line 141.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/bump-kappa10/bump-kappa10-1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/bump-kappa10/bump-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-1-eps-converted-to.
+pdf used on input line 141.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-2-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:50
+(epstopdf)                    size: 6869 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-2-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-2.eps>
+(epstopdf)             \includegraphics on input line 142.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/bump-kappa10/bump-kappa10-2-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ./images/bump-kappa10/bump-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-2-eps-converted-to.
+pdf used on input line 142.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-5-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:51
+(epstopdf)                    size: 4071 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-5-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-5.eps>
+(epstopdf)             \includegraphics on input line 143.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/bump-kappa10/bump-kappa10-5-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ./images/bump-kappa10/bump-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-5-eps-converted-to.
+pdf used on input line 143.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-10.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-10-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:52
+(epstopdf)                    size: 4193 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-10-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-10.eps>
+(epstopdf)             \includegraphics on input line 144.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/bump-kappa10/bump-kappa10-10-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa10/bump-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-10-eps-converted-to
+.pdf used on input line 144.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/bump-kappa10/bump-kappa10-20.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/bump-kappa10/bump-kappa10-20-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:48:52
+(epstopdf)                    size: 3617 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/bump-kappa10/bump
+-kappa10-20-eps-converted-to.pdf ./images/bump-kappa10/bump-kappa10-20.eps>
+(epstopdf)             \includegraphics on input line 145.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/bump-kappa10/bump-kappa10-20-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/bump-kappa10/bump-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/bump-kappa10/bump-kappa10-20-eps-converted-to
+.pdf used on input line 145.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/potentials/bump-potential.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26044 bytes
+(epstopdf)             Output file: <./images/potentials/bump-potential-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:01
+(epstopdf)                    size: 9040 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/potentials/bump-p
+otential-eps-converted-to.pdf ./images/potentials/bump-potential.eps>
+(epstopdf)             \includegraphics on input line 146.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/potentials/bump-potential-eps-converted-to.pdf, id=440, 100.375pt x 1
+00.375pt>
+File: ./images/potentials/bump-potential-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./images/potentials/bump-potential-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/potentials/bump-potential-eps-converted-to.pd
+f used on input line 146.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/disk-kappa10/disk-kappa10-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/disk-kappa10/disk-kappa10-1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:02
+(epstopdf)                    size: 3689 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk-kappa10/disk
+-kappa10-1-eps-converted-to.pdf ./images/disk-kappa10/disk-kappa10-1.eps>
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk-kappa10/disk-kappa10-1-eps-converted-to.pdf, id=441, 99.37125pt 
+x 99.37125pt>
+File: ./images/disk-kappa10/disk-kappa10-1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/disk-kappa10/disk-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk-kappa10/disk-kappa10-1-eps-converted-to.
+pdf used on input line 147.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk-kappa10/disk-kappa10-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/disk-kappa10/disk-kappa10-2-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:03
+(epstopdf)                    size: 4662 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk-kappa10/disk
+-kappa10-2-eps-converted-to.pdf ./images/disk-kappa10/disk-kappa10-2.eps>
+(epstopdf)             \includegraphics on input line 148.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk-kappa10/disk-kappa10-2-eps-converted-to.pdf, id=442, 99.37125pt 
+x 99.37125pt>
+File: ./images/disk-kappa10/disk-kappa10-2-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/disk-kappa10/disk-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk-kappa10/disk-kappa10-2-eps-converted-to.
+pdf used on input line 148.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk-kappa10/disk-kappa10-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25633 bytes
+(epstopdf)             Output file: <./images/disk-kappa10/disk-kappa10-5-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:04
+(epstopdf)                    size: 4603 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk-kappa10/disk
+-kappa10-5-eps-converted-to.pdf ./images/disk-kappa10/disk-kappa10-5.eps>
+(epstopdf)             \includegraphics on input line 149.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk-kappa10/disk-kappa10-5-eps-converted-to.pdf, id=443, 99.37125pt 
+x 99.37125pt>
+File: ./images/disk-kappa10/disk-kappa10-5-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/disk-kappa10/disk-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk-kappa10/disk-kappa10-5-eps-converted-to.
+pdf used on input line 149.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk-kappa10/disk-kappa10-10.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/disk-kappa10/disk-kappa10-10-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:05
+(epstopdf)                    size: 4505 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk-kappa10/disk
+-kappa10-10-eps-converted-to.pdf ./images/disk-kappa10/disk-kappa10-10.eps>
+(epstopdf)             \includegraphics on input line 150.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk-kappa10/disk-kappa10-10-eps-converted-to.pdf, id=444, 99.37125pt
+ x 99.37125pt>
+File: ./images/disk-kappa10/disk-kappa10-10-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/disk-kappa10/disk-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk-kappa10/disk-kappa10-10-eps-converted-to
+.pdf used on input line 150.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk-kappa10/disk-kappa10-20.eps>
+
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25634 bytes
+(epstopdf)             Output file: <./images/disk-kappa10/disk-kappa10-20-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:05
+(epstopdf)                    size: 3652 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk-kappa10/disk
+-kappa10-20-eps-converted-to.pdf ./images/disk-kappa10/disk-kappa10-20.eps>
+(epstopdf)             \includegraphics on input line 151.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk-kappa10/disk-kappa10-20-eps-converted-to.pdf, id=445, 99.37125pt
+ x 99.37125pt>
+File: ./images/disk-kappa10/disk-kappa10-20-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./images/disk-kappa10/disk-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk-kappa10/disk-kappa10-20-eps-converted-to
+.pdf used on input line 151.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/potentials/disk-potential.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26044 bytes
+(epstopdf)             Output file: <./images/potentials/disk-potential-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:06
+(epstopdf)                    size: 8501 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/potentials/disk-p
+otential-eps-converted-to.pdf ./images/potentials/disk-potential.eps>
+(epstopdf)             \includegraphics on input line 152.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/potentials/disk-potential-eps-converted-to.pdf, id=446, 100.375pt x 1
+00.375pt>
+File: ./images/potentials/disk-potential-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./images/potentials/disk-potential-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/potentials/disk-potential-eps-converted-to.pd
+f used on input line 152.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/disk1-kappa10/disk1-kappa10-1.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25635 bytes
+(epstopdf)             Output file: <./images/disk1-kappa10/disk1-kappa10-1-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:07
+(epstopdf)                    size: 3693 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk1-kappa10/dis
+k1-kappa10-1-eps-converted-to.pdf ./images/disk1-kappa10/disk1-kappa10-1.eps>
+(epstopdf)             \includegraphics on input line 153.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk1-kappa10/disk1-kappa10-1-eps-converted-to.pdf, id=447, 99.37125p
+t x 99.37125pt>
+File: ./images/disk1-kappa10/disk1-kappa10-1-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/disk1-kappa10/disk1-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk1-kappa10/disk1-kappa10-1-eps-converted-t
+o.pdf used on input line 153.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk1-kappa10/disk1-kappa10-2.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25635 bytes
+(epstopdf)             Output file: <./images/disk1-kappa10/disk1-kappa10-2-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:08
+(epstopdf)                    size: 3998 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk1-kappa10/dis
+k1-kappa10-2-eps-converted-to.pdf ./images/disk1-kappa10/disk1-kappa10-2.eps>
+(epstopdf)             \includegraphics on input line 154.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk1-kappa10/disk1-kappa10-2-eps-converted-to.pdf, id=448, 99.37125p
+t x 99.37125pt>
+File: ./images/disk1-kappa10/disk1-kappa10-2-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/disk1-kappa10/disk1-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk1-kappa10/disk1-kappa10-2-eps-converted-t
+o.pdf used on input line 154.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk1-kappa10/disk1-kappa10-5.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25635 bytes
+(epstopdf)             Output file: <./images/disk1-kappa10/disk1-kappa10-5-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:09
+(epstopdf)                    size: 4308 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk1-kappa10/dis
+k1-kappa10-5-eps-converted-to.pdf ./images/disk1-kappa10/disk1-kappa10-5.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk1-kappa10/disk1-kappa10-5-eps-converted-to.pdf, id=449, 99.37125p
+t x 99.37125pt>
+File: ./images/disk1-kappa10/disk1-kappa10-5-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/disk1-kappa10/disk1-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk1-kappa10/disk1-kappa10-5-eps-converted-t
+o.pdf used on input line 155.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk1-kappa10/disk1-kappa10-10.ep
+s>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25636 bytes
+(epstopdf)             Output file: <./images/disk1-kappa10/disk1-kappa10-10-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:10
+(epstopdf)                    size: 4853 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk1-kappa10/dis
+k1-kappa10-10-eps-converted-to.pdf ./images/disk1-kappa10/disk1-kappa10-10.eps>
+
+(epstopdf)             \includegraphics on input line 156.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk1-kappa10/disk1-kappa10-10-eps-converted-to.pdf, id=450, 99.37125
+pt x 99.37125pt>
+File: ./images/disk1-kappa10/disk1-kappa10-10-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use ./images/disk1-kappa10/disk1-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk1-kappa10/disk1-kappa10-10-eps-converted-
+to.pdf used on input line 156.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/disk1-kappa10/disk1-kappa10-20.ep
+s>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25636 bytes
+(epstopdf)             Output file: <./images/disk1-kappa10/disk1-kappa10-20-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:10
+(epstopdf)                    size: 4425 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/disk1-kappa10/dis
+k1-kappa10-20-eps-converted-to.pdf ./images/disk1-kappa10/disk1-kappa10-20.eps>
+
+(epstopdf)             \includegraphics on input line 157.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/disk1-kappa10/disk1-kappa10-20-eps-converted-to.pdf, id=451, 99.37125
+pt x 99.37125pt>
+File: ./images/disk1-kappa10/disk1-kappa10-20-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use ./images/disk1-kappa10/disk1-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/disk1-kappa10/disk1-kappa10-20-eps-converted-
+to.pdf used on input line 157.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/potentials/disk1-potential.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26045 bytes
+(epstopdf)             Output file: <./images/potentials/disk1-potential-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:11
+(epstopdf)                    size: 3100 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/potentials/disk1-
+potential-eps-converted-to.pdf ./images/potentials/disk1-potential.eps>
+(epstopdf)             \includegraphics on input line 158.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/potentials/disk1-potential-eps-converted-to.pdf, id=452, 100.375pt x 
+100.375pt>
+File: ./images/potentials/disk1-potential-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./images/potentials/disk1-potential-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/potentials/disk1-potential-eps-converted-to.p
+df used on input line 158.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/holes-kappa10/holes-kappa10-1.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25635 bytes
+(epstopdf)             Output file: <./images/holes-kappa10/holes-kappa10-1-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:12
+(epstopdf)                    size: 4418 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/holes-kappa10/hol
+es-kappa10-1-eps-converted-to.pdf ./images/holes-kappa10/holes-kappa10-1.eps>
+(epstopdf)             \includegraphics on input line 159.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/holes-kappa10/holes-kappa10-1-eps-converted-to.pdf, id=453, 99.37125p
+t x 99.37125pt>
+File: ./images/holes-kappa10/holes-kappa10-1-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/holes-kappa10/holes-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/holes-kappa10/holes-kappa10-1-eps-converted-t
+o.pdf used on input line 159.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/holes-kappa10/holes-kappa10-2.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25635 bytes
+(epstopdf)             Output file: <./images/holes-kappa10/holes-kappa10-2-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:13
+(epstopdf)                    size: 4861 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/holes-kappa10/hol
+es-kappa10-2-eps-converted-to.pdf ./images/holes-kappa10/holes-kappa10-2.eps>
+(epstopdf)             \includegraphics on input line 160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/holes-kappa10/holes-kappa10-2-eps-converted-to.pdf, id=454, 99.37125p
+t x 99.37125pt>
+File: ./images/holes-kappa10/holes-kappa10-2-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/holes-kappa10/holes-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/holes-kappa10/holes-kappa10-2-eps-converted-t
+o.pdf used on input line 160.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/holes-kappa10/holes-kappa10-5.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25635 bytes
+(epstopdf)             Output file: <./images/holes-kappa10/holes-kappa10-5-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:14
+(epstopdf)                    size: 4688 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/holes-kappa10/hol
+es-kappa10-5-eps-converted-to.pdf ./images/holes-kappa10/holes-kappa10-5.eps>
+(epstopdf)             \includegraphics on input line 161.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/holes-kappa10/holes-kappa10-5-eps-converted-to.pdf, id=455, 99.37125p
+t x 99.37125pt>
+File: ./images/holes-kappa10/holes-kappa10-5-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/holes-kappa10/holes-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/holes-kappa10/holes-kappa10-5-eps-converted-t
+o.pdf used on input line 161.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/holes-kappa10/holes-kappa10-10.ep
+s>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25636 bytes
+(epstopdf)             Output file: <./images/holes-kappa10/holes-kappa10-10-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:14
+(epstopdf)                    size: 4677 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/holes-kappa10/hol
+es-kappa10-10-eps-converted-to.pdf ./images/holes-kappa10/holes-kappa10-10.eps>
+
+(epstopdf)             \includegraphics on input line 162.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/holes-kappa10/holes-kappa10-10-eps-converted-to.pdf, id=456, 99.37125
+pt x 99.37125pt>
+File: ./images/holes-kappa10/holes-kappa10-10-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use ./images/holes-kappa10/holes-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/holes-kappa10/holes-kappa10-10-eps-converted-
+to.pdf used on input line 162.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/holes-kappa10/holes-kappa10-20.ep
+s>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25636 bytes
+(epstopdf)             Output file: <./images/holes-kappa10/holes-kappa10-20-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:15
+(epstopdf)                    size: 4247 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/holes-kappa10/hol
+es-kappa10-20-eps-converted-to.pdf ./images/holes-kappa10/holes-kappa10-20.eps>
+
+(epstopdf)             \includegraphics on input line 163.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/holes-kappa10/holes-kappa10-20-eps-converted-to.pdf, id=457, 99.37125
+pt x 99.37125pt>
+File: ./images/holes-kappa10/holes-kappa10-20-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use ./images/holes-kappa10/holes-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/holes-kappa10/holes-kappa10-20-eps-converted-
+to.pdf used on input line 163.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/potentials/holes-potential.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26045 bytes
+(epstopdf)             Output file: <./images/potentials/holes-potential-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:16
+(epstopdf)                    size: 8890 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/potentials/holes-
+potential-eps-converted-to.pdf ./images/potentials/holes-potential.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/potentials/holes-potential-eps-converted-to.pdf, id=458, 100.375pt x 
+100.375pt>
+File: ./images/potentials/holes-potential-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./images/potentials/holes-potential-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/potentials/holes-potential-eps-converted-to.p
+df used on input line 164.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25641 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:17
+(epstopdf)                    size: 4425 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-1-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kapp
+a10-1.eps>
+(epstopdf)             \includegraphics on input line 165.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-kappa10/tworooms-kappa10-1-eps-converted-to.pdf, id=459, 99.
+37125pt x 99.37125pt>
+File: ./images/tworooms-kappa10/tworooms-kappa10-1-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-1-eps-conve
+rted-to.pdf used on input line 165.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25641 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:18
+(epstopdf)                    size: 4793 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-2-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kapp
+a10-2.eps>
+(epstopdf)             \includegraphics on input line 166.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-kappa10/tworooms-kappa10-2-eps-converted-to.pdf, id=460, 99.
+37125pt x 99.37125pt>
+File: ./images/tworooms-kappa10/tworooms-kappa10-2-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-2-eps-conve
+rted-to.pdf used on input line 166.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25641 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:18
+(epstopdf)                    size: 4598 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-5-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kapp
+a10-5.eps>
+(epstopdf)             \includegraphics on input line 167.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-kappa10/tworooms-kappa10-5-eps-converted-to.pdf, id=461, 99.
+37125pt x 99.37125pt>
+File: ./images/tworooms-kappa10/tworooms-kappa10-5-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-5-eps-conve
+rted-to.pdf used on input line 167.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25642 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:19
+(epstopdf)                    size: 4570 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-10-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kap
+pa10-10.eps>
+(epstopdf)             \includegraphics on input line 168.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-kappa10/tworooms-kappa10-10-eps-converted-to.pdf, id=462, 99
+.37125pt x 99.37125pt>
+File: ./images/tworooms-kappa10/tworooms-kappa10-10-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-10-eps-conv
+erted-to.pdf used on input line 168.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25642 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:20
+(epstopdf)                    size: 3822 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-20-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kap
+pa10-20.eps>
+(epstopdf)             \includegraphics on input line 169.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-kappa10/tworooms-kappa10-20-eps-converted-to.pdf, id=463, 99
+.37125pt x 99.37125pt>
+File: ./images/tworooms-kappa10/tworooms-kappa10-20-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-20-eps-conv
+erted-to.pdf used on input line 169.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/potentials/tworooms-potential.eps
+>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26048 bytes
+(epstopdf)             Output file: <./images/potentials/tworooms-potential-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:21
+(epstopdf)                    size: 8001 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/potentials/tworoo
+ms-potential-eps-converted-to.pdf ./images/potentials/tworooms-potential.eps>
+(epstopdf)             \includegraphics on input line 170.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/potentials/tworooms-potential-eps-converted-to.pdf, id=464, 100.375pt
+ x 100.375pt>
+File: ./images/potentials/tworooms-potential-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use ./images/potentials/tworooms-potential-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/potentials/tworooms-potential-eps-converted-t
+o.pdf used on input line 170.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <./images/potentials/moomoo-potential.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 3577185 bytes
+(epstopdf)             Output file: <./images/potentials/moomoo-potential-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:22
+(epstopdf)                    size: 163375 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/potentials/moomoo
+-potential-eps-converted-to.pdf ./images/potentials/moomoo-potential.eps>
+(epstopdf)             \includegraphics on input line 189.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/potentials/moomoo-potential-eps-converted-to.pdf, id=467, 314.17375pt
+ x 433.62pt>
+File: ./images/potentials/moomoo-potential-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./images/potentials/moomoo-potential-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/potentials/moomoo-potential-eps-converted-to.
+pdf used on input line 189.
+(pdftex.def)             Requested size: 70.37381pt x 97.1236pt.
+
+Overfull \vbox (76.72363pt too high) detected at line 189
+ []
+
+Package epstopdf Info: Source file: <./images/moomoo-kappa10/moomoo-kappa10-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386793 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa10/moomoo-kappa10-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:23
+(epstopdf)                    size: 20040 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa10/mo
+omoo-kappa10-1-eps-converted-to.pdf ./images/moomoo-kappa10/moomoo-kappa10-1.ep
+s>
+(epstopdf)             \includegraphics on input line 190.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa10/moomoo-kappa10-1-eps-converted-to.pdf, id=468, 220.825
+pt x 286.06876pt>
+File: ./images/moomoo-kappa10/moomoo-kappa10-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/moomoo-kappa10/moomoo-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa10/moomoo-kappa10-1-eps-converted
+-to.pdf used on input line 190.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa10/moomoo-kappa10-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386793 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa10/moomoo-kappa10-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:24
+(epstopdf)                    size: 20065 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa10/mo
+omoo-kappa10-5-eps-converted-to.pdf ./images/moomoo-kappa10/moomoo-kappa10-5.ep
+s>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa10/moomoo-kappa10-5-eps-converted-to.pdf, id=469, 220.825
+pt x 286.06876pt>
+File: ./images/moomoo-kappa10/moomoo-kappa10-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/moomoo-kappa10/moomoo-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa10/moomoo-kappa10-5-eps-converted
+-to.pdf used on input line 191.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa10/moomoo-kappa10-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386794 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa10/moomoo-kappa10-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:24
+(epstopdf)                    size: 20152 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa10/mo
+omoo-kappa10-10-eps-converted-to.pdf ./images/moomoo-kappa10/moomoo-kappa10-10.
+eps>
+(epstopdf)             \includegraphics on input line 192.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa10/moomoo-kappa10-10-eps-converted-to.pdf, id=470, 220.82
+5pt x 286.06876pt>
+File: ./images/moomoo-kappa10/moomoo-kappa10-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/moomoo-kappa10/moomoo-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa10/moomoo-kappa10-10-eps-converte
+d-to.pdf used on input line 192.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa10/moomoo-kappa10-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386794 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa10/moomoo-kappa10-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:25
+(epstopdf)                    size: 18980 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa10/mo
+omoo-kappa10-20-eps-converted-to.pdf ./images/moomoo-kappa10/moomoo-kappa10-20.
+eps>
+(epstopdf)             \includegraphics on input line 193.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa10/moomoo-kappa10-20-eps-converted-to.pdf, id=471, 220.82
+5pt x 286.06876pt>
+File: ./images/moomoo-kappa10/moomoo-kappa10-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/moomoo-kappa10/moomoo-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa10/moomoo-kappa10-20-eps-converte
+d-to.pdf used on input line 193.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa60/moomoo-kappa60-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386793 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa60/moomoo-kappa60-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:26
+(epstopdf)                    size: 20040 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa60/mo
+omoo-kappa60-1-eps-converted-to.pdf ./images/moomoo-kappa60/moomoo-kappa60-1.ep
+s>
+(epstopdf)             \includegraphics on input line 195.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa60/moomoo-kappa60-1-eps-converted-to.pdf, id=472, 220.825
+pt x 286.06876pt>
+File: ./images/moomoo-kappa60/moomoo-kappa60-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/moomoo-kappa60/moomoo-kappa60-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa60/moomoo-kappa60-1-eps-converted
+-to.pdf used on input line 195.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa60/moomoo-kappa60-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386793 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa60/moomoo-kappa60-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:27
+(epstopdf)                    size: 19234 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa60/mo
+omoo-kappa60-5-eps-converted-to.pdf ./images/moomoo-kappa60/moomoo-kappa60-5.ep
+s>
+(epstopdf)             \includegraphics on input line 196.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa60/moomoo-kappa60-5-eps-converted-to.pdf, id=473, 220.825
+pt x 286.06876pt>
+File: ./images/moomoo-kappa60/moomoo-kappa60-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/moomoo-kappa60/moomoo-kappa60-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa60/moomoo-kappa60-5-eps-converted
+-to.pdf used on input line 196.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa60/moomoo-kappa60-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386794 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa60/moomoo-kappa60-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:28
+(epstopdf)                    size: 19128 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa60/mo
+omoo-kappa60-10-eps-converted-to.pdf ./images/moomoo-kappa60/moomoo-kappa60-10.
+eps>
+(epstopdf)             \includegraphics on input line 197.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa60/moomoo-kappa60-10-eps-converted-to.pdf, id=474, 220.82
+5pt x 286.06876pt>
+File: ./images/moomoo-kappa60/moomoo-kappa60-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/moomoo-kappa60/moomoo-kappa60-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa60/moomoo-kappa60-10-eps-converte
+d-to.pdf used on input line 197.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+Package epstopdf Info: Source file: <./images/moomoo-kappa60/moomoo-kappa60-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 386794 bytes
+(epstopdf)             Output file: <./images/moomoo-kappa60/moomoo-kappa60-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:29
+(epstopdf)                    size: 18169 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/moomoo-kappa60/mo
+omoo-kappa60-20-eps-converted-to.pdf ./images/moomoo-kappa60/moomoo-kappa60-20.
+eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/moomoo-kappa60/moomoo-kappa60-20-eps-converted-to.pdf, id=475, 220.82
+5pt x 286.06876pt>
+File: ./images/moomoo-kappa60/moomoo-kappa60-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/moomoo-kappa60/moomoo-kappa60-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/moomoo-kappa60/moomoo-kappa60-20-eps-converte
+d-to.pdf used on input line 198.
+(pdftex.def)             Requested size: 70.37381pt x 91.16411pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <./images/aniso1-kappa10/aniso1-kappa10-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25637 bytes
+(epstopdf)             Output file: <./images/aniso1-kappa10/aniso1-kappa10-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:30
+(epstopdf)                    size: 3937 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso1-kappa10/an
+iso1-kappa10-1-eps-converted-to.pdf ./images/aniso1-kappa10/aniso1-kappa10-1.ep
+s>
+(epstopdf)             \includegraphics on input line 223.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso1-kappa10/aniso1-kappa10-1-eps-converted-to.pdf, id=482, 99.3712
+5pt x 99.37125pt>
+File: ./images/aniso1-kappa10/aniso1-kappa10-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/aniso1-kappa10/aniso1-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso1-kappa10/aniso1-kappa10-1-eps-converted
+-to.pdf used on input line 223.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso1-kappa10/aniso1-kappa10-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25637 bytes
+(epstopdf)             Output file: <./images/aniso1-kappa10/aniso1-kappa10-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:31
+(epstopdf)                    size: 4278 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso1-kappa10/an
+iso1-kappa10-5-eps-converted-to.pdf ./images/aniso1-kappa10/aniso1-kappa10-5.ep
+s>
+(epstopdf)             \includegraphics on input line 224.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso1-kappa10/aniso1-kappa10-5-eps-converted-to.pdf, id=483, 99.3712
+5pt x 99.37125pt>
+File: ./images/aniso1-kappa10/aniso1-kappa10-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/aniso1-kappa10/aniso1-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso1-kappa10/aniso1-kappa10-5-eps-converted
+-to.pdf used on input line 224.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso1-kappa10/aniso1-kappa10-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25638 bytes
+(epstopdf)             Output file: <./images/aniso1-kappa10/aniso1-kappa10-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:32
+(epstopdf)                    size: 4440 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso1-kappa10/an
+iso1-kappa10-10-eps-converted-to.pdf ./images/aniso1-kappa10/aniso1-kappa10-10.
+eps>
+(epstopdf)             \includegraphics on input line 225.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso1-kappa10/aniso1-kappa10-10-eps-converted-to.pdf, id=484, 99.371
+25pt x 99.37125pt>
+File: ./images/aniso1-kappa10/aniso1-kappa10-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso1-kappa10/aniso1-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso1-kappa10/aniso1-kappa10-10-eps-converte
+d-to.pdf used on input line 225.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso1-kappa10/aniso1-kappa10-15.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25638 bytes
+(epstopdf)             Output file: <./images/aniso1-kappa10/aniso1-kappa10-15-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:32
+(epstopdf)                    size: 4055 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso1-kappa10/an
+iso1-kappa10-15-eps-converted-to.pdf ./images/aniso1-kappa10/aniso1-kappa10-15.
+eps>
+(epstopdf)             \includegraphics on input line 226.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso1-kappa10/aniso1-kappa10-15-eps-converted-to.pdf, id=485, 99.371
+25pt x 99.37125pt>
+File: ./images/aniso1-kappa10/aniso1-kappa10-15-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso1-kappa10/aniso1-kappa10-15-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso1-kappa10/aniso1-kappa10-15-eps-converte
+d-to.pdf used on input line 226.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso1-kappa10/aniso1-kappa10-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25638 bytes
+(epstopdf)             Output file: <./images/aniso1-kappa10/aniso1-kappa10-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:33
+(epstopdf)                    size: 3851 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso1-kappa10/an
+iso1-kappa10-20-eps-converted-to.pdf ./images/aniso1-kappa10/aniso1-kappa10-20.
+eps>
+(epstopdf)             \includegraphics on input line 227.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso1-kappa10/aniso1-kappa10-20-eps-converted-to.pdf, id=486, 99.371
+25pt x 99.37125pt>
+File: ./images/aniso1-kappa10/aniso1-kappa10-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso1-kappa10/aniso1-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso1-kappa10/aniso1-kappa10-20-eps-converte
+d-to.pdf used on input line 227.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+
+<./images/potentials/aniso1-potential.pdf, id=487, 354.32375pt x 354.32375pt>
+File: ./images/potentials/aniso1-potential.pdf Graphic file (type pdf)
+
+<use ./images/potentials/aniso1-potential.pdf>
+Package pdftex.def Info: ./images/potentials/aniso1-potential.pdf used on input
+ line 228.
+(pdftex.def)             Requested size: 59.26274pt x 59.26106pt.
+Package epstopdf Info: Source file: <./images/aniso3-kappa10/aniso3-kappa10-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 26050 bytes
+(epstopdf)             Output file: <./images/aniso3-kappa10/aniso3-kappa10-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:34
+(epstopdf)                    size: 3946 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso3-kappa10/an
+iso3-kappa10-1-eps-converted-to.pdf ./images/aniso3-kappa10/aniso3-kappa10-1.ep
+s>
+(epstopdf)             \includegraphics on input line 229.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso3-kappa10/aniso3-kappa10-1-eps-converted-to.pdf, id=488, 100.375
+pt x 100.375pt>
+File: ./images/aniso3-kappa10/aniso3-kappa10-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/aniso3-kappa10/aniso3-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso3-kappa10/aniso3-kappa10-1-eps-converted
+-to.pdf used on input line 229.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/aniso3-kappa10/aniso3-kappa10-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 26050 bytes
+(epstopdf)             Output file: <./images/aniso3-kappa10/aniso3-kappa10-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:35
+(epstopdf)                    size: 4431 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso3-kappa10/an
+iso3-kappa10-5-eps-converted-to.pdf ./images/aniso3-kappa10/aniso3-kappa10-5.ep
+s>
+(epstopdf)             \includegraphics on input line 230.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso3-kappa10/aniso3-kappa10-5-eps-converted-to.pdf, id=489, 100.375
+pt x 100.375pt>
+File: ./images/aniso3-kappa10/aniso3-kappa10-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/aniso3-kappa10/aniso3-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso3-kappa10/aniso3-kappa10-5-eps-converted
+-to.pdf used on input line 230.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/aniso3-kappa10/aniso3-kappa10-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 26051 bytes
+(epstopdf)             Output file: <./images/aniso3-kappa10/aniso3-kappa10-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:35
+(epstopdf)                    size: 4384 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso3-kappa10/an
+iso3-kappa10-10-eps-converted-to.pdf ./images/aniso3-kappa10/aniso3-kappa10-10.
+eps>
+(epstopdf)             \includegraphics on input line 231.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso3-kappa10/aniso3-kappa10-10-eps-converted-to.pdf, id=490, 100.37
+5pt x 100.375pt>
+File: ./images/aniso3-kappa10/aniso3-kappa10-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso3-kappa10/aniso3-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso3-kappa10/aniso3-kappa10-10-eps-converte
+d-to.pdf used on input line 231.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/aniso3-kappa10/aniso3-kappa10-15.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 26051 bytes
+(epstopdf)             Output file: <./images/aniso3-kappa10/aniso3-kappa10-15-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:36
+(epstopdf)                    size: 3964 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso3-kappa10/an
+iso3-kappa10-15-eps-converted-to.pdf ./images/aniso3-kappa10/aniso3-kappa10-15.
+eps>
+(epstopdf)             \includegraphics on input line 232.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso3-kappa10/aniso3-kappa10-15-eps-converted-to.pdf, id=491, 100.37
+5pt x 100.375pt>
+File: ./images/aniso3-kappa10/aniso3-kappa10-15-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso3-kappa10/aniso3-kappa10-15-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso3-kappa10/aniso3-kappa10-15-eps-converte
+d-to.pdf used on input line 232.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/aniso3-kappa10/aniso3-kappa10-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 26051 bytes
+(epstopdf)             Output file: <./images/aniso3-kappa10/aniso3-kappa10-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:37
+(epstopdf)                    size: 3731 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso3-kappa10/an
+iso3-kappa10-20-eps-converted-to.pdf ./images/aniso3-kappa10/aniso3-kappa10-20.
+eps>
+(epstopdf)             \includegraphics on input line 233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso3-kappa10/aniso3-kappa10-20-eps-converted-to.pdf, id=492, 100.37
+5pt x 100.375pt>
+File: ./images/aniso3-kappa10/aniso3-kappa10-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso3-kappa10/aniso3-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso3-kappa10/aniso3-kappa10-20-eps-converte
+d-to.pdf used on input line 233.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+
+<./images/potentials/aniso3-potential.pdf, id=493, 354.32375pt x 354.32375pt>
+File: ./images/potentials/aniso3-potential.pdf Graphic file (type pdf)
+
+<use ./images/potentials/aniso3-potential.pdf>
+Package pdftex.def Info: ./images/potentials/aniso3-potential.pdf used on input
+ line 234.
+(pdftex.def)             Requested size: 59.26274pt x 59.26106pt.
+Package epstopdf Info: Source file: <./images/aniso4-kappa10/aniso4-kappa10-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25637 bytes
+(epstopdf)             Output file: <./images/aniso4-kappa10/aniso4-kappa10-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:38
+(epstopdf)                    size: 3937 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso4-kappa10/an
+iso4-kappa10-1-eps-converted-to.pdf ./images/aniso4-kappa10/aniso4-kappa10-1.ep
+s>
+(epstopdf)             \includegraphics on input line 235.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso4-kappa10/aniso4-kappa10-1-eps-converted-to.pdf, id=494, 99.3712
+5pt x 99.37125pt>
+File: ./images/aniso4-kappa10/aniso4-kappa10-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/aniso4-kappa10/aniso4-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso4-kappa10/aniso4-kappa10-1-eps-converted
+-to.pdf used on input line 235.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso4-kappa10/aniso4-kappa10-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25637 bytes
+(epstopdf)             Output file: <./images/aniso4-kappa10/aniso4-kappa10-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:39
+(epstopdf)                    size: 4262 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso4-kappa10/an
+iso4-kappa10-5-eps-converted-to.pdf ./images/aniso4-kappa10/aniso4-kappa10-5.ep
+s>
+(epstopdf)             \includegraphics on input line 236.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso4-kappa10/aniso4-kappa10-5-eps-converted-to.pdf, id=495, 99.3712
+5pt x 99.37125pt>
+File: ./images/aniso4-kappa10/aniso4-kappa10-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/aniso4-kappa10/aniso4-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso4-kappa10/aniso4-kappa10-5-eps-converted
+-to.pdf used on input line 236.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso4-kappa10/aniso4-kappa10-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25638 bytes
+(epstopdf)             Output file: <./images/aniso4-kappa10/aniso4-kappa10-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:40
+(epstopdf)                    size: 4349 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso4-kappa10/an
+iso4-kappa10-10-eps-converted-to.pdf ./images/aniso4-kappa10/aniso4-kappa10-10.
+eps>
+(epstopdf)             \includegraphics on input line 237.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso4-kappa10/aniso4-kappa10-10-eps-converted-to.pdf, id=496, 99.371
+25pt x 99.37125pt>
+File: ./images/aniso4-kappa10/aniso4-kappa10-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso4-kappa10/aniso4-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso4-kappa10/aniso4-kappa10-10-eps-converte
+d-to.pdf used on input line 237.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso4-kappa10/aniso4-kappa10-15.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25638 bytes
+(epstopdf)             Output file: <./images/aniso4-kappa10/aniso4-kappa10-15-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:41
+(epstopdf)                    size: 4382 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso4-kappa10/an
+iso4-kappa10-15-eps-converted-to.pdf ./images/aniso4-kappa10/aniso4-kappa10-15.
+eps>
+(epstopdf)             \includegraphics on input line 238.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso4-kappa10/aniso4-kappa10-15-eps-converted-to.pdf, id=497, 99.371
+25pt x 99.37125pt>
+File: ./images/aniso4-kappa10/aniso4-kappa10-15-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso4-kappa10/aniso4-kappa10-15-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso4-kappa10/aniso4-kappa10-15-eps-converte
+d-to.pdf used on input line 238.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+Package epstopdf Info: Source file: <./images/aniso4-kappa10/aniso4-kappa10-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:41
+(epstopdf)                    size: 25638 bytes
+(epstopdf)             Output file: <./images/aniso4-kappa10/aniso4-kappa10-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:41
+(epstopdf)                    size: 4336 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/aniso4-kappa10/an
+iso4-kappa10-20-eps-converted-to.pdf ./images/aniso4-kappa10/aniso4-kappa10-20.
+eps>
+(epstopdf)             \includegraphics on input line 239.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/aniso4-kappa10/aniso4-kappa10-20-eps-converted-to.pdf, id=498, 99.371
+25pt x 99.37125pt>
+File: ./images/aniso4-kappa10/aniso4-kappa10-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/aniso4-kappa10/aniso4-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/aniso4-kappa10/aniso4-kappa10-20-eps-converte
+d-to.pdf used on input line 239.
+(pdftex.def)             Requested size: 59.26274pt x 59.26384pt.
+
+<./images/potentials/aniso4-potential.pdf, id=499, 354.32375pt x 354.32375pt>
+File: ./images/potentials/aniso4-potential.pdf Graphic file (type pdf)
+
+<use ./images/potentials/aniso4-potential.pdf>
+Package pdftex.def Info: ./images/potentials/aniso4-potential.pdf used on input
+ line 240.
+(pdftex.def)             Requested size: 59.26274pt x 59.26106pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./sections/sec-numerics-nonlinear.tex
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.14 }
+       <./images/bump-kappa10/bump-kappa10-1-eps-converted-to.pdf> <./images/bu
+mp-kappa10/bump-kappa10-2-eps-converted-to.pdf> <./images/bump-kappa10/bump-kap
+pa10-5-eps-converted-to.pdf> <./images/bump-kappa10/bump-kappa10-10-eps-convert
+ed-to.pdf> <./images/bump-kappa10/bump-kappa10-20-eps-converted-to.pdf> <./imag
+es/bump-kappa20/bump-kappa20-1-eps-converted-to.pdf> <./images/bump-kappa20/bum
+p-kappa20-2-eps-converted-to.pdf> <./images/bump-kappa20/bump-kappa20-5-eps-con
+verted-to.pdf> <./images/bump-kappa20/bump-kappa20-10-eps-converted-to.pdf> <./
+images/bump-kappa20/bump-kappa20-20-eps-converted-to.pdf> <./images/bump-kappa4
+0/bump-kappa40-1-eps-converted-to.pdf> <./images/bump-kappa40/bump-kappa40-2-ep
+s-converted-to.pdf> <./images/bump-kappa40/bump-kappa40-5-eps-converted-to.pdf>
+ <./images/bump-kappa40/bump-kappa40-10-eps-converted-to.pdf> <./images/bump-ka
+ppa40/bump-kappa40-20-eps-converted-to.pdf>]
+
+LaTeX Warning: Text page 15 contains only floats.
+
+
+Overfull \vbox (6.92183pt too high) has occurred while \output is active []
+
+
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.14 }
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.14 }
+       <./images/potentials/bump-potential-eps-converted-to.pdf> <./images/disk
+-kappa10/disk-kappa10-1-eps-converted-to.pdf> <./images/disk-kappa10/disk-kappa
+10-2-eps-converted-to.pdf> <./images/disk-kappa10/disk-kappa10-5-eps-converted-
+to.pdf> <./images/disk-kappa10/disk-kappa10-10-eps-converted-to.pdf> <./images/
+disk-kappa10/disk-kappa10-20-eps-converted-to.pdf> <./images/potentials/disk-po
+tential-eps-converted-to.pdf> <./images/disk1-kappa10/disk1-kappa10-1-eps-conve
+rted-to.pdf> <./images/disk1-kappa10/disk1-kappa10-2-eps-converted-to.pdf> <./i
+mages/disk1-kappa10/disk1-kappa10-5-eps-converted-to.pdf> <./images/disk1-kappa
+10/disk1-kappa10-10-eps-converted-to.pdf> <./images/disk1-kappa10/disk1-kappa10
+-20-eps-converted-to.pdf> <./images/potentials/disk1-potential-eps-converted-to
+.pdf> <./images/holes-kappa10/holes-kappa10-1-eps-converted-to.pdf> <./images/h
+oles-kappa10/holes-kappa10-2-eps-converted-to.pdf> <./images/holes-kappa10/hole
+s-kappa10-5-eps-converted-to.pdf> <./images/holes-kappa10/holes-kappa10-10-eps-
+converted-to.pdf> <./images/holes-kappa10/holes-kappa10-20-eps-converted-to.pdf
+> <./images/potentials/holes-potential-eps-converted-to.pdf> <./images/tworooms
+-kappa10/tworooms-kappa10-1-eps-converted-to.pdf> <./images/tworooms-kappa10/tw
+orooms-kappa10-2-eps-converted-to.pdf> <./images/tworooms-kappa10/tworooms-kapp
+a10-5-eps-converted-to.pdf> <./images/tworooms-kappa10/tworooms-kappa10-10-eps-
+converted-to.pdf> <./images/tworooms-kappa10/tworooms-kappa10-20-eps-converted-
+to.pdf> <./images/potentials/tworooms-potential-eps-converted-to.pdf> <./images
+/potentials/moomoo-potential-eps-converted-to.pdf> <./images/moomoo-kappa10/moo
+moo-kappa10-1-eps-converted-to.pdf> <./images/moomoo-kappa10/moomoo-kappa10-5-e
+ps-converted-to.pdf> <./images/moomoo-kappa10/moomoo-kappa10-10-eps-converted-t
+o.pdf> <./images/moomoo-kappa10/moomoo-kappa10-20-eps-converted-to.pdf> <./imag
+es/moomoo-kappa60/moomoo-kappa60-1-eps-converted-to.pdf> <./images/moomoo-kappa
+60/moomoo-kappa60-5-eps-converted-to.pdf> <./images/moomoo-kappa60/moomoo-kappa
+60-10-eps-converted-to.pdf> <./images/moomoo-kappa60/moomoo-kappa60-20-eps-conv
+erted-to.pdf>] [16pdfTeX warning (ext4): destination with the same identifier (
+name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.33 }
+       <./images/aniso1-kappa10/aniso1-kappa10-1-eps-converted-to.pdf> <./image
+s/aniso1-kappa10/aniso1-kappa10-5-eps-converted-to.pdf> <./images/aniso1-kappa1
+0/aniso1-kappa10-10-eps-converted-to.pdf> <./images/aniso1-kappa10/aniso1-kappa
+10-15-eps-converted-to.pdf> <./images/aniso1-kappa10/aniso1-kappa10-20-eps-conv
+erted-to.pdf> <./images/potentials/aniso1-potential.pdf> <./images/aniso3-kappa
+10/aniso3-kappa10-1-eps-converted-to.pdf> <./images/aniso3-kappa10/aniso3-kappa
+10-5-eps-converted-to.pdf> <./images/aniso3-kappa10/aniso3-kappa10-10-eps-conve
+rted-to.pdf> <./images/aniso3-kappa10/aniso3-kappa10-15-eps-converted-to.pdf> <
+./images/aniso3-kappa10/aniso3-kappa10-20-eps-converted-to.pdf> <./images/poten
+tials/aniso3-potential.pdf> <./images/aniso4-kappa10/aniso4-kappa10-1-eps-conve
+rted-to.pdf> <./images/aniso4-kappa10/aniso4-kappa10-5-eps-converted-to.pdf> <.
+/images/aniso4-kappa10/aniso4-kappa10-10-eps-converted-to.pdf> <./images/aniso4
+-kappa10/aniso4-kappa10-15-eps-converted-to.pdf> <./images/aniso4-kappa10/aniso
+4-kappa10-20-eps-converted-to.pdf> <./images/potentials/aniso4-potential.pdf>]
+<./images/prox/entropies3.pdf, id=733, 504.88625pt x 386.44376pt>
+File: ./images/prox/entropies3.pdf Graphic file (type pdf)
+
+<use ./images/prox/entropies3.pdf>
+Package pdftex.def Info: ./images/prox/entropies3.pdf used on input line 50.
+(pdftex.def)             Requested size: 118.5255pt x 90.71994pt.
+
+<./images/prox/prox_sigma1.pdf, id=734, 495.8525pt x 397.485pt>
+File: ./images/prox/prox_sigma1.pdf Graphic file (type pdf)
+
+<use ./images/prox/prox_sigma1.pdf>
+Package pdftex.def Info: ./images/prox/prox_sigma1.pdf used on input line 51.
+(pdftex.def)             Requested size: 118.5255pt x 95.01018pt.
+
+<./images/prox/prox_sigma3.pdf, id=735, 495.8525pt x 397.485pt>
+File: ./images/prox/prox_sigma3.pdf Graphic file (type pdf)
+
+<use ./images/prox/prox_sigma3.pdf>
+Package pdftex.def Info: ./images/prox/prox_sigma3.pdf used on input line 53.
+(pdftex.def)             Requested size: 118.5255pt x 95.01018pt.
+Package epstopdf Info: Source file: <./images/barenblatt/barenblatt-t0.eps>
+(epstopdf)                    date: 2015-06-07 20:14:35
+(epstopdf)                    size: 85053 bytes
+(epstopdf)             Output file: <./images/barenblatt/barenblatt-t0-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:21:55
+(epstopdf)                    size: 6697 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/barenblatt/barenb
+latt-t0-eps-converted-to.pdf ./images/barenblatt/barenblatt-t0.eps>
+(epstopdf)             \includegraphics on input line 82.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/barenblatt/barenblatt-t0-eps-converted-to.pdf, id=741, 486.81876pt x 
+169.63374pt>
+File: ./images/barenblatt/barenblatt-t0-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./images/barenblatt/barenblatt-t0-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/barenblatt/barenblatt-t0-eps-converted-to.pdf
+ used on input line 82.
+(pdftex.def)             Requested size: 177.78261pt x 61.94815pt.
+Package epstopdf Info: Source file: <./images/barenblatt/barenblatt-t100.eps>
+(epstopdf)                    date: 2015-06-07 20:14:36
+(epstopdf)                    size: 84901 bytes
+(epstopdf)             Output file: <./images/barenblatt/barenblatt-t100-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:21:56
+(epstopdf)                    size: 17511 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/barenblatt/barenb
+latt-t100-eps-converted-to.pdf ./images/barenblatt/barenblatt-t100.eps>
+(epstopdf)             \includegraphics on input line 82.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/barenblatt/barenblatt-t100-eps-converted-to.pdf, id=742, 486.81876pt 
+x 169.63374pt>
+File: ./images/barenblatt/barenblatt-t100-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./images/barenblatt/barenblatt-t100-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/barenblatt/barenblatt-t100-eps-converted-to.p
+df used on input line 82.
+(pdftex.def)             Requested size: 177.78261pt x 61.94815pt.
+Package epstopdf Info: Source file: <./images/barenblatt/barenblatt-t10.eps>
+(epstopdf)                    date: 2015-06-07 20:14:35
+(epstopdf)                    size: 85036 bytes
+(epstopdf)             Output file: <./images/barenblatt/barenblatt-t10-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:22:22
+(epstopdf)                    size: 11281 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/barenblatt/barenb
+latt-t10-eps-converted-to.pdf ./images/barenblatt/barenblatt-t10.eps>
+(epstopdf)             \includegraphics on input line 84.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/barenblatt/barenblatt-t10-eps-converted-to.pdf, id=743, 486.81876pt x
+ 169.63374pt>
+File: ./images/barenblatt/barenblatt-t10-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./images/barenblatt/barenblatt-t10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/barenblatt/barenblatt-t10-eps-converted-to.pd
+f used on input line 84.
+(pdftex.def)             Requested size: 177.78261pt x 61.94815pt.
+Package epstopdf Info: Source file: <./images/barenblatt/barenblatt-t200.eps>
+(epstopdf)                    date: 2015-06-07 20:14:36
+(epstopdf)                    size: 84873 bytes
+(epstopdf)             Output file: <./images/barenblatt/barenblatt-t200-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:22:32
+(epstopdf)                    size: 21017 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/barenblatt/barenb
+latt-t200-eps-converted-to.pdf ./images/barenblatt/barenblatt-t200.eps>
+(epstopdf)             \includegraphics on input line 84.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/barenblatt/barenblatt-t200-eps-converted-to.pdf, id=744, 486.81876pt 
+x 169.63374pt>
+File: ./images/barenblatt/barenblatt-t200-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./images/barenblatt/barenblatt-t200-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/barenblatt/barenblatt-t200-eps-converted-to.p
+df used on input line 84.
+(pdftex.def)             Requested size: 177.78261pt x 61.94815pt.
+Package epstopdf Info: Source file: <./images/barenblatt/barenblatt-t50.eps>
+(epstopdf)                    date: 2015-06-07 20:14:36
+(epstopdf)                    size: 84984 bytes
+(epstopdf)             Output file: <./images/barenblatt/barenblatt-t50-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:22:33
+(epstopdf)                    size: 14802 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/barenblatt/barenb
+latt-t50-eps-converted-to.pdf ./images/barenblatt/barenblatt-t50.eps>
+(epstopdf)             \includegraphics on input line 86.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/barenblatt/barenblatt-t50-eps-converted-to.pdf, id=745, 486.81876pt x
+ 169.63374pt>
+File: ./images/barenblatt/barenblatt-t50-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./images/barenblatt/barenblatt-t50-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/barenblatt/barenblatt-t50-eps-converted-to.pd
+f used on input line 86.
+(pdftex.def)             Requested size: 177.78261pt x 61.94815pt.
+Package epstopdf Info: Source file: <./images/barenblatt/barenblatt-t1000.eps>
+(epstopdf)                    date: 2015-06-07 20:14:37
+(epstopdf)                    size: 84692 bytes
+(epstopdf)             Output file: <./images/barenblatt/barenblatt-t1000-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:22:34
+(epstopdf)                    size: 25891 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/barenblatt/barenb
+latt-t1000-eps-converted-to.pdf ./images/barenblatt/barenblatt-t1000.eps>
+(epstopdf)             \includegraphics on input line 86.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/barenblatt/barenblatt-t1000-eps-converted-to.pdf, id=746, 486.81876pt
+ x 169.63374pt>
+File: ./images/barenblatt/barenblatt-t1000-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ./images/barenblatt/barenblatt-t1000-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/barenblatt/barenblatt-t1000-eps-converted-to.
+pdf used on input line 86.
+(pdftex.def)             Requested size: 177.78261pt x 61.94815pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <./images/rand-varying-e/rand-varying-e-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86884 bytes
+(epstopdf)             Output file: <./images/rand-varying-e/rand-varying-e-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:07
+(epstopdf)                    size: 42989 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-e/ra
+nd-varying-e-1-eps-converted-to.pdf ./images/rand-varying-e/rand-varying-e-1.ep
+s>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-e/rand-varying-e-1-eps-converted-to.pdf, id=748, 200.75p
+t x 200.75pt>
+File: ./images/rand-varying-e/rand-varying-e-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/rand-varying-e/rand-varying-e-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-e/rand-varying-e-1-eps-converted
+-to.pdf used on input line 106.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-e/rand-varying-e-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86884 bytes
+(epstopdf)             Output file: <./images/rand-varying-e/rand-varying-e-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:07
+(epstopdf)                    size: 22010 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-e/ra
+nd-varying-e-5-eps-converted-to.pdf ./images/rand-varying-e/rand-varying-e-5.ep
+s>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-e/rand-varying-e-5-eps-converted-to.pdf, id=749, 200.75p
+t x 200.75pt>
+File: ./images/rand-varying-e/rand-varying-e-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/rand-varying-e/rand-varying-e-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-e/rand-varying-e-5-eps-converted
+-to.pdf used on input line 107.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-e/rand-varying-e-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86885 bytes
+(epstopdf)             Output file: <./images/rand-varying-e/rand-varying-e-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:08
+(epstopdf)                    size: 16479 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-e/ra
+nd-varying-e-10-eps-converted-to.pdf ./images/rand-varying-e/rand-varying-e-10.
+eps>
+(epstopdf)             \includegraphics on input line 108.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-e/rand-varying-e-10-eps-converted-to.pdf, id=750, 200.75
+pt x 200.75pt>
+File: ./images/rand-varying-e/rand-varying-e-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/rand-varying-e/rand-varying-e-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-e/rand-varying-e-10-eps-converte
+d-to.pdf used on input line 108.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-e/rand-varying-e-15.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86885 bytes
+(epstopdf)             Output file: <./images/rand-varying-e/rand-varying-e-15-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:09
+(epstopdf)                    size: 12139 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-e/ra
+nd-varying-e-15-eps-converted-to.pdf ./images/rand-varying-e/rand-varying-e-15.
+eps>
+(epstopdf)             \includegraphics on input line 109.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-e/rand-varying-e-15-eps-converted-to.pdf, id=751, 200.75
+pt x 200.75pt>
+File: ./images/rand-varying-e/rand-varying-e-15-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/rand-varying-e/rand-varying-e-15-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-e/rand-varying-e-15-eps-converte
+d-to.pdf used on input line 109.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-e/rand-varying-e-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86885 bytes
+(epstopdf)             Output file: <./images/rand-varying-e/rand-varying-e-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:10
+(epstopdf)                    size: 9447 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-e/ra
+nd-varying-e-20-eps-converted-to.pdf ./images/rand-varying-e/rand-varying-e-20.
+eps>
+(epstopdf)             \includegraphics on input line 110.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-e/rand-varying-e-20-eps-converted-to.pdf, id=752, 200.75
+pt x 200.75pt>
+File: ./images/rand-varying-e/rand-varying-e-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/rand-varying-e/rand-varying-e-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-e/rand-varying-e-20-eps-converte
+d-to.pdf used on input line 110.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-m/rand-varying-m-1.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86884 bytes
+(epstopdf)             Output file: <./images/rand-varying-m/rand-varying-m-1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:10
+(epstopdf)                    size: 42989 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-m/ra
+nd-varying-m-1-eps-converted-to.pdf ./images/rand-varying-m/rand-varying-m-1.ep
+s>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-m/rand-varying-m-1-eps-converted-to.pdf, id=753, 200.75p
+t x 200.75pt>
+File: ./images/rand-varying-m/rand-varying-m-1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/rand-varying-m/rand-varying-m-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-m/rand-varying-m-1-eps-converted
+-to.pdf used on input line 111.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-m/rand-varying-m-5.e
+ps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86884 bytes
+(epstopdf)             Output file: <./images/rand-varying-m/rand-varying-m-5-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:11
+(epstopdf)                    size: 20876 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-m/ra
+nd-varying-m-5-eps-converted-to.pdf ./images/rand-varying-m/rand-varying-m-5.ep
+s>
+(epstopdf)             \includegraphics on input line 112.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-m/rand-varying-m-5-eps-converted-to.pdf, id=754, 200.75p
+t x 200.75pt>
+File: ./images/rand-varying-m/rand-varying-m-5-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./images/rand-varying-m/rand-varying-m-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-m/rand-varying-m-5-eps-converted
+-to.pdf used on input line 112.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-m/rand-varying-m-10.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86885 bytes
+(epstopdf)             Output file: <./images/rand-varying-m/rand-varying-m-10-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:12
+(epstopdf)                    size: 16931 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-m/ra
+nd-varying-m-10-eps-converted-to.pdf ./images/rand-varying-m/rand-varying-m-10.
+eps>
+(epstopdf)             \includegraphics on input line 113.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-m/rand-varying-m-10-eps-converted-to.pdf, id=755, 200.75
+pt x 200.75pt>
+File: ./images/rand-varying-m/rand-varying-m-10-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/rand-varying-m/rand-varying-m-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-m/rand-varying-m-10-eps-converte
+d-to.pdf used on input line 113.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-m/rand-varying-m-15.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86885 bytes
+(epstopdf)             Output file: <./images/rand-varying-m/rand-varying-m-15-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:13
+(epstopdf)                    size: 13980 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-m/ra
+nd-varying-m-15-eps-converted-to.pdf ./images/rand-varying-m/rand-varying-m-15.
+eps>
+(epstopdf)             \includegraphics on input line 114.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-m/rand-varying-m-15-eps-converted-to.pdf, id=756, 200.75
+pt x 200.75pt>
+File: ./images/rand-varying-m/rand-varying-m-15-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/rand-varying-m/rand-varying-m-15-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-m/rand-varying-m-15-eps-converte
+d-to.pdf used on input line 114.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/rand-varying-m/rand-varying-m-20.
+eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86885 bytes
+(epstopdf)             Output file: <./images/rand-varying-m/rand-varying-m-20-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-09 10:17:14
+(epstopdf)                    size: 11950 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/rand-varying-m/ra
+nd-varying-m-20-eps-converted-to.pdf ./images/rand-varying-m/rand-varying-m-20.
+eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/rand-varying-m/rand-varying-m-20-eps-converted-to.pdf, id=757, 200.75
+pt x 200.75pt>
+File: ./images/rand-varying-m/rand-varying-m-20-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./images/rand-varying-m/rand-varying-m-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/rand-varying-m/rand-varying-m-20-eps-converte
+d-to.pdf used on input line 115.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [17pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.264 
+       <./images/prox/entropies3.pdf> <./images/prox/prox_sigma1.pdf> <./images
+/prox/prox_sigma3.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.265 T
+       o test this non-convex setting, we replace the congestion box constra...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.265 T
+       o test this non-convex setting, we replace the congestion box constra...
+ <./images/barenblatt/barenblatt-t0-eps-converted-to.pdf> <./images/barenblatt/
+barenblatt-t100-eps-converted-to.pdf> <./images/barenblatt/barenblatt-t10-eps-c
+onverted-to.pdf> <./images/barenblatt/barenblatt-t200-eps-converted-to.pdf> <./
+images/barenblatt/barenblatt-t50-eps-converted-to.pdf> <./images/barenblatt/bar
+enblatt-t1000-eps-converted-to.pdf> <./images/rand-varying-e/rand-varying-e-1-e
+ps-converted-to.pdf> <./images/rand-varying-e/rand-varying-e-5-eps-converted-to
+.pdf> <./images/rand-varying-e/rand-varying-e-10-eps-converted-to.pdf> <./image
+s/rand-varying-e/rand-varying-e-15-eps-converted-to.pdf> <./images/rand-varying
+-e/rand-varying-e-20-eps-converted-to.pdf> <./images/rand-varying-m/rand-varyin
+g-m-1-eps-converted-to.pdf> <./images/rand-varying-m/rand-varying-m-5-eps-conve
+rted-to.pdf> <./images/rand-varying-m/rand-varying-m-10-eps-converted-to.pdf> <
+./images/rand-varying-m/rand-varying-m-15-eps-converted-to.pdf> <./images/rand-
+varying-m/rand-varying-m-20-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25641 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:17
+(epstopdf)                    size: 4425 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-1-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kapp
+a10-1.eps>
+(epstopdf)             \includegraphics on input line 291.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/tworooms-kappa10/tworooms-kappa10-1-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-1-eps-conve
+rted-to.pdf used on input line 291.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25641 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:18
+(epstopdf)                    size: 4793 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-2-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kapp
+a10-2.eps>
+(epstopdf)             \includegraphics on input line 292.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/tworooms-kappa10/tworooms-kappa10-2-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-2-eps-conve
+rted-to.pdf used on input line 292.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25641 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:18
+(epstopdf)                    size: 4598 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-5-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kapp
+a10-5.eps>
+(epstopdf)             \includegraphics on input line 293.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/tworooms-kappa10/tworooms-kappa10-5-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-5-eps-conve
+rted-to.pdf used on input line 293.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25642 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:19
+(epstopdf)                    size: 4570 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-10-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kap
+pa10-10.eps>
+(epstopdf)             \includegraphics on input line 294.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/tworooms-kappa10/tworooms-kappa10-10-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-10-eps-conv
+erted-to.pdf used on input line 294.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-kappa10/tworooms-kappa10
+-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 25642 bytes
+(epstopdf)             Output file: <./images/tworooms-kappa10/tworooms-kappa10
+-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:20
+(epstopdf)                    size: 3822 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-kappa10/
+tworooms-kappa10-20-eps-converted-to.pdf ./images/tworooms-kappa10/tworooms-kap
+pa10-20.eps>
+(epstopdf)             \includegraphics on input line 295.
+Package epstopdf Info: Output file is already uptodate.
+File: ./images/tworooms-kappa10/tworooms-kappa10-20-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/tworooms-kappa10/tworooms-kappa10-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/tworooms-kappa10/tworooms-kappa10-20-eps-conv
+erted-to.pdf used on input line 295.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 8387 bytes
+(epstopdf)             Output file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:42
+(epstopdf)                    size: 2641 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-noncvx-k
+appa10/tworooms-noncvx-kappa10-1-eps-converted-to.pdf ./images/tworooms-noncvx-
+kappa10/tworooms-noncvx-kappa10-1.eps>
+(epstopdf)             \includegraphics on input line 296.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-1-eps-converted-to.pd
+f, id=858, 99.37125pt x 99.37125pt>
+File: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-1-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-1-eps-converted-t
+o.pdf>
+Package pdftex.def Info: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa
+10-1-eps-converted-to.pdf used on input line 296.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 8387 bytes
+(epstopdf)             Output file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:43
+(epstopdf)                    size: 2647 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-noncvx-k
+appa10/tworooms-noncvx-kappa10-2-eps-converted-to.pdf ./images/tworooms-noncvx-
+kappa10/tworooms-noncvx-kappa10-2.eps>
+(epstopdf)             \includegraphics on input line 297.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-2-eps-converted-to.pd
+f, id=859, 99.37125pt x 99.37125pt>
+File: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-2-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-2-eps-converted-t
+o.pdf>
+Package pdftex.def Info: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa
+10-2-eps-converted-to.pdf used on input line 297.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 8387 bytes
+(epstopdf)             Output file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:44
+(epstopdf)                    size: 2633 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-noncvx-k
+appa10/tworooms-noncvx-kappa10-5-eps-converted-to.pdf ./images/tworooms-noncvx-
+kappa10/tworooms-noncvx-kappa10-5.eps>
+(epstopdf)             \includegraphics on input line 298.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-5-eps-converted-to.pd
+f, id=860, 99.37125pt x 99.37125pt>
+File: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-5-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-5-eps-converted-t
+o.pdf>
+Package pdftex.def Info: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa
+10-5-eps-converted-to.pdf used on input line 298.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 8388 bytes
+(epstopdf)             Output file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:45
+(epstopdf)                    size: 2642 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-noncvx-k
+appa10/tworooms-noncvx-kappa10-10-eps-converted-to.pdf ./images/tworooms-noncvx
+-kappa10/tworooms-noncvx-kappa10-10.eps>
+(epstopdf)             \includegraphics on input line 299.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-10-eps-converted-to.p
+df, id=861, 99.37125pt x 99.37125pt>
+File: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-10-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-10-eps-converted-
+to.pdf>
+Package pdftex.def Info: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa
+10-10-eps-converted-to.pdf used on input line 299.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+Package epstopdf Info: Source file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 8388 bytes
+(epstopdf)             Output file: <./images/tworooms-noncvx-kappa10/tworooms-
+noncvx-kappa10-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:46
+(epstopdf)                    size: 2644 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/tworooms-noncvx-k
+appa10/tworooms-noncvx-kappa10-20-eps-converted-to.pdf ./images/tworooms-noncvx
+-kappa10/tworooms-noncvx-kappa10-20.eps>
+(epstopdf)             \includegraphics on input line 300.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-20-eps-converted-to.p
+df, id=862, 99.37125pt x 99.37125pt>
+File: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-20-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-20-eps-converted-
+to.pdf>
+Package pdftex.def Info: ./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa
+10-20-eps-converted-to.pdf used on input line 300.
+(pdftex.def)             Requested size: 70.37381pt x 70.37515pt.
+) (./sections/sec-wass-attraction.tex [19pdfTeX warning (ext4): destination wit
+h the same identifier (name{figure.8}) has been already used, duplicate ignored
+
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.26 }
+       <./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-1-eps-converte
+d-to.pdf> <./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-2-eps-conve
+rted-to.pdf> <./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-5-eps-co
+nverted-to.pdf> <./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-10-ep
+s-converted-to.pdf> <./images/tworooms-noncvx-kappa10/tworooms-noncvx-kappa10-2
+0-eps-converted-to.pdf>] [20]
+Package epstopdf Info: Source file: <./images/wasserstein-attraction/holes/hole
+s-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26055 bytes
+(epstopdf)             Output file: <./images/wasserstein-attraction/holes/hole
+s-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:46
+(epstopdf)                    size: 4521 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/wasserstein-attra
+ction/holes/holes-1-eps-converted-to.pdf ./images/wasserstein-attraction/holes/
+holes-1.eps>
+(epstopdf)             \includegraphics on input line 157.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/wasserstein-attraction/holes/holes-1-eps-converted-to.pdf, id=920, 10
+0.375pt x 100.375pt>
+File: ./images/wasserstein-attraction/holes/holes-1-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/wasserstein-attraction/holes/holes-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/wasserstein-attraction/holes/holes-1-eps-conv
+erted-to.pdf used on input line 157.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/wasserstein-attraction/holes/hole
+s-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26055 bytes
+(epstopdf)             Output file: <./images/wasserstein-attraction/holes/hole
+s-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:47
+(epstopdf)                    size: 4881 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/wasserstein-attra
+ction/holes/holes-2-eps-converted-to.pdf ./images/wasserstein-attraction/holes/
+holes-2.eps>
+(epstopdf)             \includegraphics on input line 158.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/wasserstein-attraction/holes/holes-2-eps-converted-to.pdf, id=921, 10
+0.375pt x 100.375pt>
+File: ./images/wasserstein-attraction/holes/holes-2-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/wasserstein-attraction/holes/holes-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/wasserstein-attraction/holes/holes-2-eps-conv
+erted-to.pdf used on input line 158.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/wasserstein-attraction/holes/hole
+s-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26055 bytes
+(epstopdf)             Output file: <./images/wasserstein-attraction/holes/hole
+s-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:48
+(epstopdf)                    size: 4946 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/wasserstein-attra
+ction/holes/holes-5-eps-converted-to.pdf ./images/wasserstein-attraction/holes/
+holes-5.eps>
+(epstopdf)             \includegraphics on input line 159.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/wasserstein-attraction/holes/holes-5-eps-converted-to.pdf, id=922, 10
+0.375pt x 100.375pt>
+File: ./images/wasserstein-attraction/holes/holes-5-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/wasserstein-attraction/holes/holes-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/wasserstein-attraction/holes/holes-5-eps-conv
+erted-to.pdf used on input line 159.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/wasserstein-attraction/holes/hole
+s-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26056 bytes
+(epstopdf)             Output file: <./images/wasserstein-attraction/holes/hole
+s-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:49
+(epstopdf)                    size: 4862 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/wasserstein-attra
+ction/holes/holes-10-eps-converted-to.pdf ./images/wasserstein-attraction/holes
+/holes-10.eps>
+(epstopdf)             \includegraphics on input line 160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/wasserstein-attraction/holes/holes-10-eps-converted-to.pdf, id=923, 1
+00.375pt x 100.375pt>
+File: ./images/wasserstein-attraction/holes/holes-10-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./images/wasserstein-attraction/holes/holes-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/wasserstein-attraction/holes/holes-10-eps-con
+verted-to.pdf used on input line 160.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/wasserstein-attraction/holes/hole
+s-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 26056 bytes
+(epstopdf)             Output file: <./images/wasserstein-attraction/holes/hole
+s-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:50
+(epstopdf)                    size: 4695 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/wasserstein-attra
+ction/holes/holes-20-eps-converted-to.pdf ./images/wasserstein-attraction/holes
+/holes-20.eps>
+(epstopdf)             \includegraphics on input line 161.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/wasserstein-attraction/holes/holes-20-eps-converted-to.pdf, id=924, 1
+00.375pt x 100.375pt>
+File: ./images/wasserstein-attraction/holes/holes-20-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./images/wasserstein-attraction/holes/holes-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/wasserstein-attraction/holes/holes-20-eps-con
+verted-to.pdf used on input line 161.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+Package epstopdf Info: Source file: <./images/wasserstein-attraction/holes/hole
+s-tgt.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 8413 bytes
+(epstopdf)             Output file: <./images/wasserstein-attraction/holes/hole
+s-tgt-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:50
+(epstopdf)                    size: 2596 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/wasserstein-attra
+ction/holes/holes-tgt-eps-converted-to.pdf ./images/wasserstein-attraction/hole
+s/holes-tgt.eps>
+(epstopdf)             \includegraphics on input line 162.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/wasserstein-attraction/holes/holes-tgt-eps-converted-to.pdf, id=925, 
+100.375pt x 100.375pt>
+File: ./images/wasserstein-attraction/holes/holes-tgt-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use ./images/wasserstein-attraction/holes/holes-tgt-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/wasserstein-attraction/holes/holes-tgt-eps-co
+nverted-to.pdf used on input line 162.
+(pdftex.def)             Requested size: 59.26274pt x 59.26361pt.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.171 	\caption
+               {%pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.173 	}
+        pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.173 	}
+        
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (2.50453pt too wide) in paragraph at lines 181--184
+ \OT1/cmr/bx/n/10 5.3. Mul-ti-ple Den-si-ties Evo-lu-tions.[] \OT1/cmr/m/n/10 A
+ nat-u-ral ex-ten-sion of the JKO flow []
+ []
+
+[21]
+Package epstopdf Info: Source file: <./images/pairwise-attraction/tworooms/twor
+ooms-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 66547 bytes
+(epstopdf)             Output file: <./images/pairwise-attraction/tworooms/twor
+ooms-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:51
+(epstopdf)                    size: 3394 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-attracti
+on/tworooms/tworooms-1-eps-converted-to.pdf ./images/pairwise-attraction/tworoo
+ms/tworooms-1.eps>
+(epstopdf)             \includegraphics on input line 243.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-attraction/tworooms/tworooms-1-eps-converted-to.pdf, id=946,
+ 100.375pt x 100.375pt>
+File: ./images/pairwise-attraction/tworooms/tworooms-1-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./images/pairwise-attraction/tworooms/tworooms-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-attraction/tworooms/tworooms-1-eps-c
+onverted-to.pdf used on input line 243.
+(pdftex.def)             Requested size: 70.37381pt x 70.3784pt.
+Package epstopdf Info: Source file: <./images/pairwise-attraction/tworooms/twor
+ooms-4.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 66547 bytes
+(epstopdf)             Output file: <./images/pairwise-attraction/tworooms/twor
+ooms-4-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:52
+(epstopdf)                    size: 6210 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-attracti
+on/tworooms/tworooms-4-eps-converted-to.pdf ./images/pairwise-attraction/tworoo
+ms/tworooms-4.eps>
+(epstopdf)             \includegraphics on input line 244.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-attraction/tworooms/tworooms-4-eps-converted-to.pdf, id=947,
+ 100.375pt x 100.375pt>
+File: ./images/pairwise-attraction/tworooms/tworooms-4-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./images/pairwise-attraction/tworooms/tworooms-4-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-attraction/tworooms/tworooms-4-eps-c
+onverted-to.pdf used on input line 244.
+(pdftex.def)             Requested size: 70.37381pt x 70.3784pt.
+Package epstopdf Info: Source file: <./images/pairwise-attraction/tworooms/twor
+ooms-8.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 66547 bytes
+(epstopdf)             Output file: <./images/pairwise-attraction/tworooms/twor
+ooms-8-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:53
+(epstopdf)                    size: 5971 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-attracti
+on/tworooms/tworooms-8-eps-converted-to.pdf ./images/pairwise-attraction/tworoo
+ms/tworooms-8.eps>
+(epstopdf)             \includegraphics on input line 245.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-attraction/tworooms/tworooms-8-eps-converted-to.pdf, id=948,
+ 100.375pt x 100.375pt>
+File: ./images/pairwise-attraction/tworooms/tworooms-8-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./images/pairwise-attraction/tworooms/tworooms-8-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-attraction/tworooms/tworooms-8-eps-c
+onverted-to.pdf used on input line 245.
+(pdftex.def)             Requested size: 70.37381pt x 70.3784pt.
+Package epstopdf Info: Source file: <./images/pairwise-attraction/tworooms/twor
+ooms-15.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 66548 bytes
+(epstopdf)             Output file: <./images/pairwise-attraction/tworooms/twor
+ooms-15-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:54
+(epstopdf)                    size: 5597 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-attracti
+on/tworooms/tworooms-15-eps-converted-to.pdf ./images/pairwise-attraction/tworo
+oms/tworooms-15.eps>
+(epstopdf)             \includegraphics on input line 246.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-attraction/tworooms/tworooms-15-eps-converted-to.pdf, id=949
+, 100.375pt x 100.375pt>
+File: ./images/pairwise-attraction/tworooms/tworooms-15-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-attraction/tworooms/tworooms-15-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-attraction/tworooms/tworooms-15-eps-
+converted-to.pdf used on input line 246.
+(pdftex.def)             Requested size: 70.37381pt x 70.3784pt.
+Package epstopdf Info: Source file: <./images/pairwise-attraction/tworooms/twor
+ooms-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 66548 bytes
+(epstopdf)             Output file: <./images/pairwise-attraction/tworooms/twor
+ooms-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:55
+(epstopdf)                    size: 7484 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-attracti
+on/tworooms/tworooms-20-eps-converted-to.pdf ./images/pairwise-attraction/tworo
+oms/tworooms-20.eps>
+(epstopdf)             \includegraphics on input line 247.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-attraction/tworooms/tworooms-20-eps-converted-to.pdf, id=950
+, 100.375pt x 100.375pt>
+File: ./images/pairwise-attraction/tworooms/tworooms-20-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-attraction/tworooms/tworooms-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-attraction/tworooms/tworooms-20-eps-
+converted-to.pdf used on input line 247.
+(pdftex.def)             Requested size: 70.37381pt x 70.3784pt.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.255 	\caption
+               {%pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.260 	}
+        pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.260 	}
+        
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22 <./images/wasserstein-attraction/holes/holes-1-eps-converted-to.pdf> <./ima
+ges/wasserstein-attraction/holes/holes-2-eps-converted-to.pdf> <./images/wasser
+stein-attraction/holes/holes-5-eps-converted-to.pdf> <./images/wasserstein-attr
+action/holes/holes-10-eps-converted-to.pdf> <./images/wasserstein-attraction/ho
+les/holes-20-eps-converted-to.pdf> <./images/wasserstein-attraction/holes/holes
+-tgt-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248857 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:56
+(epstopdf)                    size: 3823 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-1-eps-converted-to.pdf ./images/pairwise-sum/tworectang
+les/tworectangles-1.eps>
+(epstopdf)             \includegraphics on input line 308.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-1-eps-converted-to.pdf, id=9
+80, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-1-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-1-ep
+s-converted-to.pdf used on input line 308.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248857 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:57
+(epstopdf)                    size: 8922 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-2-eps-converted-to.pdf ./images/pairwise-sum/tworectang
+les/tworectangles-2.eps>
+(epstopdf)             \includegraphics on input line 309.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-2-eps-converted-to.pdf, id=9
+81, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-2-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-2-ep
+s-converted-to.pdf used on input line 309.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248857 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:58
+(epstopdf)                    size: 9473 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-5-eps-converted-to.pdf ./images/pairwise-sum/tworectang
+les/tworectangles-5.eps>
+(epstopdf)             \includegraphics on input line 310.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-5-eps-converted-to.pdf, id=9
+82, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-5-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-5-ep
+s-converted-to.pdf used on input line 310.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248858 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:49:59
+(epstopdf)                    size: 9908 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-10-eps-converted-to.pdf ./images/pairwise-sum/tworectan
+gles/tworectangles-10.eps>
+(epstopdf)             \includegraphics on input line 311.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-10-eps-converted-to.pdf, id=
+983, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-10-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-10-e
+ps-converted-to.pdf used on input line 311.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248858 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:00
+(epstopdf)                    size: 16208 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-20-eps-converted-to.pdf ./images/pairwise-sum/tworectan
+gles/tworectangles-20.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-20-eps-converted-to.pdf, id=
+984, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-20-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-20-e
+ps-converted-to.pdf used on input line 312.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86899 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:00
+(epstopdf)                    size: 3242 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-sum-1-eps-converted-to.pdf ./images/pairwise-sum/tworec
+tangles/tworectangles-sum-1.eps>
+(epstopdf)             \includegraphics on input line 313.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-sum-1-eps-converted-to.pdf, 
+id=985, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-sum-1-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-sum-1-eps-converted-to.p
+df>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-sum-
+1-eps-converted-to.pdf used on input line 313.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86899 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:01
+(epstopdf)                    size: 4486 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-sum-2-eps-converted-to.pdf ./images/pairwise-sum/tworec
+tangles/tworectangles-sum-2.eps>
+(epstopdf)             \includegraphics on input line 314.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-sum-2-eps-converted-to.pdf, 
+id=986, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-sum-2-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-sum-2-eps-converted-to.p
+df>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-sum-
+2-eps-converted-to.pdf used on input line 314.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86899 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:02
+(epstopdf)                    size: 4887 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-sum-5-eps-converted-to.pdf ./images/pairwise-sum/tworec
+tangles/tworectangles-sum-5.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-sum-5-eps-converted-to.pdf, 
+id=987, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-sum-5-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-sum-5-eps-converted-to.p
+df>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-sum-
+5-eps-converted-to.pdf used on input line 315.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86900 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:03
+(epstopdf)                    size: 5351 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-sum-10-eps-converted-to.pdf ./images/pairwise-sum/twore
+ctangles/tworectangles-sum-10.eps>
+(epstopdf)             \includegraphics on input line 316.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-sum-10-eps-converted-to.pdf,
+ id=988, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-sum-10-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-sum-10-eps-converted-to.
+pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-sum-
+10-eps-converted-to.pdf used on input line 316.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86900 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-sum-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:04
+(epstopdf)                    size: 5204 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-sum-20-eps-converted-to.pdf ./images/pairwise-sum/twore
+ctangles/tworectangles-sum-20.eps>
+(epstopdf)             \includegraphics on input line 317.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-sum-20-eps-converted-to.pdf,
+ id=989, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-sum-20-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-sum-20-eps-converted-to.
+pdf>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-sum-
+20-eps-converted-to.pdf used on input line 317.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 15915 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:05
+(epstopdf)                    size: 2843 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-p1-1-eps-converted-to.pdf ./images/pairwise-sum/tworect
+angles/tworectangles-p1-1.eps>
+(epstopdf)             \includegraphics on input line 318.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-p1-1-eps-converted-to.pdf, i
+d=990, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-p1-1-eps-converted-to.p
+df Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-p1-1-eps-converted-to.pd
+f>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-p1-1
+-eps-converted-to.pdf used on input line 318.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86898 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:05
+(epstopdf)                    size: 4745 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-p1-2-eps-converted-to.pdf ./images/pairwise-sum/tworect
+angles/tworectangles-p1-2.eps>
+(epstopdf)             \includegraphics on input line 319.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-p1-2-eps-converted-to.pdf, i
+d=991, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-p1-2-eps-converted-to.p
+df Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-p1-2-eps-converted-to.pd
+f>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-p1-2
+-eps-converted-to.pdf used on input line 319.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86898 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:06
+(epstopdf)                    size: 5520 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-p1-5-eps-converted-to.pdf ./images/pairwise-sum/tworect
+angles/tworectangles-p1-5.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-p1-5-eps-converted-to.pdf, i
+d=992, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-p1-5-eps-converted-to.p
+df Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-p1-5-eps-converted-to.pd
+f>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-p1-5
+-eps-converted-to.pdf used on input line 320.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86899 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:07
+(epstopdf)                    size: 6098 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-p1-10-eps-converted-to.pdf ./images/pairwise-sum/tworec
+tangles/tworectangles-p1-10.eps>
+(epstopdf)             \includegraphics on input line 321.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-p1-10-eps-converted-to.pdf, 
+id=993, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-p1-10-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-p1-10-eps-converted-to.p
+df>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-p1-1
+0-eps-converted-to.pdf used on input line 321.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86899 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/tworectangles/tworec
+tangles-p1-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:08
+(epstopdf)                    size: 6526 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/twor
+ectangles/tworectangles-p1-20-eps-converted-to.pdf ./images/pairwise-sum/tworec
+tangles/tworectangles-p1-20.eps>
+(epstopdf)             \includegraphics on input line 322.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/tworectangles/tworectangles-p1-20-eps-converted-to.pdf, 
+id=994, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/tworectangles/tworectangles-p1-20-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use ./images/pairwise-sum/tworectangles/tworectangles-p1-20-eps-converted-to.p
+df>
+Package pdftex.def Info: ./images/pairwise-sum/tworectangles/tworectangles-p1-2
+0-eps-converted-to.pdf used on input line 322.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.325 	\caption
+               {%pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.330 	}
+        pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.330 	}
+        
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248851 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:09
+(epstopdf)                    size: 3539 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-1-eps-converted-to.pdf ./images/pairwise-sum/congestion/conge
+stion-1.eps>
+(epstopdf)             \includegraphics on input line 355.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-1-eps-converted-to.pdf, id=999, 20
+0.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-1-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-1-eps-conv
+erted-to.pdf used on input line 355.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248851 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:10
+(epstopdf)                    size: 8078 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-2-eps-converted-to.pdf ./images/pairwise-sum/congestion/conge
+stion-2.eps>
+(epstopdf)             \includegraphics on input line 356.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-2-eps-converted-to.pdf, id=1000, 2
+00.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-2-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-2-eps-conv
+erted-to.pdf used on input line 356.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248851 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:11
+(epstopdf)                    size: 10718 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-5-eps-converted-to.pdf ./images/pairwise-sum/congestion/conge
+stion-5.eps>
+(epstopdf)             \includegraphics on input line 357.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-5-eps-converted-to.pdf, id=1001, 2
+00.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-5-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-5-eps-conv
+erted-to.pdf used on input line 357.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248852 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:12
+(epstopdf)                    size: 12517 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-10-eps-converted-to.pdf ./images/pairwise-sum/congestion/cong
+estion-10.eps>
+(epstopdf)             \includegraphics on input line 358.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-10-eps-converted-to.pdf, id=1002, 
+200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-10-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-10-eps-con
+verted-to.pdf used on input line 358.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 248852 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:13
+(epstopdf)                    size: 11574 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-20-eps-converted-to.pdf ./images/pairwise-sum/congestion/cong
+estion-20.eps>
+(epstopdf)             \includegraphics on input line 359.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-20-eps-converted-to.pdf, id=1003, 
+200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-20-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-20-eps-con
+verted-to.pdf used on input line 359.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-sum-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 15910 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-sum-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:14
+(epstopdf)                    size: 2861 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-sum-1-eps-converted-to.pdf ./images/pairwise-sum/congestion/c
+ongestion-sum-1.eps>
+(epstopdf)             \includegraphics on input line 360.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-sum-1-eps-converted-to.pdf, id=100
+4, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-sum-1-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-sum-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-sum-1-eps-
+converted-to.pdf used on input line 360.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-sum-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86893 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-sum-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:14
+(epstopdf)                    size: 4566 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-sum-2-eps-converted-to.pdf ./images/pairwise-sum/congestion/c
+ongestion-sum-2.eps>
+(epstopdf)             \includegraphics on input line 361.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-sum-2-eps-converted-to.pdf, id=100
+5, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-sum-2-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-sum-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-sum-2-eps-
+converted-to.pdf used on input line 361.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-sum-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86893 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-sum-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:15
+(epstopdf)                    size: 5522 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-sum-5-eps-converted-to.pdf ./images/pairwise-sum/congestion/c
+ongestion-sum-5.eps>
+(epstopdf)             \includegraphics on input line 362.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-sum-5-eps-converted-to.pdf, id=100
+6, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-sum-5-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-sum-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-sum-5-eps-
+converted-to.pdf used on input line 362.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-sum-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86894 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-sum-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:16
+(epstopdf)                    size: 6319 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-sum-10-eps-converted-to.pdf ./images/pairwise-sum/congestion/
+congestion-sum-10.eps>
+(epstopdf)             \includegraphics on input line 363.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-sum-10-eps-converted-to.pdf, id=10
+07, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-sum-10-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-sum-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-sum-10-eps
+-converted-to.pdf used on input line 363.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-sum-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86894 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-sum-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:17
+(epstopdf)                    size: 7727 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-sum-20-eps-converted-to.pdf ./images/pairwise-sum/congestion/
+congestion-sum-20.eps>
+(epstopdf)             \includegraphics on input line 364.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-sum-20-eps-converted-to.pdf, id=10
+08, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-sum-20-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-sum-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-sum-20-eps
+-converted-to.pdf used on input line 364.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-p1-1.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 15909 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-p1-1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:17
+(epstopdf)                    size: 2859 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-p1-1-eps-converted-to.pdf ./images/pairwise-sum/congestion/co
+ngestion-p1-1.eps>
+(epstopdf)             \includegraphics on input line 365.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-p1-1-eps-converted-to.pdf, id=1009
+, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-p1-1-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-p1-1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-p1-1-eps-c
+onverted-to.pdf used on input line 365.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-p1-2.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86892 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-p1-2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:18
+(epstopdf)                    size: 4369 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-p1-2-eps-converted-to.pdf ./images/pairwise-sum/congestion/co
+ngestion-p1-2.eps>
+(epstopdf)             \includegraphics on input line 366.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-p1-2-eps-converted-to.pdf, id=1010
+, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-p1-2-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-p1-2-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-p1-2-eps-c
+onverted-to.pdf used on input line 366.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-p1-5.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86892 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-p1-5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:19
+(epstopdf)                    size: 4929 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-p1-5-eps-converted-to.pdf ./images/pairwise-sum/congestion/co
+ngestion-p1-5.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-p1-5-eps-converted-to.pdf, id=1011
+, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-p1-5-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-p1-5-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-p1-5-eps-c
+onverted-to.pdf used on input line 367.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-p1-10.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86893 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-p1-10-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:19
+(epstopdf)                    size: 5840 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-p1-10-eps-converted-to.pdf ./images/pairwise-sum/congestion/c
+ongestion-p1-10.eps>
+(epstopdf)             \includegraphics on input line 368.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-p1-10-eps-converted-to.pdf, id=101
+2, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-p1-10-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-p1-10-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-p1-10-eps-
+converted-to.pdf used on input line 368.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+Package epstopdf Info: Source file: <./images/pairwise-sum/congestion/congestio
+n-p1-20.eps>
+(epstopdf)                    date: 2015-08-11 18:24:42
+(epstopdf)                    size: 86893 bytes
+(epstopdf)             Output file: <./images/pairwise-sum/congestion/congestio
+n-p1-20-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-20 09:50:20
+(epstopdf)                    size: 6241 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/pairwise-sum/cong
+estion/congestion-p1-20-eps-converted-to.pdf ./images/pairwise-sum/congestion/c
+ongestion-p1-20.eps>
+(epstopdf)             \includegraphics on input line 369.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/pairwise-sum/congestion/congestion-p1-20-eps-converted-to.pdf, id=101
+3, 200.75pt x 200.75pt>
+File: ./images/pairwise-sum/congestion/congestion-p1-20-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./images/pairwise-sum/congestion/congestion-p1-20-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/pairwise-sum/congestion/congestion-p1-20-eps-
+converted-to.pdf used on input line 369.
+(pdftex.def)             Requested size: 70.37381pt x 70.37381pt.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.372 	\caption
+               {%pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.378 	}
+        pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.378 	}
+        
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./sections/sec-conclusion.tex [23 <./images/pairwise-attraction/tworooms/two
+rooms-1-eps-converted-to.pdf> <./images/pairwise-attraction/tworooms/tworooms-4
+-eps-converted-to.pdf> <./images/pairwise-attraction/tworooms/tworooms-8-eps-co
+nverted-to.pdf> <./images/pairwise-attraction/tworooms/tworooms-15-eps-converte
+d-to.pdf> <./images/pairwise-attraction/tworooms/tworooms-20-eps-converted-to.p
+df>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./images/pairwise-sum/tworectangles/tworectangles-1-eps-converted-to.pdf>
+ <./images/pairwise-sum/tworectangles/tworectangles-2-eps-converted-to.pdf> <./
+images/pairwise-sum/tworectangles/tworectangles-5-eps-converted-to.pdf> <./imag
+es/pairwise-sum/tworectangles/tworectangles-10-eps-converted-to.pdf> <./images/
+pairwise-sum/tworectangles/tworectangles-20-eps-converted-to.pdf> <./images/pai
+rwise-sum/tworectangles/tworectangles-sum-1-eps-converted-to.pdf> <./images/pai
+rwise-sum/tworectangles/tworectangles-sum-2-eps-converted-to.pdf> <./images/pai
+rwise-sum/tworectangles/tworectangles-sum-5-eps-converted-to.pdf> <./images/pai
+rwise-sum/tworectangles/tworectangles-sum-10-eps-converted-to.pdf> <./images/pa
+irwise-sum/tworectangles/tworectangles-sum-20-eps-converted-to.pdf> <./images/p
+airwise-sum/tworectangles/tworectangles-p1-1-eps-converted-to.pdf> <./images/pa
+irwise-sum/tworectangles/tworectangles-p1-2-eps-converted-to.pdf> <./images/pai
+rwise-sum/tworectangles/tworectangles-p1-5-eps-converted-to.pdf> <./images/pair
+wise-sum/tworectangles/tworectangles-p1-10-eps-converted-to.pdf> <./images/pair
+wise-sum/tworectangles/tworectangles-p1-20-eps-converted-to.pdf> <./images/pair
+wise-sum/congestion/congestion-1-eps-converted-to.pdf> <./images/pairwise-sum/c
+ongestion/congestion-2-eps-converted-to.pdf> <./images/pairwise-sum/congestion/
+congestion-5-eps-converted-to.pdf> <./images/pairwise-sum/congestion/congestion
+-10-eps-converted-to.pdf> <./images/pairwise-sum/congestion/congestion-20-eps-c
+onverted-to.pdf> <./images/pairwise-sum/congestion/congestion-sum-1-eps-convert
+ed-to.pdf> <./images/pairwise-sum/congestion/congestion-sum-2-eps-converted-to.
+pdf> <./images/pairwise-sum/congestion/congestion-sum-5-eps-converted-to.pdf> <
+./images/pairwise-sum/congestion/congestion-sum-10-eps-converted-to.pdf> <./ima
+ges/pairwise-sum/congestion/congestion-sum-20-eps-converted-to.pdf> <./images/p
+airwise-sum/congestion/congestion-p1-1-eps-converted-to.pdf> <./images/pairwise
+-sum/congestion/congestion-p1-2-eps-converted-to.pdf> <./images/pairwise-sum/co
+ngestion/congestion-p1-5-eps-converted-to.pdf> <./images/pairwise-sum/congestio
+n/congestion-p1-10-eps-converted-to.pdf> <./images/pairwise-sum/congestion/cong
+estion-p1-20-eps-converted-to.pdf>]) (./sections/sec-prox-calculus.tex [25] [26
+])
+(./EntropicJKO.bbl [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
+
+[30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
+ (./EntropicJKO.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
+Package rerunfilecheck Info: File `EntropicJKO.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
+ ) 
+Here is how much of TeX's memory you used:
+ 8322 strings out of 493014
+ 144889 string characters out of 6133351
+ 216553 words of memory out of 5000000
+ 11317 multiletter control sequences out of 15000+600000
+ 11702 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,16n,37p,1510b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on EntropicJKO.pdf (30 pages, 1761416 bytes).
+PDF statistics:
+ 1308 PDF objects out of 1440 (max. 8388607)
+ 980 compressed objects within 10 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 661 words of extra memory for PDF output out of 10000 (max. 10000000)
+

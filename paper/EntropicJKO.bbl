@@ -1,0 +1,427 @@
+\begin{thebibliography}{10}
+
+\bibitem{AdamsCMP}
+S.~Adams, N.~Dirr, M.~Peletier, and J.~Zimmer.
+\newblock From a large-deviations principle to the wasserstein gradient flow: A
+  new micro-macro passage.
+\newblock {\em Communications in Mathematical Physics}, 307(3):791--815, 2011.
+
+\bibitem{agueh2002existence}
+M.~Agueh.
+\newblock {\em Existence of solutions to degenerate parabolic equations via the
+  {Monge-Kantorovich} theory.}
+\newblock PhD thesis, Georgia Institute of Technology, USA, 2002.
+
+\bibitem{agueh2013one}
+M.~Agueh and M.~Bowles.
+\newblock One-dimensional numerical algorithms for gradient flows in the
+  $p$-{Wasserstein} spaces.
+\newblock {\em Acta Applicandae Mathematicae}, 125(1):121--134, 2013.
+
+\bibitem{Carlier_wasserstein_barycenter}
+M.~Agueh and G.~Carlier.
+\newblock Barycenters in the {W}asserstein space.
+\newblock {\em SIAM J. on Mathematical Analysis}, 43(2):904--924, 2011.
+
+\bibitem{ambrosio2006gradient}
+L.~Ambrosio, N.~Gigli, and G.~Savar{\'e}.
+\newblock {\em Gradient flows: in metric spaces and in the space of probability
+  measures}.
+\newblock Springer, 2006.
+
+\bibitem{ArtachoNonCvx}
+A.~Artacho, Borwein F.~J., and J.~M.
+\newblock Global convergence of a non-convex douglas-rachford iteration.
+\newblock {\em J. Global Optimization}, 57(3):1--17, 2012.
+
+\bibitem{BauschkeCombettes-Dykstra}
+H.~H. Bauschke and P.~L. Combettes.
+\newblock A {Dykstra}-like algorithm for two monotone operators.
+\newblock {\em Pacific Journal of Optimization}, 4(3):383--391, 2008.
+
+\bibitem{BauschkeCombettes11}
+H.~H. Bauschke and P.~L. Combettes.
+\newblock {\em Convex Analysis and Monotone Operator Theory in {H}ilbert
+  Spaces.}
+\newblock Springer-Verlag, New York, 2011.
+
+\bibitem{BauschkeNonCvx}
+H.~H. Bauschke, P.~L. Combettes, and D.~R. Luke.
+\newblock Phase retrieval, error reduction algorithm, and {Fienup} variants: A
+  view from convex optimization.
+\newblock {\em J. Opt. Soc. Am. A}, 19(7):1334--1345, 2002.
+
+\bibitem{bauschke-lewis}
+H.~H. Bauschke and A.~S. Lewis.
+\newblock Dykstra's algorithm with {B}regman projections: a convergence proof.
+\newblock {\em Optimization}, 48(4):409--427, 2000.
+
+\bibitem{Benamou2000}
+J.-D. Benamou and Y.~Brenier.
+\newblock A computational fluid mechanics solution of the {M}onge-{K}antorovich
+  mass transfer problem.
+\newblock {\em Numerische Mathematik}, 84(3):375--393, 2000.
+
+\bibitem{BregmanProj2015}
+J-D. Benamou, G.~Carlier, M.~Cuturi, L.~Nenna, and G.~Peyr\'e.
+\newblock Iterative {Bregman} projections for regularized transportation
+  problems.
+\newblock {\em to appear in SIAM J. Sci. Comp.}, 2015.
+
+\bibitem{JDB-JKO}
+J-D. Benamou, G.~Carlier, Q.~M\'erigot, and E.~Oudet.
+\newblock Discretization of functionals involving the {Monge-Amp\`ere}
+  operator.
+\newblock {\em Preprint arXiv:1408.4536}, 2014.
+
+\bibitem{BigotBarycenter}
+J.~Bigot and T.~Klein.
+\newblock Consistent estimation of a population barycenter in the {W}asserstein
+  space.
+\newblock {\em Preprint arXiv:1212.2562}, 2012.
+
+\bibitem{blanchet2008convergence}
+A.~Blanchet, V.~Calvez, and J.~A Carrillo.
+\newblock Convergence of the mass-transport steepest descent scheme for the
+  subcritical patlak-keller-segel model.
+\newblock {\em SIAM Journal on Numerical Analysis}, 46(2):691--721, 2008.
+
+\bibitem{blanchet2012optimal}
+A.~Blanchet and G.~Carlier.
+\newblock Optimal transport and {Cournot-Nash} equilibria.
+\newblock {\em arXiv preprint arXiv:1206.6571}, 2012.
+
+\bibitem{Bonneel-displacement}
+N.~Bonneel, M.~{van de Panne}, S.~Paris, and W.~Heidrich.
+\newblock Displacement interpolation using {Lagrangian} mass transport.
+\newblock {\em ACM Transactions on Graphics (SIGGRAPH ASIA'11)}, 30(6), 2011.
+
+\bibitem{botsch-2010}
+M.~Botsch, L.~Kobbelt, M.~Pauly, P.~Alliez, and B.~Levy.
+\newblock {\em Polygon Mesh Processing}.
+\newblock Taylor \& Francis, 2010.
+
+\bibitem{bregman1967relaxation}
+L.~M. Bregman.
+\newblock The relaxation method of finding the common point of convex sets and
+  its application to the solution of problems in convex programming.
+\newblock {\em USSR computational mathematics and mathematical physics},
+  7(3):200--217, 1967.
+
+\bibitem{BregmanCensorReich-Dykstra}
+L.M. Bregman, Y.~Censor, and S.~Reich.
+\newblock Dykstra's algorithm as the nonlinear extension of {Bregman's}
+  optimization method.
+\newblock {\em Journal of Convex Analysis}, 6:319--333, 1999.
+
+\bibitem{BrenierEulerAMS}
+Y.~Brenier.
+\newblock The least action principle and the related concept of generalized
+  flows for incompressible perfect fluids.
+\newblock {\em J. of the AMS}, 2:225--255, 1990.
+
+\bibitem{BuddMoving}
+C.J. Budd, M.J.P. Cullen, and E.J. Walsh.
+\newblock {Monge-Amp\`ere} based moving mesh methods for numerical weather
+  prediction, with applications to the eady problem.
+\newblock {\em Journal of Computational Physics}, 236:247--270, 2013.
+
+\bibitem{burger2010mixed}
+M.~Burger, J.~A. Carrillo, and M-T. Wolfram.
+\newblock A mixed finite element method for nonlinear diffusion equations.
+\newblock {\em Kinetic and Related Models}, 3(1):59--83, 2010.
+
+\bibitem{Burger-JKO}
+M.~Burger, M.~Franeka, and C-B. Schonlieb.
+\newblock Regularised regression and density estimation based on optimal
+  transport.
+\newblock {\em Appl. Math. Res. Express}, 2:209--253, 2012.
+
+\bibitem{CarrilloFiniteVolume}
+J.~A. Carrillo, A.~Chertock, and Y.~Huang.
+\newblock A finite-volume method for nonlinear nonlocal equations with a
+  gradient flow structure.
+\newblock {\em Communications in Computational Physics}, 17:233--258, 1 2015.
+
+\bibitem{carrillo2009numerical}
+J.~A Carrillo and J.~S. Moll.
+\newblock Numerical simulation of diffusive and aggregation phenomena in
+  nonlinear continuity equations by evolving diffeomorphisms.
+\newblock {\em SIAM Journal on Scientific Computing}, 31(6):4305--4329, 2009.
+
+\bibitem{CensorReich-Dykstra}
+Y.~Censor and S.~Reich.
+\newblock The {Dykstra} algorithm with {Bregman} projections.
+\newblock {\em Communications in Applied Analysis}, 2:407--419, 1998.
+
+\bibitem{ChambollePock-div}
+A.~Chambolle and T.~Pock.
+\newblock On the ergodic convergence rates of a first-order primal-dual
+  algorithm.
+\newblock {\em preprint}, 2014.
+
+\bibitem{ChowHuangLiZhou2012}
+S-N. Chow, W.~Huang, Y.~Li, and H.~Zhou.
+\newblock Fokker-planck equations for a free energy functional or markov
+  process on a graph.
+\newblock {\em Archive for Rational Mechanics and Analysis}, 203(3):969--1008,
+  2012.
+
+\bibitem{Ciarlet-Book}
+P.~G. Ciarlet.
+\newblock {\em Introduction to Numerical Linear Algebra and Optimisation}.
+\newblock Cambridge University Press, Cambridge, 1989.
+\newblock Originally published in French under the title, {\em Introduction \`a
+  l'analyse num\'erique matricielle et \`a l'optimisation} in 1982.
+
+\bibitem{crane-2013}
+K.~Crane, C.~Weischedel, and M.~Wardetzky.
+\newblock Geodesics in heat: A new approach to computing distance based on heat
+  flow.
+\newblock {\em ACM Trans. Graph.}, 32(5):152:1--152:11, October 2013.
+
+\bibitem{csis}
+I.~Csisz{\'a}r.
+\newblock {$I$}-divergence geometry of probability distributions and
+  minimization problems.
+\newblock {\em Ann. Probability}, 3:146--158, 1975.
+
+\bibitem{CuturiSinkhorn}
+M.~Cuturi.
+\newblock Sinkhorn distances: Lightspeed computation of optimal transport.
+\newblock In {\em Advances in Neural Information Processing Systems (NIPS) 26},
+  pages 2292--2300, 2013.
+
+\bibitem{CuturiBarycenter}
+M.~Cuturi and A.~Doucet.
+\newblock Fast computation of {Wasserstein} barycenters.
+\newblock In {\em Proceedings of the 31st International Conference on Machine
+  Learning (ICML), JMLR W\&CP}, volume~32, 2014.
+
+\bibitem{Davis:2006}
+T.~A. Davis.
+\newblock {\em Direct Methods for Sparse Linear Systems}.
+\newblock SIAM, 2006.
+
+\bibitem{DemingStephanIPFP}
+W.~E. Deming and F.~F. Stephan.
+\newblock On a least squares adjustment of a sampled frequency table when the
+  expected marginal totals are known.
+\newblock {\em Annals Mathematical Statistics}, 11(4):427--444, 1940.
+
+\bibitem{deriche-1993}
+R.~Deriche.
+\newblock Recursively implementing the {G}aussian and its derivatives.
+\newblock Technical Report RR-1893, INRIA, 1993.
+
+\bibitem{dyk}
+R.~L. Dykstra.
+\newblock An iterative procedure for obtaining {$I$}-projections onto the
+  intersection of convex sets.
+\newblock {\em Ann. Probab.}, 13(3):975--984, 1985.
+
+\bibitem{EcksteinProxPoint}
+J.~Eckstein.
+\newblock Nonlinear proximal point algorithms using {Bregman} functions, with
+  applications to convex programming.
+\newblock {\em Mathematics of Operations Research}, 18(1):202--226, 1993.
+
+\bibitem{ErbarHeatManifold}
+M.~Erbar.
+\newblock The heat equation on manifolds as a gradient flow in the
+  {Wasserstein} space.
+\newblock {\em Annales de l'Institut Henri Poincar\'e, Probabilités et
+  Statistiques}, 46(1):1--23, 2010.
+
+\bibitem{FehrenbachMirebeau}
+J.~Fehrenbach and J-M. Mirebeau.
+\newblock Sparse non-negative stencils for anisotropic diffusion.
+\newblock {\em Journal of Mathematical Imaging and Vision}, 49(1):123--147,
+  2014.
+
+\bibitem{FigalliPartial}
+A.~Figalli.
+\newblock The optimal partial transport problem.
+\newblock {\em Arch. Ration. Mech. Anal.}, 195(2):533--560, 2010.
+
+\bibitem{FrischNaturee}
+U.~Frisch, S.~Matarrese, R.~Mohayaee, and A.~Sobolevski.
+\newblock {Monge-Ampere-Kantorovitch} {(MAK)} reconstruction of the early
+  universe.
+\newblock {\em Nature}, 417(260), 2002.
+
+\bibitem{GianazzaARMA}
+U.~Gianazza, G.~Savar\'e, and G.~Toscani.
+\newblock The wasserstein gradient flow of the {Fisher} information and the
+  quantum drift-diffusion equation.
+\newblock {\em Archive for Rational Mechanics and Analysis}, 194(1):133--220,
+  2009.
+
+\bibitem{JonathanMcCannCapacity}
+K.~Jonathan and R.~J. McCann.
+\newblock Insights into capacity constrained optimal transport.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 110:10064--10067, 2013.
+
+\bibitem{jordan1998variational}
+R.~Jordan, D.~Kinderlehrer, and O.~Otto.
+\newblock The variational formulation of the {Fokker}-{Planck} equation.
+\newblock {\em SIAM journal on mathematical analysis}, 29(1):1--17, 1998.
+
+\bibitem{Kantorovich42}
+L.~Kantorovich.
+\newblock On the transfer of masses (in russian).
+\newblock {\em Doklady Akademii Nauk}, 37(2):227--229, 1942.
+
+\bibitem{kinderlehrer1999approximation}
+D.~Kinderlehrer and N.~J Walkington.
+\newblock Approximation of parabolic equations using the {Wasserstein} metric.
+\newblock {\em ESAIM: Mathematical Modelling and Numerical Analysis},
+  33(04):837--852, 1999.
+
+\bibitem{KiwielProxPoint}
+K.C. Kiwiel.
+\newblock Proximal minimization methods with generalized {Bregman} functions.
+\newblock {\em SIAM J. Control Optim.}, 35(4):1142--1168, 1997.
+
+\bibitem{LeonardShrodinger}
+C.~Leonard.
+\newblock A survey of the {Schrodinger} problem and some of its connections
+  with optimal transport.
+\newblock {\em Discrete Contin. Dyn. Syst. A}, 34(4):1533--1574, 2014.
+
+\bibitem{Maas2011}
+J.~Maas.
+\newblock Gradient flows of the entropy for finite markov chains.
+\newblock {\em Journal of Functional Analysis}, 261(8):2250--2292, 2011.
+
+\bibitem{Matthes1D}
+D.~Matthes and H.~Osberger.
+\newblock Convergence of a variational lagrangian scheme for a nonlinear drift
+  diffusion equation.
+\newblock {\em Preprint arXiv:1301.0747}, 2014.
+
+\bibitem{maury2010macroscopic}
+B.~Maury, A.~Roudneff-Chupin, and F.~Santambrogio.
+\newblock A macroscopic crowd motion model of gradient flow type.
+\newblock {\em Mathematical Models and Methods in Applied Sciences},
+  20(10):1787--1821, 2010.
+
+\bibitem{MielkeCVPDE}
+A.~Mielke.
+\newblock Geodesic convexity of the relative entropy in reversible markov
+  chains.
+\newblock {\em Calculus of Variations and Partial Differential Equations},
+  48(1-2):1--31, 2013.
+
+\bibitem{nesterov1994interior}
+Y.~Nesterov, A.~Nemirovskii, and Y.~Ye.
+\newblock {\em Interior-point polynomial algorithms in convex programming},
+  volume~13.
+\newblock SIAM, 1994.
+
+\bibitem{otto2001geometry}
+F.~Otto.
+\newblock The geometry of dissipative evolution equations: the porous medium
+  equation.
+\newblock {\em Communications in partial differential equations},
+  26(1-2):101--174, 2001.
+
+\bibitem{FPapPeyOud13}
+N.~Papadakis, G.~Peyr{\'e}, and E.~Oudet.
+\newblock Optimal transport with proximal splitting.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(1):212--238, 2014.
+
+\bibitem{PassMultimarginal}
+B.~Pass.
+\newblock On the local structure of optimal measures in the multi-marginal
+  optimal transportation problem.
+\newblock {\em Calc. Var. Partial Differential Equations}, 43(3-4):529--536,
+  2012.
+
+\bibitem{RubTomGui00}
+Y.~Rubner, C.~Tomasi, and L.J. Guibas.
+\newblock The earth mover's distance as a metric for image retrieval.
+\newblock {\em International Journal of Computer Vision}, 40(2), 2000.
+
+\bibitem{RuschendorfThomsen}
+L.~Ruschendorf and W.~Thomsen.
+\newblock Closedness of sum spaces and the generalized {Schrodinger} problem.
+\newblock {\em Theory of Probability and its Applications}, 42(3):483--494,
+  1998.
+
+\bibitem{Shrodinger31}
+E.~Schrodinger.
+\newblock Uber die umkehrung der naturgesetze.
+\newblock {\em Sitzungsberichte Preuss. Akad. Wiss. Berlin. Phys. Math.},
+  144:144--153, 1931.
+
+\bibitem{sethian-book}
+J.A. Sethian.
+\newblock {\em Level Sets Methods and Fast Marching Methods}.
+\newblock Cambridge University Press, 2nd edition, 1999.
+
+\bibitem{Sinkhorn64}
+R.~Sinkhorn.
+\newblock A relationship between arbitrary positive matrices and doubly
+  stochastic matrices.
+\newblock {\em Ann. Math. Statist.}, 35:876--879, 1964.
+
+\bibitem{Sinkhorn67}
+R.~Sinkhorn.
+\newblock Diagonal equivalence to matrices with prescribed row and column sums.
+\newblock {\em Amer. Math. Monthly}, 74:402--405, 1967.
+
+\bibitem{SinkhornKnopp67}
+R.~Sinkhorn and P~. Knopp.
+\newblock Concerning nonnegative matrices and doubly stochastic matrices.
+\newblock {\em Pacific J. Math.}, 21:343--348, 1967.
+
+\bibitem{SolodovSvaiterBregman}
+M.~V. Solodov and B.~F. Svaiter.
+\newblock An inexact hybrid generalized proximal point algorithm and some new
+  results on the theory of {Bregman} functions.
+\newblock {\em Mathematics of Operations Research}, 25(2):214--230, 2000.
+
+\bibitem{ConvolutionalOT}
+J.~Solomon, F.~{de Goes}, G.~Peyr\'e, M.~Cuturi, A.~Butscher, A.~Nguyen, T.~Du,
+  and L.~Guibas.
+\newblock Convolutional {Wasserstein} distances: Efficient optimal
+  transportation on geometric domains.
+\newblock {\em Preprint}, 2015.
+
+\bibitem{varadhan-1967}
+S.~R.~S. Varadhan.
+\newblock On the behavior of the fundamental solution of the heat equation with
+  variable coefficients.
+\newblock {\em Communications on Pure and Applied Mathematics}, 20(2):431--455,
+  1967.
+
+\bibitem{Villani03}
+C.~Villani.
+\newblock {\em Topics in Optimal Transportation}.
+\newblock Graduate Studies in Mathematics Series. American Mathematical
+  Society, 2003.
+
+\bibitem{WangBanerjee-ADMM}
+H.~Wang and A.~Banerjee.
+\newblock Bregman alternating direction method of multipliers.
+\newblock {\em preprint arXiv:1306.3203}, 2014.
+
+\bibitem{WeickertBook}
+J.~Weickert.
+\newblock {\em Anisotropic Diffusion in Image Processing}.
+\newblock Teubner, Stuttgart, 1998.
+
+\bibitem{Westdickenberg2010}
+M.~Westdickenberg and J.~Wilkening.
+\newblock Variational particle schemes for the porous medium equation and for
+  the system of isentropic {Euler} equations.
+\newblock {\em ESAIM: Mathematical Modelling and Numerical Analysis},
+  44(1):133--166, 2010.
+
+\bibitem{2014-xia-siims}
+G-S. Xia, S.~Ferradans, G.~Peyr{\'e}, and J-F. Aujol.
+\newblock Synthesizing and mixing stationary {Gaussian} texture models.
+\newblock {\em SIAM Journal on Imaging Sciences}, 7(1):476--508, 2014.
+
+\end{thebibliography}

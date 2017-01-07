@@ -1,0 +1,137 @@
+% !TEX root = ../EntropicJKO.tex
+\section{Introduction}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Optimal Transport}
+
+%%%
+\paragraph{Optimal transport: from theory to applications}
+
+In the last 20 years or so, optimal transport (OT) has emerged as a foundational tool to analyze diverse problems at the interface between variational analysis, partial differential equations and probability. We refer to the book of Villani~\cite{Villani03} for an introduction to these topics. It took more time for this notion to become progressively mainstream in various applications, which is largely due to the high computation cost of the corresponding (static) linear program of Kantorovich~\cite{Kantorovich42} or to the dynamical formulation of Benamou and Brenier~\cite{Benamou2000}. However, one can now find many relevant uses of OT in very diverse fields such as astrophysics~\cite{FrischNaturee}, computer vision~\cite{RubTomGui00}, computer graphics~\cite{Bonneel-displacement}, image processing~\cite{2014-xia-siims}, statistics~\cite{BigotBarycenter} and machine learning~\cite{CuturiSinkhorn}, to name a few.
+
+
+%%%
+\paragraph{Entropic regularization}
+
+In order to obtain fast approximations of optimal transport distances (a.k.a. Wasserstein distances), there has been a recent revival of the so-called entropic regularization method. Cuturi~\cite{CuturiSinkhorn} presented this scheme in the machine learning community as a fully parallelizable algorithm which can make the method scalable to large problems. He shows that this corresponds to the application of the well-known iterative diagonal scaling algorithm, which is sometimes referred to as Sinkhorn's algorithm~\cite{Sinkhorn64,SinkhornKnopp67,Sinkhorn67} or IPFP~\cite{DemingStephanIPFP}. This method is also closely related to Schrodinger's problem~\cite{Shrodinger31} of projecting a Gibbs distribution on fixed marginal constraints, see~\cite{RuschendorfThomsen,LeonardShrodinger} for recent mathematical accounts on this problem. It is also related to deviation problems, see~\cite{AdamsCMP} for a connexion with gradient flows.
+
+The major interest of this entropic approximation is that it allows one to re-cast various OT-related problems as optimizations over the space of probabilities endowed with the Kulback-Leibler divergence. The geometry of this space, as well as the availability of efficient first-order optimization methods, makes this novel formulation numerically more friendly than the original linear program formulation. The price to pay for such simple and efficient approaches is the presence of an extra amount of smoothing (in fact a blurring by the Gibbs kernel) on the obtained results. 
+
+%%%
+\paragraph{Variational problems involving OT}
+
+These methods have been used to solve various variational optimization problem involving the Wasserstein distance. For instance the computation of Wasserstein barycenters, initially proposed in~\cite{Carlier_wasserstein_barycenter}, has been approximated by entropic regularization in~\cite{CuturiBarycenter}. A more general class of problems, including multi-marginal transport (see~\cite{PassMultimarginal} for recent results on this topic) as well as generalized Euler's flows (see~\cite{BrenierEulerAMS} for a weak formulation of Euler's equations), partial transport (as defined in~\cite{FigalliPartial}) and capacity-constrained transport (as defined in~\cite{JonathanMcCannCapacity}) have been approximated by entropic smoothing in~\cite{BregmanProj2015}. 
+
+Our work goes in the same direction of applying entropic regularization to speed up the computation of OT-related problems. Instead of considering here the minimization of functionals involving the Wasserstein distance, we consider here the minimization of convex functions according to the Wasserstein distance. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Previous Works}
+\label{sec-previous-works}
+
+
+%%%
+\paragraph{Wasserstein flows -- theory}
+
+It is natural to derive various partial differential equations (PDE's) as gradient flows of certain energy functionals. While it is most of time assumed that the flow follows the gradient as defined through the $L^2$ topology on some Hilbert space of functions, it is sometime desirable to consider more complicated metrics. This allows one to capture different PDE's and also sometime to give a precise meaning to weak solutions of these PDE's. One of the most striking example is the computation of gradient flows over spaces of probability distributions (i.e. positive and normalized measures) according to the topology defined by the Wasserstein metric. In this setting, the gradient descent cannot be understood directly as an infinitesimal explicit descent in the direction of some gradient, but rather as a limit of an implicit Euler step, as detailed in Section~\ref{subsect-jko-stepping}. This idea corresponds to the notion of gradient flows in metric spaces exposed in the book~\cite{ambrosio2006gradient}.   
+
+The pioneer paper of Jordan, Kinderlehrer and Otto~\cite{jordan1998variational} shows how one recovers Fokker-Planck  diffusions of distributions when one minimizes entropy functionals according to the $W_2$ Wasserstein metric.
+The corresponding method are often referred to as`JKO flows'' in reference to these authors. Since then, many non-linear PDE's have been derived as gradient flows for Wasserstein metrics, including the heat equation on manifolds~\cite{ErbarHeatManifold}, the porous medium equation~\cite{otto2001geometry}, more general degenerate parabolic PDE's~\cite{agueh2002existence}, Keller-Segel equation~\cite{blanchet2008convergence} and higher order PDE's~\cite{GianazzaARMA} (see also~\cite{Burger-JKO} for applications in imaging). It is also possible to define a suitable notion of minimizing flow that cannot be written as PDE's due to the non-differentiability of the energy functional, a striking example being the model of crowd motion with congestion proposed by~\cite{maury2010macroscopic},
+
+
+%%%
+\paragraph{Wasserstein flows -- numerics}
+
+The use of Wasserstein methods to discretize non-linear evolutions is an emerging field of research. The major difficulty lies in the high computational cost induced by the resolution of each step. 
+
+The case of 1-D densities is simpler because the optimal transport metric is a flat metric when re-parameterized using inverse cumulative functions. This idea is used in~\cite{kinderlehrer1999approximation,blanchet2008convergence,blanchet2012optimal,agueh2013one,Matthes1D}. 
+%
+In higher dimension, a first class of approaches uses an Eulerian representation of the discretized density (i.e. on a fixed grid). The resulting problem can be solved using interior point methods for convex energies~\cite{Burger-JKO} or some sort of linearization in conjunction with finite elements~\cite{burger2010mixed} or finite volumes~\cite{CarrilloFiniteVolume} schemes. 
+%
+A second class of approaches rather uses a Lagrangian representation, which is well adapted to optimal transport where the thought after solution is obtained by warping the density at the previous iterate. This idea is at the heart of several schemes, using discretized warpings~\cite{carrillo2009numerical}, particules systems~\cite{Westdickenberg2010}, moving meshes~\cite{BuddMoving} and a consistent discretization of the gradients of convex functions (i.e. optimal transports)~\cite{JDB-JKO}. 
+% 
+Lastly, let us note that gradient flows over discrete spaces (e.g. graphs) have been recently proposed~\cite{ChowHuangLiZhou2012,Maas2011,MielkeCVPDE} and could lead to structure preserving discretization schemes. 
+
+In this article, we use an Eulerian discretization and intend at approximating flows for energies that are already convex in the usual (Euclidean) sense. The main goal is to provide a fast and quite versatile discretization scheme through the use of an entropic smoothing method.
+
+% , and do not prove a $\Gamma$-convergence result (see Section~\ref{sec-conclusion} for a discussion about the underlying difficulties). 
+
+
+%%%
+\paragraph{First order scheme with respect to Bregman divergences}
+
+First order proximal optimization schemes have been recently popularized in image processing and machine learning, due to their simplicity and the low computational cost of each iteration. Each step typically requires the computation of proximal operators, which are defined as strictly convex optimization sub-problems, corresponding to an implicit step according to the $L^2$ distance. We refer to the book~\cite{BauschkeCombettes11} for an overview of this large class of methods and recent developments. Note that these $L^2$ proximal methods have been used to solve the dynamical formulation of OT~\cite{Benamou2000,FPapPeyOud13}. 
+
+Many of these proximal algorithms have been extended when one replaces the $L^2$ metric by more general Bregman divergences. The prototypical algorithm (although rarely applicable in its original form) that has been extended to this divergence setting is the so-called proximal point algorithm~\cite{EcksteinProxPoint} (see~\cite{KiwielProxPoint} for an extension to more general, possibly non-smooth, divergences) which corresponds to iteratively applying the proximal operator of the function to be minimized.
+
+Iterative projections on convex sets is probably the simplest yet useful example of proximal methods. It has been extended to the general setting of Bregman's divergences by Bregman~\cite{bregman1967relaxation}. This scheme actually computes the projection on the intersection of convex sets if these sets are affine, which is a restrictive assumption. The natural extension of iterative projections to generic closed convex sets is the so-called Dykstra's algorithm~\cite{dyk,csis}, which can be interpreted as a block-coordinate optimization on the dual problem. Dykstra's method has been extended to the special case of half-spaces in~\cite{CensorReich-Dykstra} and to generic closed convex sets in~\cite{bauschke-lewis,BregmanCensorReich-Dykstra}. 
+%
+Actually, as we show in Section~\ref{subsec-dykstra-bregman}, this result extends to arbitrary proper lower-semicontinuous convex functions (that are not necessarily indicators of closed convex sets). Note that such an extension is well-known for the case of the $L^2$ metric~\cite{BauschkeCombettes-Dykstra}.
+
+While in this paper we only make use of Dykstra's algorithm, it should be noted that many more proximal splitting algorithms are available in this Bregman's divergences setting, such as Douglas-Rachford and ADMM~\cite{WangBanerjee-ADMM}, primal-dual algorithms~\cite{ChambollePock-div} and hybrid proximal point algorithms~\cite{SolodovSvaiterBregman}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Contributions}
+
+In this paper, we present a novel numerical scheme to compute approximations of discrete gradient flows for  Wasserstein metrics. The approximation is performed by an entropic smoothing of the original OT distance. Each step is computed as the resolution of a convex but possibly non-smooth optimization problem involving a Kulback-Leibler divergence to some Gibbs kernel. We thus propose in Section~\ref{sec-bregman-prox} to solve it using an extension of Dykstra's algorithm to this class of problems, for which we prove the convergence to the solution. Our main finding is that this scheme is both simple to implement and competitive in term of computational speed, since it only requires multiplications with the Gibbs kernel, which, for many practical scenarios, can be achieved in nearly linear time.  We illustrate in Secton~\ref{sec-numerics} this point by applications to a crowd motion model involving a non-smooth congestion term. Lastly, Section~\ref{sec-general-functinons} presents a generalization of the proposed algorithm to the case were several couplings are optimized. We show the usefulness of this generalization to compute the gradient flow of a Wasserstein attraction term with congestion and to compute evolution of several coupled densities. 
+
+The code to reproduce the numerical part of this article is available online.\footnote{\url{https://github.com/gpeyre/2015-SIIMS-wasserstein-jko/}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Notations}
+
+In the following we consider either vectors $p \in \RR^N$ ($N$ being the number of discretization points) that are usually in the probability simplex
+\eql{\label{eq-def-simplex}
+	\Si_N \eqdef \enscond{p \in \RR_+^N}{\textstyle\sum_{i=1}^N p_i = 1}
+}
+and couplings, that are matrices $\pi \in \RR_+^{N \times N}$. We denote $\dotp{p}{q}=\sum_{i=1}^N p_i q_i$ the canonical inner product on $\RR^N$ and similarly on $\RR^{N \times N}$.
+
+For some set $\Cc \subset \RR^Q$ (typically $Q=N$ or $Q=N \times N$), we define its indicator function as
+\eql{\label{eq-indicator-def}
+	\foralls a \in \RR^Q, \quad
+	\iota_\Cc(a) \eqdef \choice{
+		0 \qifq a \in \Cc, \\
+		+\infty \quad \text{otherwise}.
+	}
+}
+To ease notations, we define $\odot$ and $\frac{\cdot}{\cdot}$ as being entry-wise operations, i.e. $a \odot b \eqdef (a_i b_i)_i$ and $\frac{a}{b} \eqdef (a_i/b_i)_i$. We denote as $\ones \eqdef (1,\ldots,1)^T \in \RR^N$ the vector filled with ones. We define
+\eql{\label{eq-modulo-2}
+	\foralls \ell \in \NN, \quad
+	[\ell]_2 \eqdef \choice{
+		1 \qifq \ell \text{ is odd, }\\
+		2 \qifq \ell \text{ is even. }	
+	}
+}
+
+We define minus the entropy on both vectors and couplings (and we make this distinction on purpose to ease the description of the proposed methods) as
+\begin{align}
+	\label{eq-entropy-defn}
+	\foralls p \in \RR^N, \quad
+	\oE(p) &\eqdef \sum_{i=1}^N p_i (\log(p_i)-1) + \iota_{\RR^+}(p_i),  \\
+	\label{eq-entropy-couplings-defn}
+	\foralls \pi \in \RR^{N \times N}, \quad
+	E(\pi) &\eqdef \sum_{i,j=1}^Q \pi_{i,j} (\log(\pi_{i,j})-1) + \iota_{\RR^+}(\pi_{i,j}),  
+\end{align}
+with the convention that $0 \log(0)=0$, and where $\iota_{\RR^+}$ is the indicator function of $\RR^+$, see~\eqref{eq-indicator-def}. 
+
+We define the Kulback-Leibler divergence on both vectors and couplings as
+\begin{align}
+	\label{eq-defn-kl}
+	\foralls (p,q) \in \RR_{+}^N \times \RR_{+,*}^N, \quad
+	\oKL(p|q) &\eqdef \sum_{i=1}^Q p_i \log\pa{ \frac{p_i}{q_i} } - p_i + q_i, \\
+	\foralls (\pi,\xi) \in \RR_+^{N \times N} \times \RR_{+,*}^{N \times N}, \quad
+	\KL(\pi|\xi) &\eqdef \sum_{i,j=1}^Q \pi_{i,j} \log\pa{ \frac{\pi_{i,j}}{\xi_{i,j}} } - \pi_{i,j} + \xi_{i,j}.
+\end{align}
+% Note that it can be extended to arbitrary vectors $(a,b)$ with the convention that $\KL(a|b) = +\infty$ if $a$ or $b$ are negative, or if the support (index of non zero coefficients) of $b$ is not included in the support of $a$. 
+
+
+
+
+
+
+

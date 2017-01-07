@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: EntropicJKO.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+You've used 73 entries,
+            2118 wiz_defined-function locations,
+            968 strings with 16214 characters,
+and the built_in function-call counts, 22882 in all, are:
+= -- 2305
+> -- 993
+< -- 4
++ -- 411
+- -- 320
+* -- 1658
+:= -- 3900
+add.period$ -- 221
+call.type$ -- 73
+change.case$ -- 370
+chr.to.int$ -- 0
+cite$ -- 73
+duplicate$ -- 814
+empty$ -- 1809
+format.name$ -- 320
+if$ -- 4647
+int.to.chr$ -- 0
+int.to.str$ -- 73
+missing$ -- 80
+newline$ -- 369
+num.names$ -- 146
+pop$ -- 308
+preamble$ -- 1
+purify$ -- 306
+quote$ -- 0
+skip$ -- 541
+stack$ -- 0
+substring$ -- 1660
+swap$ -- 88
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 274
+warning$ -- 0
+while$ -- 244
+width$ -- 75
+write$ -- 795

@@ -1,0 +1,17 @@
+% !TEX root = ../EntropicJKO.tex
+\begin{abstract}
+	This article details a novel numerical scheme to approximate gradient flows for optimal transport (i.e. Wasserstein) metrics. 
+	These flows have proved useful to tackle theoretically and numerically non-linear diffusion equations that model for instance porous media or crowd evolutions. These gradient flows define a suitable notion of weak solutions for these evolutions and they can be approximated in a stable way using discrete flows. These discrete flows are implicit Euler time stepping according to the Wasserstein metric.
+	%
+	A bottleneck of these approaches is the high computational load induced by the resolution of each step. Indeed, this corresponds to the resolution of a convex optimization problem involving a Wasserstein distance to the previous iterate.
+	%
+	Following several recent works on the approximation of Wasserstein distances, we consider a discrete flow induced by an entropic regularization of the transportation coupling. This entropic regularization allows one to trade the initial Wasserstein fidelity term for a Kullback-Leibler divergence, which is easier to deal with numerically. We show how Kullback-Leibler first order proximal schemes, and in particular Dykstra's algorithm, can be used to compute each step of the regularized flow. 
+	% 
+	The resulting algorithm is both fast, parallelizable and versatile, because it only requires multiplications by the Gibbs kernel $e^{-c/\ga}$ where $c$ is the ground cost and $\ga>0$ the regularization strength. On Euclidean domains discretized on an uniform grid, this corresponds to a linear filtering (for instance a Gaussian filtering when $c$ is the squared Euclidean distance) which can be computed in nearly linear time. On more general domains, such as (possibly non-convex) shapes or on manifolds discretized by a triangular mesh, following a recently proposed numerical scheme for optimal transport, this Gibbs kernel multiplication is approximated by a short-time heat diffusion. 
+	% 
+	We show numerical illustrations of this method to approximate crowd motions with congestion on complicated domains as well as extensions to take into account interactions between multiple densities.
+\end{abstract}
+
+\begin{keywords}Optimal transport, gradient flow, JKO flow, Wasserstein distance, Kullback-Leibler divergence, Dykstra's algorithm, crowd motion, non-linear diffusion.\end{keywords}
+
+\begin{AMS}90C25, 68U10\end{AMS}

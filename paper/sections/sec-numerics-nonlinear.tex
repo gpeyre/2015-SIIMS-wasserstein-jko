@@ -1,0 +1,124 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Non-linear Diffusions}
+
+To model non-linear diffusion equations, we consider (possibly space-varying) generalized entropies
+\eql{\label{eq-defn-gen-entropies}
+	f(p) \eqdef \sum_i b_i e_{m_i}(p_i)
+	\qwhereq
+	\foralls m \geq 1, 
+	e_m(s) \eqdef \choice{
+		s (\log(s)-1) \qifq m=1, \\
+		s \frac{s^{m-1}-m}{m-1}	\qifq m>1.
+	}
+}
+Here $(b_i)_{i=1}^N$ is a set of weights $b_i \geq 0$ that enable a specially varying diffusion strength, while $(m_i)_{i=1}^N$ is a set of exponents that enable to make the evolution more non-linear at certain locations. Note that the case $m=1$ corresponds to minus the entropy defined in~\eqref{eq-entropy-defn}. 
+
+In the case of constant weights $b$ and exponents $m$, the gradient flows of these functionals lead to non-linear diffusions of the form $\partial_t p = b \Delta p^m$. The case $m=1$ is the usual linear heat diffusion, as considered in the initial work of~\cite{jordan1998variational}. The case $m=2$ is the so-called porous medium equation~\cite{otto2001geometry}, where diffusion is slower in areas where the density $p$ is small. In particular, solutions might have a compact support that evolves in time, on contrary to the linear heat diffusion where mass can travel with infinite speed.  
+
+The following proposition, details how to compute the proximal operator of $h$.
+
+\begin{prop}
+The proximal operator of $f$ satisfies 
+\eq{
+	\Prox_{\si f}^{\oKL}(r) = (\Prox_{\si b_i e_{m_i}}^{\oKL}(r_i) )_{i=1}^N.
+}
+For $m=1$, the proximal operator of $e_1$ reads
+\eql{\label{eq-prox-entropy}
+	\foralls s>0, \quad \Prox_{\si e_1}^{\oKL}(s) = s^{\frac{1}{1+\si}}.
+}
+If $m \neq 1$, then for any $s>0$, $\ProxKL_{\si e_m}(s) = \psi$ is the unique positive root of the equation
+\eql{\label{eq-prox-psi}
+	\log(\psi) + m \si \frac{\psi^{m-1} - 1}{m-1}  = \log(s)
+}
+\end{prop}
+
+\begin{proof}
+	The proof follows from writing the first order optimality condition of~\eqref{eq-defn-proxKL}, which are exactly~\eqref{eq-prox-psi}. For $m=1$, this equation can be solved in closed form. 
+\end{proof}
+
+In the numerical applications, we compute $\ProxKL_{\si e_m}$ by using a few steps of Newton iterations to solve~\eqref{eq-prox-psi}, which can be parallelized over all the grid's locations. Figure~\ref{fig-Psi} shows examples of the energy $e_m$ and the corresponding proximal maps $\ProxKL_{\si e_m}$. They act as pointwise non-linear thresholding operators that are applied iteratively on the probability distribution being computed. In some sense, the congestion term~\eqref{eq-dfn-congestion} and the corresponding proximal operator~\eqref{eq-dfn-congestion-prox} can be understood as a limit of this model as $m \rightarrow +\infty$.
+
+
+
+
+\newcommand{\myfigProx}[1]{\includegraphics[width=.32\linewidth]{prox/#1}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}} % {@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		\myfigProx{entropies3} &
+		\myfigProx{prox_sigma1} &
+		% \myfigProx{prox_sigma2} &
+		\myfigProx{prox_sigma3} \\ 
+		$e_m$ & $\ProxKL_{\si e_m}, \sigma=1$ & $\ProxKL_{\si e_m}, \sigma=3$ \\
+	\end{tabular}
+	\caption{% 
+		Display of the graphs of functions $e_m$ and $\ProxKL_{\si e_m}$ for some values of $(\si,m)$.
+	}
+   \label{fig-Psi}
+\end{figure}
+
+We first consider an homogeneous 1-D setting with $b_i=b$ and $m_i = m$. This corresponds to the discretization of the porous medium equation $\partial_t p = b \Delta p^m$. Following~\cite{Westdickenberg2010} we set $b=\frac{(m-1)^2}{4m}$. There exists a family of explicit solutions, the so-called Barenblatt profiles, see~\cite{Westdickenberg2010} for instance, given by the expressions, for $t>-t_0$, 
+\eql{\label{eq-barenblatt}
+	(t+t_0)^{-\al}  \pa{ C^2 - k (t+t_0)^{-2\al}  x^2 }_{+}^{ \frac{1}{m-1} }
+	\qwhereq
+	\choice{
+	\al = \frac{1}{m+1}, \\
+	k = \frac{m-1}{2 m (m+1)}.
+	}
+}
+where $t_0$ is a time shift and $C>0$ is a constant that controls the total mass of the solution. 
+
+Figure~\eqref{fig-barenblatt} shows a comparison between the ground trust solution~\eqref{eq-barenblatt} and the approximation computed by the entropic gradient flow for $m = 4$, $t_0 = 1$, $C = 1/20$, on a grid of $N=2048$ points. The extra-smoothing added by the entropic scheme is clearly visible and it increases roughly linearly with time, so that the support of the solution is less and less compact. This is the main weakness of this numerical scheme, so that more conservative scheme such as~\cite{Westdickenberg2010} should be considered, at least for this homogeneous 1-D setting.
+
+
+\newcommand{\myfigBaren}[1]{\includegraphics[width=.48\linewidth]{barenblatt/barenblatt-t#1}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfigBaren{0} & \myfigBaren{100}  \\
+		$t=0$ & $t=100$ \\
+		\myfigBaren{10} & \myfigBaren{200}  \\
+		$t=10$ & $t=200$ \\
+		\myfigBaren{50} & \myfigBaren{1000}  \\
+		$t=50$ & $t=1000$ 
+	\end{tabular}
+	\caption{% 
+		Comparison of the Barenblatt profile (dashed curves) and the approximated solution (plain curves) for $m=4$.  
+	}
+   \label{fig-barenblatt}
+\end{figure}
+
+
+
+
+Figure~\eqref{fig-porous} shows illustration of the models in the case where either $b$ or $m$ is varying, thus producing a spatially varying flow. The initial distribution $p_{t=0}$ is computed as a white noise realization, where the pixels are independently and identically drawn according to a uniform distribution on $[0,1]$ (and then $p$ is normalized to unit mass). 
+
+\newcommand{\myfigPor}[2]{\includegraphics[width=.19\linewidth]{rand-varying-#1/rand-varying-#1-#2}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfigPor{e}{1}&
+		\myfigPor{e}{5}&
+		\myfigPor{e}{10}&
+		\myfigPor{e}{15}&
+		\myfigPor{e}{20}\\
+		\myfigPor{m}{1}&
+		\myfigPor{m}{5}&
+		\myfigPor{m}{10}&
+		\myfigPor{m}{15}&
+		\myfigPor{m}{20}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$ 
+	\end{tabular}
+	\caption{% 
+		Non-linear diffusion by gradient flow on the generalized entropies~\eqref{eq-defn-gen-entropies}. 
+		Top row: fixed $m_i=1.4$ and varying weights $b_i \in [1,20]$ (1 in the boundary, 20 in the center).
+		Bottom row: fixed $b_i=1$ and varying exponents $m_i \in [1,2]$ (1 in the boundary, $2$ in the center).
+	}
+   \label{fig-porous}
+\end{figure}

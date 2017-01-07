@@ -1,0 +1,123 @@
+% !TEX root = ../EntropicJKO.tex
+\section{Entropic Discrete JKO Flows}
+\label{sec-entropic-jko}
+
+We describe here discrete gradient flows with entropic smoothing and briefly outline connexions with continuous flows and PDE's.  
+
+%%%%
+\subsection{Discretization}
+\label{sec-discretization}
+ 
+In this article, we consider discrete flows (i.e. evolutions are discretized in time) of discrete probability distributions (i.e. the space is also discretized, and we deal with finite dimensional problems). More precisely, we consider a computational grid $\{x_i\}_{i=1}^N$ of $N$ points, which can be understood for instance as an uniform grid in a sub-set of $\RR^d$ (in the numerical illustrations of Section~\ref{sec-numerics} we consider $d=2$) or as vertices of a triangulation of a surface. 
+
+We consider discrete probability distributions on this set of points which we represent in the following as vectors $p \in \Si_N$ in the simplex as defined in~\eqref{eq-def-simplex}, where $p_i$ is the mass associated to the point $x_i$. One should understand these discrete vectors as a discretization of some measure, which is assumed to have a density $\rho(x)$ with respect to the usual area measure (e.g. the Lebesgue measure in $\RR^d$ or the area measure on a surface). A typical way to map $\rho(x)$ to $p \in \Si_N$ is to partition the computation domain in non-overlapping cells $V_i$, located around each $x_i$, and to set $p_i = \int_{V_i} \rho(x) \d x$. A canonical choice is to set $(V_i)_i$ to be the Voronoi partition of the domain associated to the points $(x_i)_i$. 
+
+
+Discretized optimal transport between such discrete measures is defined according to some ground cost $c \in \RR^{N \times N}$. A typical scenario is when $x_i \in \RR^d$ are points in the Euclidean space and one considers $c_{i,j} = \norm{x_i-x_j}^\al$, corresponding to the definition of Wasserstein distances. The case $\al=1$ corresponds to Monge's original problem, and $\al=2$ to the so-called $W_2$ metric, which is by far the most studied case because of its geometrical properties~\cite{Villani03}. A natural extension is to consider points $x_i$ on a smooth manifold $\Mm$ and to define $c_{i,j}=d_\Mm(x_i,x_j)^\al$ where $d_\Mm$ is the geodesic distance on the manifold.
+
+%%%%
+\subsection{Entropic Regularization of Wasserstein Distance}
+
+Following several recent works (see Sections~\ref{sec-previous-works}), the entropic-regularized transportation distance between $(p,q) \in \Si_N^2$ for a ground cost $c \in \RR^{N \times N}$  is
+\eq{
+	W_{\ga}(p,q) \eqdef \umin{\pi \in \Pi(p,q)} \dotp{c}{\pi} + \ga E(\pi)
+}
+for some regularization parameter $\ga \geq 0$, where the set of couplings with prescribed marginals $(p,q)$ is
+\eq{
+	\Pi(p,q) \eqdef \enscond{\pi \in \RR_+^{N \times N}}{ \pi\ones=p, \pi^T\ones=q }.
+}
+The case $\ga=0$ corresponds to the classical, un-regularized, optimal transport, and is a linear program. The case $\ga>0$ corresponds to a strictly convex minimization problem, where $E$ plays the role of a barrier function of the positive octant making the optimization problem better conditioned numerically. But there is more than merely a strict-convexification of the original functional, otherwise one could have settled for more classical log-barrier routinely used in interior-point methods~\cite{nesterov1994interior}. 
+%
+Algebraic properties of the entropy, and its close relationship with the Kulback-Leibler (KL) divergence~\eqref{eq-defn-kl} (see Section~\ref{subsec-dykstra-bregman} for a precise statement) indeed enables closed-form solutions for the various marginal projections problems encountered in OT problems (see for instance Proposition~\ref{prop-projection}). 
+
+It is important to remind that $W_{\ga}$ is not a distance for $\ga>0$, and we refer to Section~\ref{sec-conclusion} for a discussion on the impact of this deficiency.
+
+
+%%%%
+\subsection{JKO Stepping}
+\label{subsect-jko-stepping}
+
+Following the initial work of~\cite{jordan1998variational} (which gives the name of the method, ``JKO flows''), it is possible to discretize various non-linear PDE's as a gradient flow of a functional $f$ using implicit gradient step with respect to a Wasserstein distance. Our method relies on the idea of replacing the initial Wasserstein metric by its entropic regularized approximation. 
+
+A entropically regularized JKO iteration is an implicit descent descent step with respect to the $W_\ga$ ``metric''. To be consistent with notations introduced in the remaining parts of this article, we thus refer to it as a proximal operator according to $W_\ga$, and its definition reads, for $\tau>0$, 
+\eql{\label{eq-def-jko-operator}
+	\foralls q \in \RR^N, \quad
+	\Prox_{\tau f}^{W_\ga}(q) \eqdef \uargmin{p \in \Si_N} W_\ga(p,q) + \tau f(p).
+}
+Note that since $p \mapsto W_{\ga}(p,q)$ is a strictly convex and coercive function, this operator is uniquely defined.  
+
+Starting from some fixed discrete density $p_{t=0} \in \Si_N$, one defines the discrete JKO follow as
+\eql{\label{eq-smooth-jko}
+	\foralls t>0, \quad p_{t+1} \eqdef \Prox_{\tau_t f}^{W_{\ga_t}}(p_t), 
+}
+where $\tau_t>0$ is the step size, $\ga_t>0$ the entropic regularization parameter. Note that we allow here these parameters to vary during the iterations, although we use fixed parameters in the numerical sections~\ref{sec-numerics} and~\ref{sec-general-functinons}. 
+
+When $c_{i,j} = d_\Mm(x_i,x_j)^2$ (the geodesic distance squared on some smooth manifold $\Mm$), $f$ is smooth and $\ga=0$ (no entropic regularization), a formal computation shows that this scheme discretizes, as $(\tau,1/N) \rightarrow 0$, the PDE %(with solutions in the sense of distributions) 
+\eq{
+	\pd{\rho_t}{t} = \diverg_\Mm\pa{ \rho_t \nabla_\Mm ( F'(\rho_t) ) }.
+}
+Here $p_t \in \Si_N$ is a discretization of some density $\rho_t$ as detailed in Section~\ref{sec-discretization} and $f(p)$ is a discretization of some functional $F(\rho)$ defined on densities. 
+%
+The operators $\diverg_\Mm$ and $\nabla_\Mm$ are the gradient and divergence operators on the manifold $\Mm$, and $F'$ is the differential of $F$ (the gradient for the $L^2$ metric on the probability distributions on $\Mm$). We refer to~\cite{ErbarHeatManifold} for a proof of this relationship when $f$ is an entropy on a manifold. 
+
+For instance, in the case where $f(p)=\oE(p) + \dotp{p}{w}$, this discrete flow thus discretizes a linear diffusion-advection on the manifold
+\eq{
+	\pd{\rho_t}{t} = \Delta_\Mm(\rho_t) + \diverg_\Mm( \rho_t z )
+	\qwhereq
+	z = \nabla_\Mm(w).
+}
+so that the mass get advected by the vector field $z$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{KL Proximal Operators}
+
+In order for the method that we propose to be applicable, the function $f$ must be convex and should be ``simple'' in the sense that one should be able to compute easily its proximal operator for the KL divergence. Similarly to~\eqref{eq-def-jko-operator}, this proximal operator is defined as
+\eql{\label{eq-def-kl-prox-operator}
+	\foralls q \in \RR^N, \quad
+	\Prox_{\tau f}^{\oKL}(q) \eqdef \uargmin{p \in \RR_+^N} \oKL(p|q) + \tau f(p).
+}
+Note that since $p \mapsto \oKL(p|q)$ is a strictly convex and coercive function, this operator is uniquely defined.
+%
+Section~\eqref{sec-numerics} shows two examples of such ``simple'' functions: an indicator of a box constraint (for crowd movement) and generalized entropies (for non-linear diffusions).
+
+The underlying rationale behind the framework we propose in this article is that, while it is in general impossible to directly compute the operator $\Prox_{\tau f}^{W_\ga}$, there are many functionals for which $\Prox_{\tau f}^{\oKL}$ is accessible either in closed form, or through a fast and precise algorithm. We will thus trade the application of a single implicit $W_\ga$ proximal step by the iterative application of several KL implicit proximal steps. 
+%
+Note that, in particular, $f$ does not need to be smooth, which is crucial to model non-PDE evolutions such as crowd movements with congestion~\cite{maury2010macroscopic}.   
+
+The main property of the KL proximal operator are recalled in Appendix~\ref{sec-kl-calculus}. 
+
+
+
+\if 0
+The gradient flow evolution reads, as a PDE,
+\eq{
+	\pd{p}{t} = -\diverg(p v(p))
+}
+where the gradient direction according to the $W_2$ metric is
+\eq{
+	v(p) \eqdef \lim_{\epsilon \rightarrow 0} \min_v f((\Id+\epsilon v) \sharp p) + \frac{\epsilon}{2}
+		W_2(p,(\Id+\epsilon v)\sharp p)^2
+}
+and one has the Taylor expansion
+\eq{
+	f((\Id+\epsilon v) \sharp p) = f(p) + \epsilon \dotp{v}{\nabla Df(p)}_{\Ldeux(p)} + O(\epsilon^2)
+}
+where $Df$ is the differential (gradient) of the energy $f$, and
+\eq{
+	W_2(p,(\Id+\epsilon v)\sharp p)^2 = \epsilon \norm{v}_{\Ldeux(p)}^2 + O(\epsilon^2)
+}
+so that informally, one has 
+\eq{
+  v(p) = \lim_{\epsilon \rightarrow 0} \min_v f(p) + \epsilon \dotp{v}{\nabla Df(p)}_{\Ldeux(p)} + \epsilon \norm{v}_{\Ldeux(p)}^2 + O(\epsilon^2)
+}
+which leads to
+\eq{
+	  0  = p \nabla Df(p) + p v 
+	  \qarrq
+	    v(p) = -\nabla Df(p)
+}
+and hence the PDE
+\eq{
+  	\pd{p}{t} = \diverg(p \nabla Df(p)).
+}
+\fi 

@@ -1,0 +1,385 @@
+% !TEX root = ../EntropicJKO.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{More General Functionals}
+\label{sec-general-functinons}
+
+In order to highlight the power of the proposed entropic regularization approach, we show here how to adapt the algorithm detailed in Section~\ref{sec-bregman-prox} in order to deal with more involved functionals. These functionals require the introduction of several couplings, which in turn necessitates to develop a generic iterative scaling procedure derived from Dykstra's algorithm. This new method has its own interest, beyond the computation of Wasserstein gradient flows.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{A Generic Diagonal Scaling Algorithm}
+
+In order to tackle a more general class of functions $f$, we consider here a generalization of problem~\eqref{eq-defn-KL-prbm} where one wants to optimize over a family $\pi=(\pi_1,\ldots,\pi_M)$ of $M$ couplings $\pi_m \in \RR^{N \times N}$ a functional of the form 
+\eql{\label{eq-pbm-variational-generic}
+	\umin{\pi \in (\RR^{N \times N})^M } \KL_\la(\pi|\xi) + \phi_1(\pi) + \phi_2(\pi)
+	\qwhereq
+	\choice{
+		\phi_1(\pi) \eqdef \psi_1(\pi \ones), \\
+		\phi_2(\pi) \eqdef \psi_2(\pi^T \ones), 
+	}
+}
+where, for $\la \in \RR_+^M$, $\KL_\la$ is the weighted KL divergence (see also~\eqref{eq-defn-okl-lambda})
+\eq{
+	\foralls (\pi,\xi) \in (\RR^{N \times N})^M \times (\RR^{N \times N})^M, \quad
+	\KL_\la(\pi|\xi) = \sum_{m=1}^M \la_m \KL(\pi_m|\xi_m)
+}
+and where we denoted, with a slight abuse of notations, the collection of left and right marginals as
+\eq{
+	\pi \ones = (\pi_1\ones,\ldots,\pi_M \ones) \in (\RR^N)^M
+	\qandq
+	\pi^T \ones = (\pi_1^T\ones,\ldots,\pi_M^T \ones) \in (\RR^N)^M
+}
+and $\psi_i : (\RR^N)^M \rightarrow \RR$ are convex functions for which one can compute the proximal operator $\Prox^{\oKL_\la}_{\psi_i}$ according to the $\oKL_\la$ divergence.
+
+We wish to apply Dykstra's iterations~\eqref{eq-iter-dystra-1} and~\eqref{eq-iter-dystra-2} to~\eqref{eq-pbm-variational-generic}. This requires to compute the proximal operator of the functions $\phi_i$. The following proposition details how to achieve this using the proximal operator of the functions $\psi_i$ alone.
+
+\begin{proposition}	
+	We denote, for $i=1,2$, $\pi^{[i]} \eqdef \Prox^{\KL_\la}_{\phi_i}(\pi)$.
+	We denote, for $m=1,\ldots,M$, $\tilde p_m^{[1]} \eqdef \pi_m \ones$ and $\tilde p_m^{[2]} \eqdef \pi_m^T \ones$.
+	One has
+	\begin{align*}
+	\foralls m \in \{1,\ldots,M\}, \quad
+		\pi_m^{[1]} &= \diag\pa{ \frac{p_m^{[1]}}{\tilde p_m^{[1]}} } \pi_m  \qandq
+		\pi_m^{[2]} = \pi_m \diag\pa{ \frac{p_m^{[2]}}{\tilde p_m^{[2]}} } \\
+		\qwhereq \foralls i \in \{1,2\}, \quad
+		(p^{[i]})_m & = \Prox^{\oKL_\la}_{\psi_i}\pa{ (\tilde p^{[i]})_m }.
+	\end{align*}
+\end{proposition}
+\begin{proof}
+	This corresponds to an application of formulas~\eqref{eq-prox-calculus-lifting} and~\eqref{eq-prox-calculus-lifting-transp}.
+\end{proof}
+
+The following proposition, which is similar to Proposition~\ref{prop-implementation-scaling}, explains how to implement the iterations of Dykstra's algorithm using only multiplications with the kernels $(\xi_m)_m$. 
+
+\begin{proposition}\label{prop-implementation-generic}
+The iterates $\iter{\pi} = (\iter{\pi_1},\ldots,\iter{\pi_M})$ of Dykstra's algorithm can be written  as
+\eq{
+	\foralls m \in \{1,\ldots,M\}, \quad
+	\iter{\pi_m} = \diag(\iter{a_m}) \xi_m \diag(\iter{b_m})
+	\qandq
+	\iter{z_m} = \iter{u_m} v_m^{(\ell),T}.
+}
+with the initialization 
+\eq{
+	\foralls m \in \{1,\ldots,M\}, \quad
+	\itz{a_m}=\itz{b_m}=\itz{u_m}=\itz{v_m} \eqdef \ones.
+}
+We define, $\foralls m \in \{1,\ldots,M\}$, 
+\begin{align*}
+	\itA{\tilde a_m} &\eqdef \itA{a_m} \odot \itAA{u_m} \qandq
+	\itA{\tilde b_m} \eqdef \itA{b_m} \odot \itAA{v_m}, \\
+	(p_m)_m &\eqdef \Prox^{\oKL_\la}_{\psi_{[\ell]_2}}( (\tilde p_m)_m )
+	\qwhereq
+	\tilde p_m \eqdef \choice{
+			\itA{\tilde a_m} \odot \xi_m( \itA{\tilde b_m} ) \qifq [\ell]_2=1, \\
+			\itA{\tilde b_m} \odot \xi_m^T( \itA{\tilde a_m} ) \qifq [\ell]_2=2.
+	}		
+\end{align*}
+The update reads, $\foralls m \in \{1,\ldots,M\}$, 
+\begin{align*}
+	\iter{a_m} &\eqdef \choice{
+			p_m \odot [\xi_m(\itA{\tilde b_m})]^{-1} \qifq [\ell]_2=1 \\
+			\itA{\tilde a_m} \qifq [\ell]_2=2
+		} \\
+	%%%%
+	\iter{b_m} &\eqdef \choice{
+			\itA{\tilde b_m} \qifq [\ell]_2=1 \\
+			p_m \odot [\xi_m^T(\itA{\tilde a_m})]^{-1} \qifq [\ell]_2=2
+		} \\
+	%%%
+	\iter{u_m}  &\eqdef 	\itAA{u_m} \odot \frac{ \itA{a_m} }{ \iter{a_m} }
+	\qandq
+	\iter{v_m} \eqdef \itAA{v_m} \odot \frac{ \itA{b_m} }{ \iter{b_m} }.
+\end{align*}
+\end{proposition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wasserstein Attraction with Congestion}
+
+We now give a first concrete example of functional $f$ for which the formulation~\eqref{eq-pbm-variational-generic} should be used in place of~\eqref{eq-defn-KL-prbm}. 
+
+Instead of advecting the mass of $p_t$ according to a fixed potential $w$ as it is considered in the functional~\eqref{eq-dfn-congestion}, it is possible to make it evolve toward a ``target'' distribution $r \in \Si_N$ by minimizing the Wasserstein distance between $p_t$ and $r$. It thus consists in considering the gradient flow of the function 
+\eql{\label{eq-def-f-attrac}
+	\foralls p \in \Si_N, \quad
+	f(p) = W_\ga(r,p) + h(p) + \iota_{\Si_N}(p), 
+} 
+where $h(p)$ is a function for which one can compute its $\oKL$ proximal operator as defined in~\eqref{eq-def-kl-prox-operator}. 
+
+We now denote $q \eqdef p_t$ the previous iterate, and aim at solving a single JKO step~\eqref{eq-prox-step}. It is not possible to compute in closed form the $\oKL$ proximal operator of the function $f$ defined in~\eqref{eq-def-f-attrac}, so that the algorithm detailed in Section~\ref{sec-bregman-prox} is not directly applicable. 
+
+Instead, we re-formulate~\eqref{eq-prox-step} as a KL minimization of the form~\eqref{eq-pbm-variational-generic} involving $M=2$ couplings $\pi=(\pi_1,\pi_2) \in (\RR^{N \times N})^2$ and kernels $\xi=(\xi_1,\xi_2) \eqdef (e^{-c/\ga},e^{-c/\ga})$. This encodes implicitly the solution $p=\pi_1\ones=\pi_2 \ones$ of~\eqref{eq-prox-step} using the solution $\pi=(\pi_1,\pi_2)$ of~\eqref{eq-pbm-variational-generic} when introducing the functions
+\begin{align*}
+	\psi_1(p_1,p_2) &= \iota_{\Dd}(p_1,p_2) + h(p_1) 
+	\qwhereq
+	\Dd = \enscond{(p_1,p_2)}{p_1=p_2}, \\
+	\psi_2(p_1,p_2) &= \iota_{\{q,r\}}(p_1,p_2), 
+\end{align*}
+and the weights $\la=(1,\tau) \in \RR_+^2$. The following proposition details how to compute the proximal operator of these functionals. It is important to remind that that these functionals as well as their respective proximal operators operate on vectors of $\RR^N$, not on couplings.
+
+\begin{proposition}
+	One has
+	\begin{align}\label{eq-prox-psi-attraction}
+		\Prox^{\oKL_\la}_{\psi_1}(p_1,p_2) &= (p,p)
+		\qwhereq
+		p=  \Prox^{\oKL}_{\frac{1}{1+\tau}h}\pa{ p_1^{\frac{1}{1+\tau}} \odot p_2^{\frac{\tau}{1+\tau}} } \\
+		\Prox^{\oKL_\la}_{\psi_2}(p_1,p_2) &= (q,r) 
+	\end{align}
+\end{proposition}
+\begin{proof}
+	The computation of $\Prox^{\oKL_\la}_{\psi_1}$ follows from~\eqref{eq-prox-calculus-equal}.
+	The computation of $\Prox^{\oKL_\la}_{\psi_2}$ follows from~\eqref{eq-prox-calculus-indic}.
+\end{proof}
+
+With these proximal maps at hands, and with the formula for the iterations detailed in Proposition~\ref{prop-implementation-generic}, one can solve for each JKO step by computing the optimal $(\pi_1,\pi_2)$ using $q \eqdef p_t$ and then updating $p_{t+1} \eqdef \pi_1 \ones = \pi_2 \ones$.
+
+
+%%%%
+\paragraph{Numerical Illustrations}
+
+In order to introduce some congestion, we consider here the function $h(p)=\iota_{[0,\kappa]^N}$, as in~\eqref{eq-dfn-congestion}, and its KL proximal operator is computed as detailed in~\eqref{eq-dfn-congestion-prox}.
+
+Figure~\ref{fig-wass-attrac} shows some examples of such a JKO flows computed on a rectangular grid. The right hand side column shows the target distribution $r$. Note that the flow $p_t$ typically does not converge toward $r$ as $t \rightarrow +\infty$, because of the congestion effect.
+
+
+\newcommand{\myfigW}[2]{\includegraphics[width=.16\linewidth]{wasserstein-attraction/#1/#1-#2}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+%		\myfigW{disk}{1}&
+%		\myfigW{disk}{2}&
+%		\myfigW{disk}{5}&
+%		\myfigW{disk}{10}&
+%		\myfigW{disk}{20}&
+%		\myfigW{disk}{tgt}\\
+		\myfigW{holes}{1}&
+		\myfigW{holes}{2}&
+		\myfigW{holes}{5}&
+		\myfigW{holes}{10}&
+		\myfigW{holes}{20}&
+		\myfigW{holes}{tgt}\\
+%		\myfigW{tworooms}{1}&
+%		\myfigW{tworooms}{2}&
+%		\myfigW{tworooms}{5}&
+%		\myfigW{tworooms}{10}&
+%		\myfigW{tworooms}{20}&
+%		\myfigW{tworooms}{tgt}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$  & $r$ 
+	\end{tabular}
+	\caption{% 
+		Examples of gradient flows for the Wasserstein attraction toward the density $r$ displayed on the right column. The congestion parameter is set to $\kappa=\normi{p_{t=0}}$.
+	}
+   \label{fig-wass-attrac}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiple Densities Evolutions}
+\label{sec-multiple-densities}
+
+A natural extension of the JKO flow~\eqref{eq-smooth-jko} is to describe the evolution of a finite family of densities $p_t=(p_{i,t})_i$ by minimizing a function $f( (p_i)_{i} )$, where one defines the transport distance as the sum of independent Wasserstein distances
+\eq{
+	W_\ga( (p_i)_i, (q_i)_i ) \eqdef \sum_{i} W_\ga(p_i,q_i).
+}
+The function $f$ thus introduce a coupling between densities during the evolution.
+For simplicity we consider in the following the case of $2$ densities. 
+
+%%%%
+\paragraph{Wasserstein pairwise attraction}
+
+We first consider the case where the coupling is a Wasserstein attraction between the two densities
+\eq{
+	f(p_1,p_2) = \al W(p_1,p_2) + h_1(p_1) + h_1(p_2)
+}
+where the functions $h_i$ are ``simple'' so that one can compute easily $\Prox_{h_i}^{\oKL}$.
+
+Denoting $q=(q_1,q_2) \eqdef (p_{1,t},p_{2,t})$ the previous iterate at time $t$, the solution $p=p_{t+1}$ to the JKO step~\eqref{eq-prox-step} can be written as 
+\eq{
+	p = (p_1,p_2) = (\pi_1 \ones, \pi_2\ones) = (\pi_3^T \ones,\pi_3^T\ones), 
+}
+where one needs to solve for $M=3$ couplings $(\pi_1,\pi_2,\pi_3)$ the problem~\eqref{eq-pbm-variational-generic} with the functionals
+\begin{align*}
+	\psi_1(a_1,a_2,a_3) &= 
+		\iota_{\Dd}(a_1,a_3) + 
+		\iota_{\{q_2\}}(a_2) + 
+		\frac{\tau}{\ga} h_1(a_1), \\
+	\psi_2(a_1,a_2,a_3) &= 
+		\iota_{\Dd}(a_2,a_3) + 
+		\iota_{\{q_1\}}(a_1) + 
+		\frac{\tau}{\ga} h_2(a_2)
+\end{align*}
+with KL weights $\la=(1,1,\tau\al)$, and where $\Dd \eqdef \enscond{(a,b)}{a=b}$. The proximal operators of these functions are easy to compute as detailed in the following proposition.
+
+\begin{prop}
+	For $i \in \{1,2\}$, denoting $j=3-i \in \{1,2\}$, one has
+	\eq{
+		(b_m)_m = \Prox_{\psi_i}^{\oKL_\la}(a_m)_m
+		\qwhereq
+		b_i=b_3=\Prox_{h_i}( a_i^{\frac{1}{1+\tau\al}} \odot a_3^{\frac{\tau}{1+\tau\al}} ), \quad
+		b_j = q_j.
+	}
+\end{prop}
+\begin{proof}
+	The expression for $(b_i,b_3)$ is obtained by using~\eqref{eq-prox-calculus-equal}.
+	The expression for $b_j$ is obtained by using~\eqref{eq-prox-calculus-indic}.
+\end{proof}
+
+In the numerical example, we used $h_i(p_i) \eqdef \iota_{[0,\kappa_i]^N}(p_i)+\dotp{w_i}{p_i}$ for potentials $(w_1,w_2)  \in \RR^N \times \RR^N$ and thresholds $(\kappa_1,\kappa_2) \in \RR_+^2$. The $\KL$ proximal operator of these functions can be computed as detailed in Proposition~\ref{prop-prox-congest}. Figure~\ref{fig-pairwise-attraction} displays the results obtained on a rectangular grid.
+
+
+\newcommand{\myfigPairA}[2]{\includegraphics[width=.19\linewidth]{pairwise-attraction/#1/#1-#2}}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+%		\myfigPairA{twobumps}{1}&
+%		\myfigPairA{twobumps}{2}&
+%		\myfigPairA{twobumps}{5}&
+%		\myfigPairA{twobumps}{8}&
+%		\myfigPairA{twobumps}{12}\\
+		\myfigPairA{tworooms}{1}&
+		\myfigPairA{tworooms}{4}&
+		\myfigPairA{tworooms}{8}&
+		\myfigPairA{tworooms}{15}&
+		\myfigPairA{tworooms}{20}\\
+%		\myfigPairA{holes}{1}&
+%		\myfigPairA{holes}{3}&
+%		\myfigPairA{holes}{7}&
+%		\myfigPairA{holes}{10}&
+%		\myfigPairA{holes}{15}\\		
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$ 
+	\end{tabular}
+	\caption{% 
+		Evolution with a pairwise attraction between two densities, with congestion parameter $\kappa_i=\normi{p_{i,t=0}}$ and $\al=1$.
+		Display of both $p_{1,t}$ (red) and $p_{2,t}$ (green), yellow indicates a mixing.
+		Top row: $w_1=w_2$ are potentials with constant gradients $\nabla w_i=(-1,0)$, and the domain is a square. 
+		Middle and bottom row: $w_1=w_2=0$, and the domain is a non-convex subset of the square.
+	}
+   \label{fig-pairwise-attraction}
+\end{figure}
+
+ 
+
+%%%%
+\paragraph{Summation couplings}
+
+Another way to introduce some interaction between $p_1$ and $p_2$ is to consider a coupling on the sum
+\eq{
+	f(p_1,p_2) \eqdef h(p_1+p_2) + \dotp{p_1}{w_1} + \dotp{p_2}{w_2}.
+}
+for some function $h$ for which one can compute easily $\Prox_{h}^{\KL}$.
+
+In this case, the solution $p=p_{t+1}$ to the JKO step~\eqref{eq-prox-step} can be written as $p=(p_1,p_2) = (\pi_1 \ones, \pi_2\ones)$ where the $M=2$ couplings $(\pi_1,\pi_2)$ solves problem~\eqref{eq-pbm-variational-generic} with the functionals
+\begin{align*}
+	\psi_1(a_1,a_2) &= 
+		\frac{\tau}{\ga} f(a_1,a_2), \\
+	\psi_2(a_1,a_2) &= 
+		\iota_{\{q_1,q_2\}}(a_1,a_2)
+\end{align*}
+and weights $\la=(1,1)$.
+The proximal operators of the functions are easy to compute as detailed in the following proposition.
+
+\begin{prop}
+	One has
+	\begin{align*}
+		\Prox_{\psi_1}^{\oKL_\la}(a_1,a_2) &= 
+			\frac{ \Prox_{\frac{\tau}{\ga} h}^{\oKL}(\tilde a_1+\tilde a_2) }{\tilde a_1+\tilde a_2} \odot ( \tilde a_1,\tilde a_2 ) \\
+		\Prox_{\psi_2}^{\oKL_\la}(a_1,a_2) &= (q_1,q_2).
+	\end{align*}
+	where $\tilde a_i = a_i \odot e^{-\frac{\tau}{\ga} w_i}$
+\end{prop}
+\begin{proof}
+	The expression for $\Prox_{\psi_1}^{\oKL_\la}$ is obtained by combining~\eqref{eq-prox-calculus-shift} and~\eqref{eq-prox-calculus-lifting}.
+	The expression for $\Prox_{\psi_2}^{\oKL_\la}$ is obtained by using~\eqref{eq-prox-calculus-indic}.
+\end{proof}
+
+
+
+\newcommand{\myfigPair}[2]{\includegraphics[width=.19\linewidth]{pairwise-sum/#1/#1-#2}}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfigPair{tworectangles}{1}&
+		\myfigPair{tworectangles}{2}&
+		\myfigPair{tworectangles}{5}&
+		\myfigPair{tworectangles}{10}&
+		\myfigPair{tworectangles}{20}\\
+		\myfigPair{tworectangles}{sum-1}&
+		\myfigPair{tworectangles}{sum-2}&
+		\myfigPair{tworectangles}{sum-5}&
+		\myfigPair{tworectangles}{sum-10}&
+		\myfigPair{tworectangles}{sum-20}\\
+		\myfigPair{tworectangles}{p1-1}&
+		\myfigPair{tworectangles}{p1-2}&
+		\myfigPair{tworectangles}{p1-5}&
+		\myfigPair{tworectangles}{p1-10}&
+		\myfigPair{tworectangles}{p1-20}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$ 
+	\end{tabular}
+	\caption{% 
+		Evolution with a summation coupling $E(p_1+p_2)$.
+		Top row: display of both $p_1$ (red) and $p_2$ (green), yellow indicates a mixing.
+		Middle row: display of $p_1+p_2$, which evolves according to a linear heat diffusion.
+		Bottom row: display of $p_1$.
+	}
+   \label{fig-pairwise-sum-entropy}
+\end{figure}
+
+As a first example, we consider an entropic coupling $h=E$, with $w_1=w_2=0$. Its proximal operator is 
+\eq{
+	\foralls p \in \Si_N, \quad \Prox_{\si E}^{\oKL}(p) = ( p_i^{\frac{1}{1+\si}} )_i.
+}
+%computed in~\eqref{eq-prox-entropy}. 
+A formal computation shows that, for the Euclidean $W_2$ transport on $\RR^d$, the corresponding discrete JKO steps~\eqref{eq-smooth-jko} is intended at approximating the non-linear PDE over $p_t = (p_{1,t},p_{2,t})$
+\eq{
+	\foralls i \in \{1,2\}, \quad
+	\foralls t>0, \quad
+	\partial_t p_{i,t} = \diverg\pa{ \frac{p_{i,t}}{p_{1,t} + p_{2,t}} \nabla p_{i,t} }.
+}
+This shows that while $p_t$ follows a non-linear coupled diffusion, $p_{1,t}+p_{2,t}$ follows a linear heat diffusion.
+Figure~\ref{fig-pairwise-sum-entropy} shows a numerical illustration on a regular grid.
+
+As a second example, we consider a congestion coupling $h=\iota_{[0,\kappa]^N}$. Its proximal operator is computed in~\eqref{eq-dfn-congestion-prox}. Figure~\ref{fig-pairwise-sum-congestion} shows a numerical illustration  on a regular grid. It shows two densities, initially supported on non-overlapping squares, moving in opposite directions under potentials $(w_1,w_2)$ such that $\nabla w_1=(1,0)^T$ and $\nabla w_2=(-1,0)^T$ (constant horizontal gradients). A congestion shock is created by the overlap of the densities, which in turn forces the support of the densities to be deformed and vertically enlarged. 
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfigPair{congestion}{1}&
+		\myfigPair{congestion}{2}&
+		\myfigPair{congestion}{5}&
+		\myfigPair{congestion}{10}&
+		\myfigPair{congestion}{20}\\
+		\myfigPair{congestion}{sum-1}&
+		\myfigPair{congestion}{sum-2}&
+		\myfigPair{congestion}{sum-5}&
+		\myfigPair{congestion}{sum-10}&
+		\myfigPair{congestion}{sum-20}\\
+		\myfigPair{congestion}{p1-1}&
+		\myfigPair{congestion}{p1-2}&
+		\myfigPair{congestion}{p1-5}&
+		\myfigPair{congestion}{p1-10}&
+		\myfigPair{congestion}{p1-20}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$ 
+	\end{tabular}
+	\caption{% 
+		Evolution with a summation coupling $\iota_{[0,\kappa]^N}(p_1+p_2)$
+		where $\kappa=\normi{p_{1,t=0}}=\normi{p_{2,t=0}}$.
+		Top row: display of both $p_{1,t}$ (red) and $p_{2,t}$ (green), yellow indicates a mixing.
+		Middle row: display of $p_{1,t}+p_{2,t}$.
+		Bottom row: display of $p_{1,t}$.
+	}
+   \label{fig-pairwise-sum-congestion}
+\end{figure}
+
+
+
+
+

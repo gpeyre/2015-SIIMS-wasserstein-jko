@@ -1,0 +1,21 @@
+% !TEX root = ../EntropicJKO.tex
+\section*{Discussion and Conclusion}
+\label{sec-conclusion}
+
+In this paper, we have presented a novel algorithm to compute approximate discrete gradient flows according to an entropic smoothing of the Wasserstein distance. The main interest of the method is its speed, simplicity and versatility. This is achieved because the iterations only require (beside pointwise multiplications, divisions and exponentiations) to compute the successive applications of a ``convolution-like'' operator corresponding to the Gibbs kernel associated to the metric.
+
+A natural question is to explore whether the discrete flow defined by~\eqref{eq-smooth-jko} has a continuous limit when $\tau_t=\tau \rightarrow 0$. If one uses a fixed $\ga_t=\ga>0$, this is not the case, because $W_\ga$ does not satisfies $W_\ga(p,p)=0$. More precisely, one has that 
+\eq{
+	\uargmin{q} W_\ga(p,q) = \xi \pa{ \frac{p}{\xi^T(p)} }, 
+} 
+so that the limit for small $\tau$ of $p_{t+1}$ defined by~\eqref{eq-smooth-jko} is a blurred (i.e. multiplied by $\xi$) version of $p_t$. An interesting area of future work is to study the setting where $\ga_t$ is chosen as a function of $\tau_t$.
+
+
+% Instead of using a fixed value for $\ga_t$, choosing $\ga_t=\ga(\tau_t)$ for some carefully chosen function of $\tau_t$ could allow the discrete flow to converge to the usual Wasserstein flow. We leave the analysis of this asymptotic setting to a future work. 
+
+
+%%%%
+\section*{Acknowledgements}
+
+This work has been supported by the European Research Council (ERC project SIGMA-Vision). I would like to acknowledge  stimulating discussions with Marco Cuturi, Justin Solomon, Jean-David Benamou, Guillaume Carlier and Quentin Merigot.
+I would like to thank Guillaume Carlier for suggesting to apply the method to multiple densities (Section~\ref{sec-multiple-densities}). I would like to thank Jean-Marie Mirebeau for giving me access to his code for anisotropic diffusion. I would like to  thank Antonin Chambolle and Jalal Fadili for suggesting me the proof strategy of Proposition~\ref{prop-conv-dykstra}. 

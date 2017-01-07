@@ -1,0 +1,127 @@
+% !TEX root = ../EntropicJKO.tex
+\section{KL Proximal Calculus}
+\label{sec-kl-calculus}
+
+The following proposition details some useful property of the $\oKL$ proximal operator~\eqref{eq-def-kl-prox-operator}. This enables a powerful ``proximal calculus'' by combining these rules, which eases and simplifies the implementation of the algorithms. Note that we also consider generalized KL divergence over sets $(p_1,\ldots,p_M)$ of $M$ densities according to some weight $\la \in \RR_+^M$
+\eql{\label{eq-defn-okl-lambda}
+	\foralls (p_m)_m, (q_m)_m, \quad
+	\oKL_\la( (p_m)_m | (q_m)_m ) \eqdef \sum_{m=1}^M \la_m \oKL(p_m|q_m).
+}
+
+% \newcommand{\proxrule}[1]{\noindent\textbf{(#1)}~}
+\newcommand{\proxrule}[1]{}
+
+\begin{proposition}
+		\proxrule{Singleton constraint} For $f(p_1,\ldots,p_M) \eqdef \iota_{\{(q_1,\ldots,q_M)\}}(p_1,\ldots,p_M)$, one has
+			\eql{\label{eq-prox-calculus-indic}
+				\Prox_{f}^{\oKL_\la}(p_1,\ldots,p_M)=(q_1,\ldots,q_M).
+			}
+		\proxrule{Linear shift} For $f(p_1,\ldots,p_M) \eqdef h(p_1,\ldots,p_M)+\sum_{i=1}^M \dotp{w_i}{p_i}$, one has
+			\eql{\label{eq-prox-calculus-shift}
+				\Prox_{f}^{\oKL_\la}(p_1,\ldots,p_M) = 
+				\Prox_{h}^{\oKL_\la}(p_1 \odot e^{-w_1/\la_1}, \ldots, p_M \odot e^{-w_M/\la_M}).
+			}
+		\proxrule{Equality constraint} For $f(p_1,\ldots,p_M) \eqdef \iota_\Dd(p_1,\ldots,p_M)+h(p_1,\ldots,p_M)$ where
+			\eq{
+				\Dd \eqdef \enscond{(p_1,\ldots,p_M)}{p_1=\ldots=p_M},
+			} 
+			one has
+			\eql{\label{eq-prox-calculus-equal}
+				\Prox_{f}^{\oKL_\la}(p_1,\ldots,p_M)= (p,\ldots,p)
+				\!\qwhereq\!
+				p = \Prox_{\frac{1}{\sum_i \la_i} \tilde h}^{\KL}\pa{ p_1^{\tilde\la_1} \odot \ldots \odot p_M^{\tilde\la_M} }, 	
+			}
+			where we denoted $\tilde\la_i \eqdef \la_i/\sum_{j} \la_j$ and $\tilde h(p)=h(p,\ldots,p)$. \\
+		\proxrule{Composition with sum} For  $f(p_1,\ldots,p_M) \eqdef h(p_1+\ldots+p_M)$ and 
+			$\la \eqdef (1,\ldots,1)$, one has 
+			\eql{\label{eq-prox-calculus-sum}
+				\Prox_{f}^{\oKL_\la}(p_1,\ldots,p_M)= \frac{\Prox_{h}^{\oKL}(p_1+\ldots+p_M)}{p_1+\ldots+p_M} (p_1,\ldots,p_M)
+			}
+		\proxrule{Lifting} We define $f(\pi_1,\ldots,\pi_M) \eqdef h(\pi_1\ones,\ldots,\pi_M\ones)$. 
+			We denote 
+			\eq{
+				\foralls m \in \{1,\ldots,M\}, \quad p_m \eqdef \pi_m\ones
+				\qandq
+				(\tilde p_1,\ldots,\tilde p_M) \eqdef  \Prox_h^{\oKL_\la}( p_1,\ldots,p_M ).
+			}
+			One has
+			\eql{\label{eq-prox-calculus-lifting}
+				\Prox_{f}^{\KL_\la}(\pi_1,\ldots,\pi_M) =
+				\pa{
+					\diag\pa{ \frac{\tilde p_m}{p_m} } \pi
+				}_m
+			}
+		\proxrule{Lifting, transposed} We define $f(\pi_1,\ldots,\pi_M) \eqdef h(\pi_1^T\ones,\ldots,\pi_M^T\ones)$. 
+			We denote 
+			\eq{
+				\foralls m \in \{1,\ldots,M\}, \quad p_m \eqdef \pi_m^T \ones
+				\qandq
+				(\tilde p_1,\ldots,\tilde p_M) \eqdef  \Prox_h^{\oKL_\la}( p_1,\ldots,p_M ).
+			}
+			One has
+			\eql{\label{eq-prox-calculus-lifting-transp}
+				\Prox_{f}^{\KL_\la}(\pi_1,\ldots,\pi_M) =
+				\pa{
+					\pi \diag\pa{ \frac{\tilde p_m}{p_m} }
+				}_m
+			}
+\end{proposition}
+
+\newcommand{\proxruleP}[1]{\noindent\textbf{Proof of \eqref{eq-prox-calculus-#1}. }~}
+\begin{proof}
+%	\begin{enumerate}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+		\proxruleP{indic} This is straightforward.  \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+		\proxruleP{shift}  If follows from the relation
+		\begin{align*}
+			&\oKL_\la( (q_1,\ldots,q_M)|(p_1,\ldots,p_M) ) + \sum_{i=1}^M \dotp{w_i}{q_i} \\ =  
+			&\oKL_\la( (q_1,\ldots,q_M)| (p_1 \odot e^{-w_1/\la_1}, \ldots, p_M \odot e^{-w_M/\la_M}) ).
+		\end{align*}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+		\proxruleP{equal}  
+		We denote $(q_m)_m \eqdef \Prox^{\oKL_\la}_{\psi_1}( (p_m)_m )$, so that $q=q_1=\ldots=q_M$ solves
+	\eq{
+		\umin{q} \sum_m \la_m\oKL(q|p_m) + \tilde h(q).
+	}
+	The result follow from the relation
+	\eq{
+		\sum_m \la_m \oKL(q|p_m) = 
+		\textstyle \pa{\sum_m \la_m} \oKL\pa{q| p_1^{\tilde\la_1} \odot \ldots \odot  p_M^{\tilde\la_M} 
+		}.
+	}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+		\proxruleP{sum}  Denoting $(q_m)_m = \Prox_{f}^{\oKL_\la}( (p_m)_m )$, the first order optimality condition for $\Prox_{f}^{\oKL_\la}$ reads 
+	\eq{
+		\foralls m \in \{1,\ldots,M\}, \quad
+			\log\pa{\frac{q_m}{p_m}} + u = 0 
+	}
+	where $u \in \partial h(p_1+\ldots+p_M)$. Respectively summing and subtracting these equations lead to
+	\eq{
+		q_1+\ldots+q_M = \Prox_{h}(p_1+\ldots+p_M)
+		\qandq
+		\frac{q_1}{p_1} = \ldots = \frac{q_m}{p_m}.
+	}
+	Solving for $(q_1,\ldots,q_m)$ in these equations leads to the desired solution. \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\proxruleP{lifting} The first order condition for $\tilde\pi$ being a solution of~\eqref{eq-defn-proxKL} states the existence of $(z_m)_m \in \partial f(\tilde p_1,\ldots,\tilde p_M)$ where $\tilde p_m = \tilde\pi_m \ones$ such that 
+	\eq{
+		\la_m \log\pa{ \frac{\tilde\pi_m}{\pi_m} } + z_m \ones^T = 0
+		\;\Rightarrow\;
+		\tilde\pi_m = \diag(e^{-z_m/\la_m }) \pi_m
+		\;\Rightarrow\;
+		\tilde p_m = \diag(e^{-z_m/\la_m }) p_m, 
+	}	 
+	which corresponds to the first order condition for $(\tilde p_m)_m$ being a solution of~\eqref{eq-def-kl-prox-operator} for the function $h$, i.e.
+	\eq{
+		(\tilde p_m)_m =  \Prox_{h}^{\oKL}( (p_m)_m ).
+	} 
+	Finally, one obtains
+	\eq{
+		\tilde\pi_m = \diag(e^{-z_m/\la_m}) \pi_m = \diag\pa{ \frac{\tilde p_m}{p_m} } \pi_m
+	}	
+	and hence the desired result. 	\\		
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+		\proxruleP{lifting-transp} It is obtained by transposing formula~\eqref{eq-prox-calculus-lifting}. 
+%	\end{enumerate}	
+\end{proof}

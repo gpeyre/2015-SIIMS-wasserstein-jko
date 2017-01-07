@@ -1,0 +1,312 @@
+% !TEX root = ../EntropicJKO.tex
+\section{Numerical Results}
+\label{sec-numerics}
+
+We now illustrate the usefulness and versatility of our approach to compute approximate solutions to various non-linear diffusion processes. The videos showing the time evolutions displayed in the figures below are available online\footnote{\url{https://github.com/gpeyre/2015-SIIMS-wasserstein-jko/tree/master/videos}}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exact and Approximate Kernel Computation}
+\label{subsec-kernel-comp}
+
+As already highlighted in Section~\ref{subsec-dykstra-jko}, our method is efficient if one can compute in a fast way the multiplication $\xi p$ between the Gibbs kernel $\xi=e^{-c/\ga}$ and a vector $p \in \RR^N$.  In the general case, this is intractable because this is a full matrix-vector multiplication. Even if $\xi$ usually has an exponential decay away from the diagonal, precisely capturing this decay is important to achieve transportation of mass effects. In particular, truncating the kernel to obtain a sparse matrix is prohibited. 
+
+%%%
+\paragraph{Translation invariant metrics}
+
+The simplest setting is when the sampling points $(x_i)_{i=1}^N$ (as defined in Section~\ref{sec-entropic-jko}) correspond to an uniform grid discretization of a translation invariant distance, i.e. $c_{i,j} = D(x_i-x_j)^\al$ for  some function $D : \RR^d \rightarrow \RR$. In this case, $\xi$ is simply a discrete convolution against the kernel $D(\cdot)^\al$ sampled on an uniform grid. For instance, when $D(\cdot) = \norm{\cdot}$ and $\al=2$, $\xi$ is simply a convolution with a Gaussian kernel of width $\ga$. When using periodic or Neumann boundary conditions, it is thus possible to implement this convolution in $O(N\log(N))$ operations using Fast Fourier Transforms (FFT's). There also exists a flurry of linear time approximate convolutions, the most popular one being Deriche's factorization with IIR filters~\cite{deriche-1993}. We used this method to generate the top rows of Figure~\ref{fig-examples} and~\ref{fig-pairwise-attraction}. The other figures require a more advanced treatment because the kernel is not translation invariant. We now detail this approach.
+
+%%%
+\paragraph{Riemannian metrics}
+
+Unfortunately, many case of practical interest correspond to diffusions inside non-convex domains, or even on non-Euclidean domains, typically a Riemannian manifold $\Mm$ (possibly with a boundary). In this setting, the natural choice for the ground cost $c$ is to set $c_{i,j} = d_\Mm(x_i,x_j)^\al$, where $d_\Mm$ is the geodesic distance on the manifold. 
+%
+A major issue is that computing this matrix $c$ is costly, for instance it would take $O(N^2\log(N))$ using Fast-Marching technics~\cite{sethian-book} on a grid or a triangulated mesh of $N$ points. Even storing this non-sparse matrix can be prohibitive, and applying it at each step of the Dykstra algorithm would require $O(N^2)$ operations. 
+%
+Inspired by the ``geodesic in heat'' method of~\cite{crane-2013}, it has recently been proposed by~\cite{ConvolutionalOT} to speed up these computations by approximating the kernel $\xi$ by a Laplace or a heat kernel $\tilde\xi$ (depending on wether $\al=1$ or $\al=2$). This means that $c$ does not need to be pre-computed and stored, and that, as explained below, one can apply it on the fly at each iteration using a fast sparse linear solver. 
+%
+In the numerical tests, we have used this approximation. 
+
+To this end, one only needs to have at its disposal a discrete approximation $\De_\Mm$ of the Laplacian operator on the manifold $\Mm$. This is easily achieved using axis-aligned finite differences for manifold discretized on a rectangular grid, and this is the case for Figures~\ref{fig-examples}. When considering a discretized manifold $\Mm$ which is a triangulated surface (as this is the case for Figure~\ref{fig-meshes}), one can use piecewise linear $P_1$ finite elements, and the operator $\De_\Mm$ is then the popular Laplacian with cotangent weights, see~\cite{botsch-2010}. 
+
+Following~\cite{ConvolutionalOT}, the kernel $\xi$ is then approximated using $L \in \NN^*$ steps of implicit Euler time discretization of the resolution of the heat equation on $\Mm$ until time $\ga$, i.e.
+\eql{\label{eq-heat-kernel}
+	\xi \approx \tilde\xi \eqdef \pa{ \Id - \frac{\ga}{L} \Delta_\Mm }^{-L} 
+}
+where $(\cdot)^{-L}$ means that one iterates $L$ times matrix inversion. 
+
+When $L=1$, and ignoring discretization errors, the result of Varadhan~\cite{varadhan-1967} shows that in the limit of small $\ga$, $\tilde\xi$ converges to the kernel $\xi$ obtained when using $\al=1$ (i.e. ``$W_1$'' optimal transport). 
+%
+Indeed, this formula state that $-\frac{1}{\ga} \log(\tilde\xi)$ converge uniformly when $\ga \rightarrow 0$ toward the geodesic distance on $\Mm$.
+%
+As $L$ increases, $\tilde\xi$ converges to the heat kernel, which can be shown, also using~\cite{varadhan-1967} to be consistent with the case $\al=2$ (i.e. ``$W_2$'' optimal transport). In the numerical tests, we have used $L=10$. 
+
+Numerically, the computation of matrix/vector multiplications $\tilde\xi p$ appearing the Dykstra updates thus requires the resolution of $L$ linear systems. Since these matrix/vector multiplications are computed many times during the iterations, a considerable speed-up is achieved by first pre-computing a sparse Cholesky factorization of $\Id - \frac{\ga}{L} \Delta_\Mm$ and then solving the $L$ linear systems by back-substitution~\cite{Davis:2006}. Although there is no theoretical guarantee, we observed numerically that each step typically has a linear time complexity because the factorization is indeed highly sparse. We refer to~\cite{crane-2013} for an experimental analysis of this class of Laplacian solvers.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Numerical Settings}
+
+In the following sections, we show simulations on 2-D domains, either on a flat square (possibly equipped with an anisotropic Riemannian metric) or on a surface embedded in $\RR^3$ (thus equipped with the induced Riemannian metric).
+% 
+The square domain is set to $[0,1]^2$ and we use an uniform grid of $N=100 \times 100$ points. 
+% 
+The surface used for the numerical tests is a triangulated mesh of $N = 20000$ vertices, fitting in the bounding box $[0,1]^3$. 
+
+We consider only cost functions corresponding to squared geodesic distances, i.e. we use $\al=2$. 
+%
+When the cost function is $c_{i,j} = \norm{x_i-x_j}^2$, we implemented multiplications by $\xi$ with a fast Gaussian filtering as explained in Section~\ref{subsec-kernel-comp}.
+%
+For cost functions corresponding to geodesic distances $c_{i,j} = d_\Mm(x_i,x_j)^2$, we implemented the heat kernel approximation~\eqref{eq-heat-kernel} with $L=10$. 
+%
+We always consider Neumann boundary conditions, which correspond, for the case of translation invariant kernels, to convolutions with symmetric extensions across boundaries. 
+
+We set the entropic smoothing parameter to $\ga = 1/N$, and the time step to $\tau = 1/\sqrt{N}$. 
+%
+The variable $t$ indicates the iteration number, as defined in~\eqref{eq-smooth-jko}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Crowd Motion Model}
+
+To model crowd motion, we follow~\cite{maury2010macroscopic}, where a congestion effect (not too many people can be at the same position) is enforced by imposing that the density $p$ of peoples follows a JKO flow with the functional $f$ defined as
+\eql{\label{eq-dfn-congestion}
+	\foralls p \in \RR^N, \quad
+	f(p) \eqdef \iota_{[0,\kappa]^N}(p) + \dotp{w}{p}
+}
+where $\kappa \geq \normi{p_{t=0}}$ is the congestion parameter (the smaller, the more congestion)
+and $w \in \RR^N$ is a potential (the mass should move along the gradient of $w$).
+
+\newcommand{\myfigM}[3]{\includegraphics[width=.19\linewidth]{#1-kappa#3/#1-kappa#3-#2}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfigM{bump}{1}{10}&
+		\myfigM{bump}{2}{10}&
+		\myfigM{bump}{5}{10}&
+		\myfigM{bump}{10}{10}&
+		\myfigM{bump}{20}{10}\\
+		\myfigM{bump}{1}{20}&
+		\myfigM{bump}{2}{20}&
+		\myfigM{bump}{5}{20}&
+		\myfigM{bump}{10}{20}&
+		\myfigM{bump}{20}{20}\\
+		\myfigM{bump}{1}{40}&
+		\myfigM{bump}{2}{40}&
+		\myfigM{bump}{5}{40}&
+		\myfigM{bump}{10}{40}&
+		\myfigM{bump}{20}{40}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$ 
+	\end{tabular}
+	\caption{% 
+		Display of the influence of the congestion parameter $\kappa$ on the evolution (the driving potential $w$ is displayed on the upper-right corner of Figure~\ref{fig-examples}). 
+		From top to bottom, the parameters are set to $\kappa/\normi{p_{t=0}} \in \{1, 2, 4\} \}$.
+	}
+   \label{fig-influ-kappa}
+\end{figure}
+
+For such a function, the KL proximal operator is easy to compute, as detailed in the following proposition.
+
+\begin{prop}\label{prop-prox-congest}
+	One has 
+	\eql{\label{eq-dfn-congestion-prox}
+		\foralls p \in \RR^N, \quad 
+		\Prox_{\si f}^{\oKL}(p) = \min(p \odot e^{-\si w},\kappa)
+	}	
+	where the min should be understood components-wise. 
+\end{prop}
+
+\begin{proof}
+	By separability of the functional, one only needs to prove the 1-D case.
+	One first proves the formula when $w=0$.
+	One then applies~\eqref{eq-prox-calculus-shift} in the case $M=1$.
+\end{proof}	
+	
+	
+Note that it is of course possible to consider a $\kappa$ that is spatially varying to model a non-homogeneous congestion effect. 
+
+Figure~\ref{fig-influ-kappa} shows the influence of the congestion parameter $\kappa$. This figure is obtained for the quadratic Euclidean cost $c_{i,j}=\norm{x_i-x_j}^2$.  
+%
+Figure~\ref{fig-examples} shows various evolutions for different potentials $w$ (guiding the crowd to the exit) on a manifold $\Mm$ which is a sub-set of a square in $\RR^2$. This means that locally the Riemannian metric is Euclidean, but since the domain is non-convex, the transport is defined according to a geodesic distance $d_\Mm$ which is not the Euclidean distance. The discretization is achieved using the approximate heat kernel~\eqref{eq-heat-kernel}.
+
+\newcommand{\myfig}[2]{\includegraphics[width=.16\linewidth]{#1-kappa10/#1-kappa10-#2}}
+\newcommand{\myfigPot}[1]{\includegraphics[width=.16\linewidth]{potentials/#1-potential}}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfig{bump}{1}&
+		\myfig{bump}{2}&
+		\myfig{bump}{5}&
+		\myfig{bump}{10}&
+		\myfig{bump}{20}&
+		\myfigPot{bump} \\
+		\myfig{disk}{1}&
+		\myfig{disk}{2}&
+		\myfig{disk}{5}&
+		\myfig{disk}{10}&
+		\myfig{disk}{20}&
+		\myfigPot{disk} \\
+		\myfig{disk1}{1}&
+		\myfig{disk1}{2}&
+		\myfig{disk1}{5}&
+		\myfig{disk1}{10}&
+		\myfig{disk1}{20}&
+		\myfigPot{disk1} \\
+		\myfig{holes}{1}&
+		\myfig{holes}{2}&
+		\myfig{holes}{5}&
+		\myfig{holes}{10}&
+		\myfig{holes}{20}&
+		\myfigPot{holes} \\
+		\myfig{tworooms}{1}&
+		\myfig{tworooms}{2}&
+		\myfig{tworooms}{5}&
+		\myfig{tworooms}{10}&
+		\myfig{tworooms}{20}&
+		\myfigPot{tworooms}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$ & $\cos(w)$
+	\end{tabular}
+	\caption{% 
+		Display of crowd evolution for $\kappa=\normi{p_{t=0}}$. 
+		The rightmost column display equispaced level-sets of the driving potential $w$. 
+	}
+   \label{fig-examples}
+\end{figure}
+
+Lastly Figure~\ref{fig-meshes} shows the evolution on a triangulated mesh, which is also implemented using the same heat kernel, but this time on a 3-D triangulation using piecewise linear finite elements (hence a discrete Laplacian with cotangent weights~\cite{botsch-2010}). 
+
+
+\renewcommand{\myfigPot}[1]{\includegraphics[width=.19\linewidth]{potentials/#1-potential}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\multirow{2}{*}[3em]{\myfigPot{moomoo}} &
+		\myfigM{moomoo}{1}{10}&
+		\myfigM{moomoo}{5}{10}&
+		\myfigM{moomoo}{10}{10}&
+		\myfigM{moomoo}{20}{10}\\
+		&
+		\myfigM{moomoo}{1}{60}&
+		\myfigM{moomoo}{5}{60}&
+		\myfigM{moomoo}{10}{60}&
+		\myfigM{moomoo}{20}{60} \\
+		$\cos(w)$ & $t=0$ & $t=15$ & $t=30$ & $t=45$ 
+	\end{tabular}
+	\caption{% 
+		Display of the evolution $p_t$ on a triangulated surface. 
+		From top to bottom, the congestion parameter is set to $\kappa/\normi{p_{t=0}} \in \{1, 6\}$. 
+	}
+   \label{fig-meshes}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Anisotropic Diffusion Kernels}
+\label{sec-anisotropic}
+
+We consider the crowd motion functional~\eqref{eq-dfn-congestion} over measures defined on $\Mm = \RR^2$ now equipped with a Riemannian manifold structure defined by some tensor field $T(x) \in \RR^{d \times d}$ of symmetric positive matrices. We use the heat kernel approximation detailed in Section~\ref{subsec-kernel-comp}. The kernel~\eqref{eq-heat-kernel} thus corresponds to a discretization of an anisotropic diffusion, which are routinely used to perform image restoration~\cite{WeickertBook}. As the anisotropy (i.e. the maximum ratio between the maximum and minium eigenvalues) of the tensors increases, the corresponding linear PDE becomes ill-posed, and traditional discretizations using finite differences are inconsistent, leading to unacceptable artifacts. We thus use the adaptive anisotropic stencils recently proposed in~\cite{FehrenbachMirebeau} to define the sparse Laplacian matrix discretizing the manifold Laplacian $\Delta_\Mm u(x) = \text{div}( T(x) \nabla u(x) )$. This discrete Laplacian is able to cope with highly anisotropic tensor fields. This is illustrated in Figure~\ref{fig-anisotropic}, which shows the impact of the anisotropy on the trajectory of the mass. The potential $w$ creates an horizontal movement of the mass, but the circular shape of the tensor orientations forces the mass to rather follow a curved trajectory. Ultimately, mass accumulates on the left side and the congestion effect appears.
+
+
+\renewcommand{\myfig}[2]{\includegraphics[width=.16\linewidth]{#1-kappa10/#1-kappa10-#2}}
+\renewcommand{\myfigPot}[1]{\includegraphics[width=.16\linewidth]{potentials/#1-potential}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfig{aniso1}{1}&
+		\myfig{aniso1}{5}&
+		\myfig{aniso1}{10}&
+		\myfig{aniso1}{15}&
+		\myfig{aniso1}{20} &
+		\myfigPot{aniso1} \\
+		\myfig{aniso3}{1}&
+		\myfig{aniso3}{5}&
+		\myfig{aniso3}{10}&
+		\myfig{aniso3}{15}&
+		\myfig{aniso3}{20} & 
+		\myfigPot{aniso3} \\
+		\myfig{aniso4}{1}&
+		\myfig{aniso4}{5}&
+		\myfig{aniso4}{10}&
+		\myfig{aniso4}{15}&
+		\myfig{aniso4}{20} &
+		\myfigPot{aniso4} \\
+		$t=0$ & $t=15$ & $t=30$ & $t=45$ & $t=60$ & $\cos(w), T$ 
+	\end{tabular}
+	\caption{% 
+		Display of the evolution $p_t$ using anisotropic diffusion kernels.
+		%
+		The right column displays in the background the level-sets of $w$ and the tensor field $T(x)$
+		displayed as red ellipsoids. 
+		An ellipsoid at point $x$ is oriented along the principal axis of $T(x)$, and the length/width ratio is proportional to the anisotropy of $T(x)$. The metric thus favors mass movements along the direction of the ellipsoids.
+		%
+		The anisotropy (ratio between maximum and minimum eigenvalues of $T(x)$)
+		is set respectively from top to bottom to $\{2, 10, 30\}$ in each of the successive rows.
+	}
+   \label{fig-anisotropic}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Non-linear Diffusions} % REMOVED
+\input{sections/sec-numerics-nonlinear.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Non-convex Functionals}
+
+It is formally possible to apply Dykstra's algorithm detailed in Section~\ref{sec-kl-jko-algo} to a non-convex function $f$, if one is able to compute in closed form the proximal operator~\eqref{eq-defn-proxKL} (which then might be a multi-valued map). Of course there is no hope for the resulting non-convex Dykstra's algorithm to converge in general to the global minimizer of the non-convex optimization~\eqref{eq-defn-KL-prbm}. Even worse, to the best of our knowledge, there is currently no proof that the non-convex Dykstra's algorithm converges to a stationary point of the energy, even in the case of an Euclidean divergence. However, we found that applying Dykstra's algorithm to non-convex functions works remarkably well in practice. Note that the closely related Douglas-Rachford (DR) algorithm is known to converge in some particular non-convex cases~\cite{ArtachoNonCvx}. DR is known to perform very well on several non-convex optimization problems such as phase retrieval~\cite{BauschkeNonCvx}. 
+
+To test this non-convex setting, we replace the congestion box constraint~\eqref{eq-dfn-congestion} by the non-convex function
+\eql{\label{eq-dfn-congestion-noncvx}
+	f(p) \eqdef \iota_{\{0,\kappa\}^N} + \dotp{w}{p}.
+}
+This function enforces that the thought after solution is binary, so that each value $p_i$ is in $\{0,\kappa\}$.
+The proximal operator of this non-convex function can be computed explicitly using
+\eq{
+	\foralls i \in \{1,\ldots,N\}, \quad
+	\Prox_{\si \iota_{\{0,\kappa\}^N}}^{\oKL}(p)_i = \choice{
+		0 \qifq p_i < \kappa/e, \\
+		\{0,\kappa\} \qifq p_i = \kappa/e, \\
+		\kappa \qifq p_i > \kappa/e, 
+	}
+}
+where $e=\exp(1)$. 
+%
+Note that $\Prox_{\si \iota_{\{0,\kappa\}^N}}^{\oKL}(p)_i$ is multi-valued at $p_i = \kappa/e$, and numerically one needs to chose one of the two values. 
+%
+Figure~\ref{fig-nonconvex} shows a comparison of the evolutions obtained with the convex and non-convex functionals. The non-convex one suffers from binary noise artefacts, which could be partly due to the non-convexity, but also to the amplification of discretization errors by the  proximal mapping which is not Lipschitz continuous. 
+
+\renewcommand{\myfig}[2]{\includegraphics[width=.19\linewidth]{#1-kappa10/#1-kappa10-#2}}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+		%%%%%%
+		\myfig{tworooms}{1}&
+		\myfig{tworooms}{2}&
+		\myfig{tworooms}{5}&
+		\myfig{tworooms}{10}&
+		\myfig{tworooms}{20}\\
+		\myfig{tworooms-noncvx}{1}&
+		\myfig{tworooms-noncvx}{2}&
+		\myfig{tworooms-noncvx}{5}&
+		\myfig{tworooms-noncvx}{10}&
+		\myfig{tworooms-noncvx}{20}\\
+		$t=0$ & $t=10$ & $t=20$ & $t=30$ & $t=40$
+	\end{tabular}
+	\caption{% 
+		Display of crowd evolution for $\kappa=\normi{p_{t=0}}$. 
+		Top row: convex function~\eqref{eq-dfn-congestion}.
+		Bottom row: non-convex function~\eqref{eq-dfn-congestion-noncvx}.
+	}
+   \label{fig-nonconvex}
+\end{figure}
+
+
+
